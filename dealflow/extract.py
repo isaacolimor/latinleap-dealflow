@@ -162,8 +162,11 @@ def evaluar(articulo: dict, cliente=None) -> list[dict]:
     if cliente is None:
         import anthropic
         cliente = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+        nombre_modelo = modelo()
+    else:  # cliente inyectado (modo demo o pruebas): no requiere llave
+        nombre_modelo = os.environ.get("DEALFLOW_MODEL") or config.MODELO
     resp = cliente.messages.create(
-        model=modelo(),
+        model=nombre_modelo,
         max_tokens=2500,
         system=SISTEMA,
         tools=[HERRAMIENTA],
