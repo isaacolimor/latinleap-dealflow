@@ -1,0 +1,47 @@
+name: Dealflow semanal
+
+on:
+  schedule:
+    - cron: "17 13 * * 1"   # lunes 07:17 hora de CDMX (13:17 UTC)
+  workflow_dispatch:         # botón "Run workflow" para correrlo a mano en la demo
+
+permissions:
+  contents: write   # guardar resultados en docs/data
+  issues: write     # publicar el digest y leer las casillas marcadas
+
+concurrency:
+  group: dealflow
+  cancel-in-progress: false
+
+jobs:
+  correr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt pytest
+
+      - name: Pruebas de la rúbrica
+        run: python -m pytest -q
+
+      - name: Correr pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEALFLOW_MODEL: ${{ vars.DEALFLOW_MODEL }}
+        run: python run.py
+
+      - name: Guardar resultados en el repo
+        run: |
+          git config user.name "latinleap-dealflow-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || git commit -m "Corrida $(date -u +%Y-%m-%d): actualizar dealflow"
+          git push

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latin Leap Dealflow</title>
+<style>
+:root{
+  --bg:#f7f7f4; --surface:#ffffff; --ink:#1b1d1f; --ink2:#55595e; --muted:#8a8f94;
+  --line:#e4e4df; --accent:#2f5bd3; --accent-soft:#e6ecfb; --good:#1f7a4d; --good-soft:#e3f2ea;
+  --warn:#9a6700; --warn-soft:#fbf1dc; --bad:#a33a3a; --bad-soft:#f8e6e6; --hot:#b4471a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121416; --surface:#1b1e21; --ink:#eceeef; --ink2:#b4b9be; --muted:#82888e;
+    --line:#2c3035; --accent:#7f9ef0; --accent-soft:#232c45; --good:#6cc595; --good-soft:#1d3328;
+    --warn:#e0b45a; --warn-soft:#3a2f17; --bad:#e08a8a; --bad-soft:#3a2020; --hot:#f08c5c;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:28px 16px 60px}
+header h1{margin:0;font-size:26px;letter-spacing:-.01em}
+header p{margin:4px 0 0;color:var(--ink2)}
+.meta{color:var(--muted);font-size:13px;margin-top:6px}
+.meta a{color:var(--accent)}
+section{margin-top:28px}
+h2{font-size:16px;margin:0 0 10px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.tile .lbl{font-size:13px;color:var(--ink2)}
+.tile .val{font-size:32px;font-weight:650;margin-top:2px;font-variant-numeric:tabular-nums}
+.tile .sub{font-size:12.5px;color:var(--muted)}
+.prog{height:8px;border-radius:4px;background:var(--line);margin-top:8px;overflow:hidden}
+.prog>i{display:block;height:100%;background:var(--accent);border-radius:4px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.funnel .row{display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:10px;margin:6px 0}
+.funnel .lbl{font-size:13.5px;color:var(--ink2)}
+.funnel .bar{height:22px;background:var(--line);border-radius:4px;position:relative}
+.funnel .bar>i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:4px;min-width:3px}
+.funnel .n{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.funnel .row:hover .bar>i{filter:brightness(1.12)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;color:var(--ink2);font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;border-bottom:1px solid var(--line);padding:8px}
+td{border-bottom:1px solid var(--line);padding:9px 8px;vertical-align:top}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr.deal{cursor:pointer}
+tr.deal:hover td{background:var(--accent-soft)}
+.chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;white-space:nowrap}
+.c-calificada{background:var(--good-soft);color:var(--good)}
+.c-bajo_umbral{background:var(--warn-soft);color:var(--warn)}
+.c-descartada{background:var(--bad-soft);color:var(--bad)}
+.c-portafolio{background:var(--accent-soft);color:var(--accent)}
+.hot{color:var(--hot);font-size:12px;font-weight:600}
+.ok{color:var(--good);font-size:12px;font-weight:600}
+.detail td{background:var(--bg);font-size:13.5px;color:var(--ink2)}
+.detail .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.detail b{color:var(--ink)}
+.detail blockquote{margin:6px 0 0;padding:8px 12px;border-left:3px solid var(--accent);background:var(--surface);color:var(--ink)}
+.bd{display:grid;grid-template-columns:90px 1fr 40px;gap:6px;align-items:center;font-size:12.5px}
+.bd .b{height:6px;background:var(--line);border-radius:3px;position:relative}
+.bd .b>i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:3px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.filters button,.filters input{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 11px}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters input{min-width:200px;flex:1;max-width:320px}
+.scroll{overflow-x:auto}
+.method li{margin:3px 0}
+.empty{color:var(--muted);padding:24px;text-align:center}
+a{color:var(--accent)}
+@media (max-width:640px){.funnel .row{grid-template-columns:120px 1fr 44px}.hide-sm{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Latin Leap · Dealflow Engine</h1>
+    <p>Originación automática de startups pre-seed y seed en LATAM hispanohablante, calificadas contra la tesis del fondo.</p>
+    <div class="meta" id="meta">Cargando…</div>
+  </header>
+
+  <section>
+    <h2>Meta del reto: +10% sobre 60 deals al mes</h2>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section>
+    <h2>Embudo acumulado</h2>
+    <div class="card funnel" id="funnel"></div>
+  </section>
+
+  <section>
+    <h2>Oportunidades</h2>
+    <div class="filters" id="filters">
+      <button data-f="calificada" aria-pressed="true">Calificadas</button>
+      <button data-f="bajo_umbral" aria-pressed="false">Bajo umbral</button>
+      <button data-f="descartada" aria-pressed="false">Descartadas</button>
+      <button data-f="portafolio" aria-pressed="false">Ya en portafolio</button>
+      <input id="q" type="search" placeholder="Buscar startup, país o sector">
+    </div>
+    <div class="card scroll"><table>
+      <thead><tr><th>Startup</th><th>País</th><th class="hide-sm">Sector</th><th class="hide-sm">Etapa</th><th class="num">Score</th><th>Estado</th></tr></thead>
+      <tbody id="deals"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Por fuente</h2>
+    <div class="card scroll"><table>
+      <thead><tr><th>Fuente</th><th class="num">Notas leídas</th><th class="num">Evaluadas</th><th class="num">Startups</th><th class="num">Pasan filtros</th><th class="num">Calificadas</th><th class="num">Rendimiento</th></tr></thead>
+      <tbody id="fuentes"></tbody>
+    </table></div>
+  </section>
+
+  <section class="method">
+    <h2>Cómo funciona</h2>
+    <div class="card">
+      <ol>
+        <li><b>Recolección</b> cada lunes 7:17 a.m. (CDMX) desde LatamList, Startups Latam, Descubre.vc y búsquedas en Google News.</li>
+        <li><b>Prefiltro sin costo</b>: descarta notas ya vistas, fuera de ventana, Serie B en adelante o solo Brasil.</li>
+        <li><b>Extracción con Claude</b>: identifica cada startup y califica cada criterio en 0, 0.5 o 1 con la evidencia del texto.</li>
+        <li><b>Scorecard determinista</b> en Python: filtros eliminatorios (país, etapa, tecnología, portafolio) y pesos de la tesis.
+          <span id="pesos"></span></li>
+        <li><b>Digest semanal</b> como issue de GitHub con borrador de contacto. El equipo marca las que revisará; esas decisiones alimentan la métrica de deals aceptados.</li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<script>
+const PESOS = {sector:20, copycat:20, traccion:20, geografia:15, ai_first:15, momento:5, purpose:5};
+const NOMBRES = {sector:"Sector", copycat:"Copycat", traccion:"Tracción", geografia:"Geografía", ai_first:"IA", momento:"Momento", purpose:"Purpose"};
+const ETAPAS = {idea_sin_ronda:"Sin ronda", pre_seed:"Pre-seed", seed:"Seed", post_seed_pre_a:"Post-seed / pre-A", serie_a_o_mas:"Serie A o más", desconocida:"Sin dato"};
+const ESTADOS = {calificada:"Calificada", bajo_umbral:"Bajo umbral", descartada:"Descartada", portafolio:"Portafolio"};
+const META = 6, UMBRAL = 60;
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? esc(u) : "#";
+const fmtFecha = iso => iso ? new Date(iso).toLocaleDateString("es-MX",{day:"numeric",month:"short",year:"numeric"}) : "–";
+let DEALS = [], filtros = new Set(["calificada"]);
+
+document.getElementById("pesos").textContent =
+  "Pesos: " + Object.entries(PESOS).map(([k,v]) => `${NOMBRES[k]} ${v}`).join(" · ") + `. Umbral del digest: ${UMBRAL}.`;
+
+async function cargar(path, def){ try{ const r = await fetch(path,{cache:"no-store"}); return r.ok ? r.json() : def; }catch{ return def; } }
+
+function tiles(deals, corridas){
+  const hace30 = Date.now() - 30*864e5;
+  const cal30 = deals.filter(d => d.estado==="calificada" && new Date(d.primera_vez) >= hace30).length;
+  const acept = deals.filter(d => d.decision_equipo==="aceptada").length;
+  const pct = Math.min(100, Math.round(cal30/META*100));
+  const ult = corridas[corridas.length-1];
+  document.getElementById("tiles").innerHTML = `
+    <div class="tile"><div class="lbl">Calificadas nuevas (30 días)</div><div class="val">${cal30}</div>
+      <div class="prog" title="${cal30} de ${META}"><i style="width:${pct}%"></i></div><div class="sub">Meta: ${META} incrementales al mes (${pct}%)</div></div>
+    <div class="tile"><div class="lbl">Aceptadas por el equipo</div><div class="val">${acept}</div><div class="sub">Casillas marcadas en los digests</div></div>
+    <div class="tile"><div class="lbl">Startups analizadas</div><div class="val">${deals.length}</div><div class="sub">${deals.filter(d=>d.estado==="portafolio").length} ya eran portafolio</div></div>
+    <div class="tile"><div class="lbl">Corridas automáticas</div><div class="val">${corridas.length}</div><div class="sub">Última: ${ult ? fmtFecha(ult.fecha) : "aún no"}</div></div>`;
+}
+
+function funnel(corridas){
+  const s = k => corridas.reduce((a,c) => a + (c[k]||0), 0);
+  const pasos = [["Notas leídas","articulos_leidos"],["Notas nuevas","articulos_nuevos"],["Evaluadas con IA","evaluados"],
+                 ["Startups detectadas","startups"],["Pasan filtros","pasan_filtros"],["Calificadas (≥"+UMBRAL+")","calificadas_nuevas"]];
+  const vals = pasos.map(([l,k]) => [l, s(k)]), max = Math.max(1, ...vals.map(v=>v[1]));
+  document.getElementById("funnel").innerHTML = corridas.length ? vals.map(([l,v],i) => {
+    const prev = i ? vals[i-1][1] : null, conv = prev ? ` · ${Math.round(v/prev*100)}% del paso anterior` : "";
+    return `<div class="row" title="${esc(l)}: ${v}${conv}"><div class="lbl">${esc(l)}</div><div class="bar"><i style="width:${v/max*100}%"></i></div><div class="n">${v}</div></div>`;
+  }).join("") : `<div class="empty">Todavía no hay corridas.</div>`;
+}
+
+function fuentes(corridas){
+  const agg = {};
+  corridas.forEach(c => Object.entries(c.por_fuente||{}).forEach(([f,m]) => {
+    const a = agg[f] ||= {leidos:0,evaluados:0,startups:0,pasan_filtros:0,calificadas_nuevas:0};
+    for (const k in a) a[k] += m[k]||0;
+  }));
+  const filas = Object.entries(agg).sort((a,b)=>b[1].calificadas_nuevas-a[1].calificadas_nuevas);
+  document.getElementById("fuentes").innerHTML = filas.length ? filas.map(([f,m]) => `<tr><td>${esc(f)}</td>
+    <td class="num">${m.leidos}</td><td class="num">${m.evaluados}</td><td class="num">${m.startups}</td><td class="num">${m.pasan_filtros}</td>
+    <td class="num"><b>${m.calificadas_nuevas}</b></td><td class="num">${m.evaluados ? (m.calificadas_nuevas/m.evaluados*100).toFixed(0)+"% de evaluadas" : "–"}</td></tr>`).join("")
+    : `<tr><td colspan="7" class="empty">Sin datos todavía.</td></tr>`;
+}
+
+function detalle(d){
+  const bd = Object.keys(PESOS).map(k => `<div class="bd"><span>${NOMBRES[k]}</span><span class="b"><i style="width:${(d.desglose?.[k]||0)/PESOS[k]*100}%"></i></span><span>${d.desglose?.[k]??0}/${PESOS[k]}</span></div>`).join("");
+  const men = (d.menciones||[]).map(m => `<a href="${safeUrl(m.url)}" target="_blank" rel="noopener">${esc(m.fuente)}</a> (${fmtFecha(m.fecha)})`).join(", ");
+  const fallas = (d.filtros_fallidos||[]).length ? `<p><b>Filtros fallidos:</b> ${esc(d.filtros_fallidos.join(", "))} (score sin filtros: ${d.score_bruto})</p>` : "";
+  return `<tr class="detail"><td colspan="6"><div class="grid">
+    <div><p><b>${esc(d.descripcion)}</b></p>${fallas}
+      <p><b>Ronda:</b> ${esc(d.ronda_reciente || "sin dato")}<br><b>Análogo:</b> ${esc(d.copycat_analogo || "sin análogo claro")}<br>
+      <b>Evidencia:</b> ${esc(d.evidencia)}<br><b>Fuentes:</b> ${men}${d.sitio_web ? `<br><b>Web:</b> <a href="${safeUrl(d.sitio_web)}" target="_blank" rel="noopener">${esc(d.sitio_web)}</a>` : ""}</p></div>
+    <div>${bd}</div>
+    <div><b>Borrador de primer contacto</b><blockquote>${esc(d.borrador_contacto || "No aplica.")}</blockquote></div>
+  </div></td></tr>`;
+}
+
+function tabla(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const filas = DEALS.filter(d => filtros.has(d.estado))
+    .filter(d => !q || [d.nombre,d.pais,d.sector].join(" ").toLowerCase().includes(q))
+    .sort((a,b) => (b.score - a.score) || (b.score_bruto - a.score_bruto));
+  const tb = document.getElementById("deals");
+  tb.innerHTML = filas.length ? filas.map((d,i) => `<tr class="deal" data-i="${i}" tabindex="0" aria-expanded="false">
+      <td><b>${esc(d.nombre)}</b> ${d.levantando_ahora ? '<span class="hot">· levantando ahora</span>' : ""} ${d.decision_equipo==="aceptada" ? '<span class="ok">· aceptada</span>' : ""}</td>
+      <td>${esc(d.pais)}</td><td class="hide-sm">${esc(d.sector)}</td><td class="hide-sm">${ETAPAS[d.etapa]||esc(d.etapa)}</td>
+      <td class="num"><b>${d.estado==="calificada"||d.estado==="bajo_umbral" ? d.score : "–"}</b></td>
+      <td><span class="chip c-${esc(d.estado)}">${ESTADOS[d.estado]||esc(d.estado)}</span></td></tr>`).join("")
+    : `<tr><td colspan="6" class="empty">No hay oportunidades con este filtro.</td></tr>`;
+  tb.querySelectorAll("tr.deal").forEach(tr => {
+    const toggle = () => {
+      const abierta = tr.nextElementSibling?.classList.contains("detail");
+      if (abierta) { tr.nextElementSibling.remove(); tr.setAttribute("aria-expanded","false"); }
+      else { tr.insertAdjacentHTML("afterend", detalle(filas[+tr.dataset.i])); tr.setAttribute("aria-expanded","true"); }
+    };
+    tr.addEventListener("click", toggle);
+    tr.addEventListener("keydown", e => { if (e.key==="Enter"||e.key===" ") { e.preventDefault(); toggle(); } });
+  });
+}
+
+document.querySelectorAll("#filters button").forEach(b => b.addEventListener("click", () => {
+  const f = b.dataset.f; filtros.has(f) ? filtros.delete(f) : filtros.add(f);
+  b.setAttribute("aria-pressed", filtros.has(f)); tabla();
+}));
+document.getElementById("q").addEventListener("input", tabla);
+
+(async () => {
+  const [deals, corridas] = await Promise.all([cargar("data/deals.json", []), cargar("data/corridas.json", [])]);
+  DEALS = deals;
+  const ult = corridas[corridas.length-1];
+  document.getElementById("meta").innerHTML = ult
+    ? `Última corrida: ${fmtFecha(ult.fecha)} · modelo ${esc(ult.modelo)}${ult.digest ? ` · <a href="${safeUrl(ult.digest)}" target="_blank" rel="noopener">ver digest</a>` : ""} · <a href="https://github.com/isaacolimor/latinleap-dealflow" target="_blank" rel="noopener">código</a>`
+    : `Aún no hay corridas. <a href="https://github.com/isaacolimor/latinleap-dealflow">Ver código</a>`;
+  tiles(deals, corridas); funnel(corridas); fuentes(corridas); tabla();
+})();
+</script>
+</body>
+</html>

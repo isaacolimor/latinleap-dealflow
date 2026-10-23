@@ -1,0 +1,260 @@
+{
+ "_nota": "Artículos reales de LatamList (20 oct 2026), resumidos. Las 'respuestas' son evaluaciones SIMULADAS escritas a mano para probar el flujo sin API key; no son salidas del modelo.",
+ "articulos": [
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/argentine-fintech-rebill-raises-5-4m-pre-series-a-round/",
+   "titulo": "Argentine fintech Rebill raises $5.4M Pre Series A round",
+   "texto": "Rebill, Argentine payments infrastructure founded in 2020, raised $5.4M pre Series A (Tiger Global, Y Combinator, SV Angel). Lets businesses accept local payment methods across Argentina, Brazil, Chile, Colombia, Mexico and the US without a local entity. Between January and September 2026 it quadrupled active merchants and tripled monthly payment volume.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "Argentina",
+    "Fintech",
+    "Pre Series A"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/ifood-acquires-brazilian-hr-and-benefits-startup-caju/",
+   "titulo": "iFood acquires Brazilian HR and benefits startup Caju",
+   "texto": "iFood Beneficios acquired Caju, a Brazilian benefits startup.",
+   "fecha": "",
+   "tags": [
+    "M & A",
+    "Brazil",
+    "Caju",
+    "hr tech"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/efy-finance-secures-investment-from-tether-to-expand-across-latin-america/",
+   "titulo": "EFY Finance secures investment from Tether to expand across Latin America",
+   "texto": "Panama-based fintech EFY Finance secured an investment from Tether in its seed round. Cross-border payments, digital asset custody and stablecoin accounts. Licensed in El Salvador, more than 25,000 active accounts, local settlement in 17 countries.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "Panama",
+    "Seed"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/dapta-raises-6m-seed-round-led-by-chingona-ventures/",
+   "titulo": "Dapta raises $6M seed round led by Chingona Ventures",
+   "texto": "Colombian AI startup Dapta raised a $6M seed. AI agents that automate sales via WhatsApp and phone. Over 200,000 registered users; clients include Rappi, Mercado Libre and Siigo.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "AI",
+    "Colombia",
+    "Seed"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/alice-raises-40m-series-d-led-by-ifc/",
+   "titulo": "Alice raises $40M Series D led by IFC",
+   "texto": "Brazilian healthtech Alice raised a Series D.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "Brazil",
+    "Series D"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/imersa-raises-50k-to-develop-ai-sales-copilot/",
+   "titulo": "Imersa raises $50K to develop AI sales copilot",
+   "texto": "Brazilian startup Imersa raised $50K.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "AI",
+    "Brazil"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/uruguayan-scanntech-raises-180m-round-led-by-l-catterton/",
+   "titulo": "Uruguayan Scanntech raises $180M round led by L Catterton",
+   "texto": "Uruguayan retail data company Scanntech, founded in 1992, raised $180M led by L Catterton.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "Retail",
+    "Uruguay"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/argentine-giraffe-bio-raises-6-4m-seed-round-to-improve-copper-recovery/",
+   "titulo": "Argentine Giraffe Bio raises $6.4M seed round to improve copper recovery",
+   "texto": "Argentine biotech Giraffe Bio, founded in 2024, raised a $6.4M seed. Uses AI and biotechnology to develop reagents that help mining companies recover more copper. Operates in Chile; plans industrial trials.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "Argentina",
+    "Biotech",
+    "Seed"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/flai-raises-27m-series-a-to-expand-ai-agents-for-us-car-dealerships/",
+   "titulo": "Flai raises $27M Series A to expand AI agents for US car dealerships",
+   "texto": "San Francisco based Flai, founded by Uruguayans, raised a Series A.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "AI",
+    "Series A",
+    "Uruguay",
+    "US"
+   ]
+  },
+  {
+   "fuente": "LatamList",
+   "url": "https://latamlist.com/colombian-fintech-fronte-raises-pre-seed-round-led-by-rally-cap-vc-and-bankless-ventures/",
+   "titulo": "Colombian fintech Fronte raises pre-seed round led by Rally Cap VC and Bankless Ventures",
+   "texto": "Colombian fintech Fronte raised an undisclosed pre-seed. Platform for transnational families to manage household expenses, coordinate payments and build a shared financial history to access credit. Surveyed nearly 1,000 remittance-receiving households; will expand its team in Bogota.",
+   "fecha": "",
+   "tags": [
+    "Startup Funding",
+    "Colombia",
+    "Fintech",
+    "Pre-seed"
+   ]
+  }
+ ],
+ "respuestas": {
+  "Argentine fintech Rebill raises $5.4M Pre Series A round": [
+   {
+    "sitio_web": "https://www.rebill.com/",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "ronda_reciente": "Pre Serie A US$5.4M, oct 2026",
+    "copycat_analogo": "Rapyd: pagos locales multipaís para empresas globales",
+    "borrador_contacto": "Hola equipo de Rebill, vi que cuadruplicaron comercios activos este año. En Latin Leap invertimos en pre-seed y seed en LATAM hispanohablante y nos interesa cómo están pensando la expansión en México y Colombia. ¿Tienen 20 minutos la próxima semana?",
+    "nombre": "Rebill",
+    "pais": "Argentina",
+    "etapa": "post_seed_pre_a",
+    "sector": "fintech",
+    "descripcion": "Infraestructura para aceptar métodos de pago locales en varios países sin entidad legal en cada uno.",
+    "ai_first": 0,
+    "copycat": 1,
+    "traccion": 1,
+    "momento": 1,
+    "purpose": 0,
+    "evidencia": "Cuadruplicó comercios activos y triplicó volumen mensual entre enero y septiembre de 2026."
+   }
+  ],
+  "EFY Finance secures investment from Tether to expand across Latin America": [
+   {
+    "sitio_web": "",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "ronda_reciente": "Seed con Tether, oct 2026",
+    "copycat_analogo": "Bridge (EE.UU.): infraestructura de stablecoins, parcial",
+    "borrador_contacto": "Hola equipo de EFY Finance, felicidades por la inversión de Tether. Nos llamó la atención la liquidación local en 17 países. En Latin Leap invertimos en seed en LATAM hispanohablante; ¿podemos agendar 20 minutos?",
+    "nombre": "EFY Finance",
+    "pais": "Panamá",
+    "etapa": "seed",
+    "sector": "fintech",
+    "descripcion": "Pagos transfronterizos, custodia de activos digitales y cuentas en stablecoins.",
+    "ai_first": 0,
+    "copycat": 0.5,
+    "traccion": 1,
+    "momento": 1,
+    "purpose": 0.5,
+    "evidencia": "Más de 25,000 cuentas activas y liquidación local en 17 países."
+   }
+  ],
+  "Dapta raises $6M seed round led by Chingona Ventures": [
+   {
+    "sitio_web": "https://dapta.ai/",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "ronda_reciente": "Seed US$6M, oct 2026",
+    "copycat_analogo": "",
+    "borrador_contacto": "",
+    "nombre": "Dapta",
+    "pais": "Colombia",
+    "etapa": "seed",
+    "sector": "ai saas",
+    "descripcion": "Agentes de IA que automatizan ventas por WhatsApp y teléfono.",
+    "ai_first": 1,
+    "copycat": 0.5,
+    "traccion": 1,
+    "momento": 0.5,
+    "purpose": 0,
+    "evidencia": "Más de 200,000 usuarios registrados; clientes como Rappi y Mercado Libre."
+   }
+  ],
+  "Uruguayan Scanntech raises $180M round led by L Catterton": [
+   {
+    "sitio_web": "",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "ronda_reciente": "",
+    "copycat_analogo": "",
+    "borrador_contacto": "",
+    "nombre": "Scanntech",
+    "pais": "Uruguay",
+    "etapa": "serie_a_o_mas",
+    "sector": "next-gen retail",
+    "descripcion": "Datos de ventas minoristas en tiempo real.",
+    "ai_first": 0.5,
+    "copycat": 0,
+    "traccion": 1,
+    "momento": 0,
+    "purpose": 0,
+    "evidencia": "Fundada en 1992; ronda de US$180M."
+   }
+  ],
+  "Argentine Giraffe Bio raises $6.4M seed round to improve copper recovery": [
+   {
+    "sitio_web": "",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "ronda_reciente": "Seed US$6.4M, oct 2026",
+    "copycat_analogo": "",
+    "borrador_contacto": "",
+    "nombre": "Giraffe Bio",
+    "pais": "Argentina",
+    "etapa": "seed",
+    "sector": "otro",
+    "descripcion": "Reactivos bioquímicos diseñados con IA para recuperar más cobre en minería.",
+    "ai_first": 1,
+    "copycat": 0,
+    "traccion": 0.5,
+    "momento": 0.5,
+    "purpose": 0.5,
+    "evidencia": "Opera en Chile y prepara pruebas industriales."
+   }
+  ],
+  "Colombian fintech Fronte raises pre-seed round led by Rally Cap VC and Bankless Ventures": [
+   {
+    "sitio_web": "https://frontepay.com/en",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "ronda_reciente": "Pre-seed no revelada, oct 2026",
+    "copycat_analogo": "",
+    "borrador_contacto": "Hola equipo de Fronte, leí sobre su pre-seed y la encuesta a hogares que reciben remesas. En Latin Leap invertimos en pre-seed y seed en LATAM hispanohablante; ¿tienen 20 minutos para platicar?",
+    "nombre": "Fronte",
+    "pais": "Colombia",
+    "etapa": "pre_seed",
+    "sector": "fintech",
+    "descripcion": "Plataforma para que familias transnacionales coordinen gastos del hogar y construyan historial crediticio.",
+    "ai_first": 0,
+    "copycat": 0,
+    "traccion": 0,
+    "momento": 1,
+    "purpose": 1,
+    "evidencia": "Pre-seed reciente; validó el problema con una encuesta a casi 1,000 hogares receptores de remesas."
+   }
+  ]
+ }
+}
