@@ -1,0 +1,81 @@
+[
+  {
+    "fecha": "2026-10-23T23:23:50.888457+00:00",
+    "modelo": "gemini-omni-1.1-flash",
+    "articulos_leidos": 198,
+    "articulos_nuevos": 51,
+    "descartes_prefiltro": {
+      "etapa_tardia": 7,
+      "solo_brasil": 4
+    },
+    "evaluados": 0,
+    "errores_evaluacion": 3,
+    "muestra_errores": [
+      {
+        "url": "https://latamlist.com/colombian-fintech-bold-secures-11-3m-credit-facility-from-bbva-spark/",
+        "error": "RuntimeError: Gemini HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0,"
+      },
+      {
+        "url": "https://latamlist.com/argentine-fintech-rebill-raises-5-4m-pre-series-a-round/",
+        "error": "RuntimeError: Gemini HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0,"
+      },
+      {
+        "url": "https://latamlist.com/efy-finance-secures-investment-from-tether-to-expand-across-latin-america/",
+        "error": "RuntimeError: Gemini HTTP 429: [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, "
+      }
+    ],
+    "startups": 0,
+    "pasan_filtros": 0,
+    "calificadas_nuevas": 0,
+    "decisiones_registradas": 0,
+    "por_fuente": {
+      "LatamList": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Startups Latam": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Google News": {
+        "leidos": 148,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Descubre.vc": {
+        "leidos": 30,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      }
+    },
+    "estado_fuentes": {
+      "LatamList": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Startups Latam": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Google News": {
+        "ok": true,
+        "articulos": 148
+      },
+      "Descubre.vc": {
+        "ok": true,
+        "articulos": 30
+      }
+    },
+    "digest": null
+  }
+]
