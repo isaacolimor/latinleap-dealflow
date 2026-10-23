@@ -112,10 +112,23 @@ def _evaluar_github(articulo: dict) -> list[dict]:
         if r.status_code >= 400:
             raise RuntimeError(f"GitHub Models HTTP {r.status_code}: {r.text[:400]}")
         break
-    llamadas = r.json()["choices"][0]["message"].get("tool_calls") or []
-    for ll in llamadas:
+    try:
+        datos = r.json()
+    except ValueError:
+        raise RuntimeError(f"Respuesta no JSON (HTTP {r.status_code}, {r.headers.get('content-type')}): "
+                           f"{r.text[:300]!r}") from None
+    mensaje = datos["choices"][0]["message"]
+    for ll in mensaje.get("tool_calls") or []:
         if ll["function"]["name"] == HERRAMIENTA["name"]:
-            return json.loads(ll["function"]["arguments"]).get("startups", [])
+            args = ll["function"].get("arguments") or ""
+            try:
+                return json.loads(args).get("startups", [])
+            except ValueError:
+                raise RuntimeError(f"Argumentos no JSON: {args[:300]!r}") from None
+    # Algunos modelos responden con JSON en el texto en vez de usar la herramienta
+    texto = (mensaje.get("content") or "").strip().removeprefix("```json").removesuffix("```").strip()
+    if texto.startswith("{"):
+        return json.loads(texto).get("startups", [])
     return []
 
 
