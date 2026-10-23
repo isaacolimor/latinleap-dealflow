@@ -71,8 +71,17 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
         if a["url"] not in {c["url"] for c in candidatos}:
             candidatos.append(a)
 
+    # Alterna entre fuentes (más recientes primero) para que ninguna acapare el tope.
     # Lo que exceda el tope queda sin marcar como visto y se evalúa en la siguiente corrida.
-    candidatos = candidatos[: config.MAX_ARTICULOS_POR_CORRIDA]
+    por_f: dict[str, list] = {}
+    for a in sorted(candidatos, key=lambda x: x["fecha"], reverse=True):
+        por_f.setdefault(a["fuente"], []).append(a)
+    alternados = []
+    while any(por_f.values()):
+        for lista in por_f.values():
+            if lista:
+                alternados.append(lista.pop(0))
+    candidatos = alternados[: config.MAX_ARTICULOS_POR_CORRIDA]
     nuevas_calificadas, errores, muestra_errores = [], 0, []
     for a in candidatos:
         f = por_fuente[a["fuente"]]

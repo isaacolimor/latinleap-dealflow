@@ -100,6 +100,7 @@ def test_gemini_parsea_tool_call(monkeypatch):
     monkeypatch.setattr(requests, "post", _post)
     monkeypatch.setattr(config, "PAUSA_GEMINI_SEG", 0)
     monkeypatch.setattr(extract, "_MODELO_GEMINI", None)
+    monkeypatch.setattr(extract, "_CANDIDATOS_GEMINI", None)
     art = {"fuente": "X", "fecha": "2026-10-20T00:00:00", "titulo": "T", "tags": [], "texto": "..."}
     assert extract.proveedor() == "gemini"
     assert extract.evaluar(art) == [{"nombre": "Fronte", "pais": "Colombia"}]
@@ -116,3 +117,46 @@ def test_sin_llave_explica_que_falta(monkeypatch):
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     with pytest.raises(RuntimeError, match="GEMINI_API_KEY"):
         extract.proveedor()
+
+
+def test_gemini_salta_modelo_sin_cuota(monkeypatch):
+    """Si un modelo responde 429 con 'limit: 0', se prueba el siguiente candidato sin esperar."""
+    import json as _json
+
+    import requests
+
+    from dealflow import extract
+
+    usados = []
+
+    class _R:
+        def __init__(self, code, data=None, text=""):
+            self.status_code, self.headers, self._d, self.text = code, {}, data, text
+
+        def json(self):
+            return self._d
+
+    def _get(url, headers, timeout):
+        return _R(200, {"data": [{"id": "models/gemini-omni-1.1-flash"}, {"id": "models/gemini-3.8-flash"},
+                                 {"id": "models/gemini-3.5-flash"}, {"id": "models/gemini-3.5-flash-lite"}]})
+
+    def _post(url, json, timeout, headers):
+        usados.append(json["model"])
+        if json["model"] == "gemini-3.8-flash":
+            return _R(429, text="Quota exceeded for metric: free_tier_requests, limit: 0")
+        args = {"startups": []}
+        return _R(200, {"choices": [{"message": {"tool_calls": [
+            {"function": {"name": "registrar_startups", "arguments": _json.dumps(args)}}]}}]})
+
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("DEALFLOW_MODEL", raising=False)
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setattr(requests, "get", _get)
+    monkeypatch.setattr(requests, "post", _post)
+    monkeypatch.setattr(config, "PAUSA_GEMINI_SEG", 0)
+    monkeypatch.setattr(extract, "_MODELO_GEMINI", None)
+    monkeypatch.setattr(extract, "_CANDIDATOS_GEMINI", None)
+    art = {"fuente": "X", "fecha": "2026-10-20T00:00:00", "titulo": "T", "tags": [], "texto": "..."}
+    assert extract.evaluar(art) == []
+    assert usados == ["gemini-3.8-flash", "gemini-3.5-flash"]  # omni excluido; 3.8 sin cuota -> 3.5
+    assert extract.modelo() == "gemini-3.5-flash"

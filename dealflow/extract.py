@@ -82,30 +82,55 @@ def proveedor() -> str:
 
 
 _MODELO_GEMINI: str | None = None
+_CANDIDATOS_GEMINI: list[str] | None = None
+_EXCLUIR = ("image", "tts", "audio", "live", "omni", "embedding", "thinking", "robotics", "computer")
 
 
-def _descubrir_modelo_gemini(key: str) -> str:
-    """Elige un modelo Flash disponible para esta llave, en vez de adivinar el nombre exacto."""
+def _preferencia(mid: str) -> tuple:
+    """Ordena candidatos: Flash estándar de versión más alta primero, luego Flash-Lite, luego el resto."""
+    import re
+
+    ver = tuple(int(x) for x in re.findall(r"\d+", mid)[:2]) or (0,)
+    es_lite = "lite" in mid
+    es_preview = any(x in mid for x in ("preview", "exp"))
+    return (es_preview, es_lite, tuple(-v for v in ver))
+
+
+def _descubrir_modelos_gemini(key: str) -> list[str]:
+    """Lista los modelos Flash disponibles para esta llave, ordenados por preferencia."""
     import requests
 
     r = requests.get(config.GEMINI_URL + "models", headers={"Authorization": f"Bearer {key}"}, timeout=30)
     if r.status_code >= 400:
         raise RuntimeError(f"Gemini HTTP {r.status_code} al listar modelos: {r.text[:300]}")
     ids = [m["id"].removeprefix("models/") for m in r.json().get("data", [])]
-    flash = [i for i in ids if "flash" in i and not any(x in i for x in ("lite", "image", "tts", "audio", "live", "exp", "preview"))]
+    flash = [i for i in ids if i.startswith("gemini") and "flash" in i and not any(x in i for x in _EXCLUIR)]
     if not flash:
-        raise RuntimeError(f"No encontré un modelo Flash en Gemini. Disponibles: {ids[:15]}")
-    return sorted(flash, reverse=True)[0]  # el de versión más alta
+        raise RuntimeError(f"No encontré un modelo Flash en Gemini. Disponibles: {ids[:20]}")
+    return sorted(flash, key=_preferencia)
+
+
+def _descartar_modelo_actual() -> bool:
+    """El modelo actual no tiene cuota gratuita: pasa al siguiente. False si ya no quedan."""
+    global _MODELO_GEMINI
+    if _CANDIDATOS_GEMINI:
+        _CANDIDATOS_GEMINI.pop(0)
+    _MODELO_GEMINI = _CANDIDATOS_GEMINI[0] if _CANDIDATOS_GEMINI else None
+    return _MODELO_GEMINI is not None
 
 
 def modelo() -> str:
-    global _MODELO_GEMINI
+    global _MODELO_GEMINI, _CANDIDATOS_GEMINI
     if os.environ.get("DEALFLOW_MODEL"):
         return os.environ["DEALFLOW_MODEL"]
     if proveedor() == "anthropic":
         return config.MODELO
+    if _CANDIDATOS_GEMINI is None:
+        _CANDIDATOS_GEMINI = _descubrir_modelos_gemini(os.environ["GEMINI_API_KEY"])
+        _MODELO_GEMINI = _CANDIDATOS_GEMINI[0]
+        print(f"[info] modelos Gemini candidatos: {_CANDIDATOS_GEMINI}")
     if _MODELO_GEMINI is None:
-        _MODELO_GEMINI = _descubrir_modelo_gemini(os.environ["GEMINI_API_KEY"])
+        raise RuntimeError("Ningún modelo Gemini disponible tiene cuota gratuita para esta llave")
     return _MODELO_GEMINI
 
 
@@ -127,10 +152,19 @@ def _evaluar_gemini(articulo: dict) -> list[dict]:
         "tools": [herramienta],
         "tool_choice": {"type": "function", "function": {"name": HERRAMIENTA["name"]}},
     }
-    for intento in range(4):
+    intento = 0
+    while True:
+        cuerpo["model"] = modelo()
         r = requests.post(config.GEMINI_URL + "chat/completions", json=cuerpo, timeout=120,
                           headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
-        if r.status_code in (429, 503) and intento < 3:  # límite gratuito o saturación: esperar y reintentar
+        sin_cuota = r.status_code == 429 and "limit: 0" in r.text
+        if sin_cuota and not os.environ.get("DEALFLOW_MODEL"):
+            print(f"[info] {cuerpo['model']} no tiene cuota gratuita; probando el siguiente")
+            if _descartar_modelo_actual():
+                continue
+            raise RuntimeError("Ningún modelo Gemini disponible tiene cuota gratuita para esta llave")
+        intento += 1
+        if r.status_code in (429, 503) and intento < 4:  # límite gratuito o saturación: esperar y reintentar
             time.sleep(int(r.headers.get("retry-after", 30 * (intento + 1))))
             continue
         if r.status_code >= 400:
