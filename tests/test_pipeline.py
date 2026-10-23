@@ -66,8 +66,8 @@ def test_prefiltro():
     assert prefiltro(a, set(), lim) == "fuera_de_ventana"
 
 
-def test_github_models_parsea_tool_call(monkeypatch):
-    """Simula la respuesta de GitHub Models (formato OpenAI) y verifica el parseo y la petición."""
+def test_gemini_parsea_tool_call(monkeypatch):
+    """Simula Gemini (formato OpenAI) y verifica petición, descubrimiento de modelo y parseo."""
     import json as _json
 
     import requests
@@ -77,27 +77,42 @@ def test_github_models_parsea_tool_call(monkeypatch):
     enviado = {}
 
     class _R:
-        status_code = 200
-        headers = {}
-
-        def raise_for_status(self):
-            pass
+        def __init__(self, data):
+            self.status_code, self.headers, self._d, self.text = 200, {}, data, ""
 
         def json(self):
-            args = {"startups": [{"nombre": "Fronte", "pais": "Colombia"}]}
-            return {"choices": [{"message": {"tool_calls": [
-                {"function": {"name": "registrar_startups", "arguments": _json.dumps(args)}}]}}]}
+            return self._d
+
+    def _get(url, headers, timeout):
+        return _R({"data": [{"id": "models/gemini-2.5-flash"}, {"id": "models/gemini-3.8-flash"},
+                            {"id": "models/gemini-3.8-flash-lite"}, {"id": "models/gemini-3.8-flash-preview-tts"}]})
 
     def _post(url, json, timeout, headers):
         enviado.update(url=url, body=json, auth=headers["Authorization"])
-        return _R()
+        args = {"startups": [{"nombre": "Fronte", "pais": "Colombia"}]}
+        return _R({"choices": [{"message": {"tool_calls": [
+            {"function": {"name": "registrar_startups", "arguments": _json.dumps(args)}}]}}]})
 
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     monkeypatch.delenv("DEALFLOW_MODEL", raising=False)
-    monkeypatch.setenv("GITHUB_TOKEN", "t")
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setattr(requests, "get", _get)
     monkeypatch.setattr(requests, "post", _post)
+    monkeypatch.setattr(config, "PAUSA_GEMINI_SEG", 0)
+    monkeypatch.setattr(extract, "_MODELO_GEMINI", None)
     art = {"fuente": "X", "fecha": "2026-10-20T00:00:00", "titulo": "T", "tags": [], "texto": "..."}
-    assert extract.proveedor() == "github"
+    assert extract.proveedor() == "gemini"
     assert extract.evaluar(art) == [{"nombre": "Fronte", "pais": "Colombia"}]
-    assert enviado["body"]["model"] == config.MODELO_GITHUB and enviado["auth"] == "Bearer t"
-    assert enviado["body"]["tools"][0]["function"]["parameters"]["required"]
+    assert enviado["body"]["model"] == "gemini-3.8-flash" and enviado["auth"] == "Bearer k"
+    assert enviado["url"].endswith("/openai/chat/completions")
+
+
+def test_sin_llave_explica_que_falta(monkeypatch):
+    import pytest
+
+    from dealflow import extract
+
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    with pytest.raises(RuntimeError, match="GEMINI_API_KEY"):
+        extract.proveedor()

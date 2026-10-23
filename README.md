@@ -18,7 +18,7 @@ La métrica de éxito tiene dos niveles:
 ## Cómo funciona
 
 ```
-Fuentes ──► Prefiltro ──► Extracción con Claude ──► Scorecard en Python ──► Digest + Tablero
+Fuentes ──► Prefiltro ──► Extracción con IA ─────► Scorecard en Python ──► Digest + Tablero
  (RSS,       (sin costo:    (hechos + nivel 0/0.5/1    (filtros eliminatorios,     (issue semanal,
   scraping)   vistos,        por criterio, con          pesos de la tesis,          GitHub Pages)
               Serie B+,      evidencia textual)         umbral)                          │
@@ -37,12 +37,12 @@ Fuentes evaluadas y descartadas: Product Hunt (sus términos prohíben uso comer
 
 ## Decisiones de diseño
 
-- **El modelo no decide el score.** Claude extrae hechos y califica cada criterio en niveles discretos con evidencia; Python aplica filtros y pesos. Así el resultado es auditable y la rúbrica se recalibra sin volver a pagar llamadas al modelo. Es la misma lógica que una política de admisión de crédito.
+- **El modelo no decide el score.** La IA extrae hechos y califica cada criterio en niveles discretos con evidencia; Python aplica filtros y pesos. Así el resultado es auditable y la rúbrica se recalibra sin volver a pagar llamadas al modelo. Es la misma lógica que una política de admisión de crédito.
 - **Filtros antes que pesos.** País, etapa, tecnología, tipo de empresa y portafolio son eliminatorios. Ejemplo real: Dapta (portafolio de Latin Leap) apareció en el feed el 20 oct 2026 con un score bruto alto; sin el filtro de portafolio, la herramienta le habría recomendado al fondo su propia empresa.
 - **Prefiltro gratis.** Notas ya vistas, fuera de ventana, Serie B o más y solo Brasil se descartan antes de llamar al modelo.
 - **Etiqueta "levantando ahora"** separada del score, para distinguir timing de calidad del negocio.
 - **Humano en el circuito.** La herramienta redacta el primer contacto, pero no lo envía. Escribir a founders a nombre del fondo es decisión del equipo.
-- **Todo en GitHub.** Código, ejecución, datos, tablero y digest en un solo lugar, sin servidores ni bases de datos que mantener. Costo: créditos de la API de Anthropic.
+- **Todo en GitHub.** Código, ejecución, datos, tablero y digest en un solo lugar, sin servidores ni bases de datos que mantener. Costo: cero con la capa gratuita de Gemini; con Claude, centavos de dólar por corrida.
 
 La rúbrica completa está en [`rubrica.md`](rubrica.md) y sus parámetros en [`config.py`](config.py).
 
@@ -52,7 +52,7 @@ La rúbrica completa está en [`rubrica.md`](rubrica.md) y sus parámetros en [`
 config.py                 rúbrica, países, sectores, fuentes, portafolio, umbral
 run.py                    orquestador (python run.py | python run.py --demo)
 dealflow/sources.py       recolección por fuente; una fuente caída no tumba la corrida
-dealflow/extract.py       extracción estructurada con Claude (tool use)
+dealflow/extract.py       extracción estructurada con IA (Claude o Gemini, function calling)
 dealflow/scoring.py       filtros, score ponderado y deduplicación
 dealflow/store.py         persistencia en docs/data/*.json
 dealflow/digest.py        issue semanal y lectura de casillas marcadas
@@ -70,12 +70,12 @@ Local:
 ```bash
 pip install -r requirements.txt
 python run.py --demo     # sin red ni API key; evaluaciones simuladas a mano sobre notas reales
-export ANTHROPIC_API_KEY=...
+export GEMINI_API_KEY=...   # o ANTHROPIC_API_KEY
 python run.py            # corrida real
 python -m pytest -q      # pruebas
 ```
 
-Configuración del repositorio: secreto `ANTHROPIC_API_KEY`; opcionalmente la variable `DEALFLOW_MODEL` para cambiar de modelo.
+Configuración del repositorio: un secreto con la llave de IA. `GEMINI_API_KEY` (capa gratuita de Google, se obtiene en aistudio.google.com) o `ANTHROPIC_API_KEY` (Claude, de pago; si existe, tiene prioridad). Opcionalmente, la variable `DEALFLOW_MODEL` fija un modelo específico.
 
 ## Limitaciones conocidas
 

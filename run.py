@@ -41,6 +41,13 @@ def prefiltro(a: dict, vistos: set, limite: datetime) -> str | None:
     return None
 
 
+def _modelo_seguro() -> str:
+    try:
+        return extract.modelo()
+    except Exception:
+        return "sin modelo configurado"
+
+
 def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: dict | None = None) -> dict:
     deals, vistos, corridas = store.cargar()
     decisiones = digest.leer_decisiones(deals)
@@ -97,7 +104,7 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
 
     metricas = {
         "fecha": datetime.now(timezone.utc).isoformat(),
-        "modelo": extract.modelo(),
+        "modelo": _modelo_seguro(),
         "articulos_leidos": len(articulos),
         "articulos_nuevos": len(candidatos) + sum(v for k, v in descartes.items() if k != "ya_visto"),
         "descartes_prefiltro": descartes,

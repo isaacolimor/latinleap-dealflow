@@ -73,25 +73,49 @@ def _texto_articulo(a: dict) -> str:
 
 
 def proveedor() -> str:
-    """Claude si hay ANTHROPIC_API_KEY; si no, GitHub Models (gratis dentro de GitHub Actions)."""
-    return "anthropic" if os.environ.get("ANTHROPIC_API_KEY") else "github"
+    """Claude si hay ANTHROPIC_API_KEY; si no, Gemini (capa gratuita de Google) si hay GEMINI_API_KEY."""
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return "anthropic"
+    if os.environ.get("GEMINI_API_KEY"):
+        return "gemini"
+    raise RuntimeError("No hay llave de IA: agrega el secreto GEMINI_API_KEY (gratis) o ANTHROPIC_API_KEY en GitHub")
+
+
+_MODELO_GEMINI: str | None = None
+
+
+def _descubrir_modelo_gemini(key: str) -> str:
+    """Elige un modelo Flash disponible para esta llave, en vez de adivinar el nombre exacto."""
+    import requests
+
+    r = requests.get(config.GEMINI_URL + "models", headers={"Authorization": f"Bearer {key}"}, timeout=30)
+    if r.status_code >= 400:
+        raise RuntimeError(f"Gemini HTTP {r.status_code} al listar modelos: {r.text[:300]}")
+    ids = [m["id"].removeprefix("models/") for m in r.json().get("data", [])]
+    flash = [i for i in ids if "flash" in i and not any(x in i for x in ("lite", "image", "tts", "audio", "live", "exp", "preview"))]
+    if not flash:
+        raise RuntimeError(f"No encontré un modelo Flash en Gemini. Disponibles: {ids[:15]}")
+    return sorted(flash, reverse=True)[0]  # el de versión más alta
 
 
 def modelo() -> str:
+    global _MODELO_GEMINI
     if os.environ.get("DEALFLOW_MODEL"):
         return os.environ["DEALFLOW_MODEL"]
-    return config.MODELO if proveedor() == "anthropic" else config.MODELO_GITHUB
+    if proveedor() == "anthropic":
+        return config.MODELO
+    if _MODELO_GEMINI is None:
+        _MODELO_GEMINI = _descubrir_modelo_gemini(os.environ["GEMINI_API_KEY"])
+    return _MODELO_GEMINI
 
 
-def _evaluar_github(articulo: dict) -> list[dict]:
-    """GitHub Models: API compatible con OpenAI, autenticada con el GITHUB_TOKEN del workflow."""
+def _evaluar_gemini(articulo: dict) -> list[dict]:
+    """Gemini vía su API compatible con OpenAI (function calling)."""
     import time
 
     import requests
 
-    token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        raise RuntimeError("Sin ANTHROPIC_API_KEY ni GITHUB_TOKEN: no hay modelo disponible")
+    key = os.environ["GEMINI_API_KEY"]
     herramienta = {"type": "function", "function": {
         "name": HERRAMIENTA["name"], "description": HERRAMIENTA["description"],
         "parameters": HERRAMIENTA["input_schema"]}}
@@ -104,28 +128,27 @@ def _evaluar_github(articulo: dict) -> list[dict]:
         "tool_choice": {"type": "function", "function": {"name": HERRAMIENTA["name"]}},
     }
     for intento in range(4):
-        r = requests.post(config.GITHUB_MODELS_URL, json=cuerpo, timeout=90,
-                          headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
-        if r.status_code == 429 and intento < 3:  # límite de uso gratuito: esperar y reintentar
-            time.sleep(int(r.headers.get("retry-after", 20 * (intento + 1))))
+        r = requests.post(config.GEMINI_URL + "chat/completions", json=cuerpo, timeout=120,
+                          headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+        if r.status_code in (429, 503) and intento < 3:  # límite gratuito o saturación: esperar y reintentar
+            time.sleep(int(r.headers.get("retry-after", 30 * (intento + 1))))
             continue
         if r.status_code >= 400:
-            raise RuntimeError(f"GitHub Models HTTP {r.status_code}: {r.text[:400]}")
+            raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:400]}")
         break
+    time.sleep(config.PAUSA_GEMINI_SEG)  # respeta ~10 consultas por minuto de la capa gratuita
     try:
         datos = r.json()
     except ValueError:
-        raise RuntimeError(f"Respuesta no JSON (HTTP {r.status_code}, {r.headers.get('content-type')}): "
-                           f"{r.text[:300]!r}") from None
+        raise RuntimeError(f"Respuesta no JSON (HTTP {r.status_code}): {r.text[:300]!r}") from None
     mensaje = datos["choices"][0]["message"]
     for ll in mensaje.get("tool_calls") or []:
         if ll["function"]["name"] == HERRAMIENTA["name"]:
             args = ll["function"].get("arguments") or ""
             try:
-                return json.loads(args).get("startups", [])
+                return (json.loads(args) if isinstance(args, str) else args).get("startups", [])
             except ValueError:
                 raise RuntimeError(f"Argumentos no JSON: {args[:300]!r}") from None
-    # Algunos modelos responden con JSON en el texto en vez de usar la herramienta
     texto = (mensaje.get("content") or "").strip().removeprefix("```json").removesuffix("```").strip()
     if texto.startswith("{"):
         return json.loads(texto).get("startups", [])
@@ -134,8 +157,8 @@ def _evaluar_github(articulo: dict) -> list[dict]:
 
 def evaluar(articulo: dict, cliente=None) -> list[dict]:
     """Devuelve la lista de startups extraídas de un artículo."""
-    if cliente is None and proveedor() == "github":
-        return _evaluar_github(articulo)
+    if cliente is None and proveedor() == "gemini":
+        return _evaluar_gemini(articulo)
     if cliente is None:
         import anthropic
         cliente = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])

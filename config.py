@@ -86,8 +86,10 @@ DESCUBRE_PAGINAS = 3  # descubre.vc/noticias/0..N-1, 10 notas por página
 # Operación
 # ---------------------------------------------------------------------------
 MODELO = "claude-sonnet-5-5"            # se usa si existe el secreto ANTHROPIC_API_KEY
-MODELO_GITHUB = "openai/gpt-4.1-mini"   # si no: GitHub Models, gratis con el GITHUB_TOKEN del workflow
-GITHUB_MODELS_URL = "https://models.github.ai/inference/chat/completions"
+# Si no hay llave de Anthropic: Gemini (capa gratuita de Google, llave en aistudio.google.com).
+# El modelo Flash se descubre solo al arrancar; se puede fijar con la variable DEALFLOW_MODEL.
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+PAUSA_GEMINI_SEG = 7             # ~10 consultas por minuto en la capa gratuita (verificar en AI Studio)
 MAX_ARTICULOS_POR_CORRIDA = 40   # tope por corrida (cuida el límite diario gratuito y el costo)
 DIAS_VENTANA = 21                # ignora notas más viejas que esto
 
