@@ -10,6 +10,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -83,7 +84,12 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
                 alternados.append(lista.pop(0))
     candidatos = alternados[: config.MAX_ARTICULOS_POR_CORRIDA]
     nuevas_calificadas, errores, muestra_errores = [], 0, []
-    for a in candidatos:
+    inicio, pendientes_por_tiempo = time.monotonic(), 0
+    for i, a in enumerate(candidatos):
+        if time.monotonic() - inicio > config.PRESUPUESTO_MINUTOS * 60:
+            pendientes_por_tiempo = len(candidatos) - i  # quedan sin marcar: se evalúan la próxima vez
+            print(f"[info] presupuesto de tiempo agotado; {pendientes_por_tiempo} notas quedan para la siguiente corrida")
+            break
         f = por_fuente[a["fuente"]]
         try:
             extraidas = extract.evaluar(a, cliente)
@@ -120,6 +126,9 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
         "evaluados": sum(f["evaluados"] for f in por_fuente.values()),
         "errores_evaluacion": errores,
         "muestra_errores": muestra_errores,
+        "pendientes_por_tiempo": pendientes_por_tiempo,
+        "esperas_por_limite": extract.ESPERAS["n"],
+        "minutos_evaluando": round((time.monotonic() - inicio) / 60, 1),
         "startups": sum(f["startups"] for f in por_fuente.values()),
         "pasan_filtros": sum(f["pasan_filtros"] for f in por_fuente.values()),
         "calificadas_nuevas": len(nuevas_calificadas),

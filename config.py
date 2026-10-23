@@ -90,6 +90,7 @@ MODELO = "claude-sonnet-5-5"            # se usa si existe el secreto ANTHROPIC_
 # El modelo Flash se descubre solo al arrancar; se puede fijar con la variable DEALFLOW_MODEL.
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 PAUSA_GEMINI_SEG = 7             # ~10 consultas por minuto en la capa gratuita (verificar en AI Studio)
+PRESUPUESTO_MINUTOS = 18        # deja de evaluar al cumplirse y guarda lo avanzado
 MAX_ARTICULOS_POR_CORRIDA = 40   # tope por corrida (cuida el límite diario gratuito y el costo)
 DIAS_VENTANA = 21                # ignora notas más viejas que esto
 

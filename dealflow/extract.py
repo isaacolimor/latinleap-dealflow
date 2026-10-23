@@ -81,6 +81,7 @@ def proveedor() -> str:
     raise RuntimeError("No hay llave de IA: agrega el secreto GEMINI_API_KEY (gratis) o ANTHROPIC_API_KEY en GitHub")
 
 
+ESPERAS = {"n": 0}  # cuántas veces el proveedor pidió esperar (para diagnóstico)
 _MODELO_GEMINI: str | None = None
 _CANDIDATOS_GEMINI: list[str] | None = None
 _EXCLUIR = ("image", "tts", "audio", "live", "omni", "embedding", "thinking", "robotics", "computer")
@@ -165,7 +166,8 @@ def _evaluar_gemini(articulo: dict) -> list[dict]:
             raise RuntimeError("Ningún modelo Gemini disponible tiene cuota gratuita para esta llave")
         intento += 1
         if r.status_code in (429, 503) and intento < 4:  # límite gratuito o saturación: esperar y reintentar
-            time.sleep(int(r.headers.get("retry-after", 30 * (intento + 1))))
+            ESPERAS["n"] += 1
+            time.sleep(min(int(r.headers.get("retry-after", 15 * intento)), 60))
             continue
         if r.status_code >= 400:
             raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:400]}")
