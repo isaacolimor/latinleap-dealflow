@@ -66,16 +66,23 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
 
     # Lo que exceda el tope queda sin marcar como visto y se evalúa en la siguiente corrida.
     candidatos = candidatos[: config.MAX_ARTICULOS_POR_CORRIDA]
-    nuevas_calificadas, errores = [], 0
+    nuevas_calificadas, errores, muestra_errores = [], 0, []
     for a in candidatos:
-        vistos.add(a["url"])  # se marca aunque falle la evaluación, para no reintentar en bucle
         f = por_fuente[a["fuente"]]
         try:
             extraidas = extract.evaluar(a, cliente)
         except Exception as exc:
+            # No se marca como vista: se reintenta en la siguiente corrida.
             errores += 1
-            print(f"[error] {a['url']}: {type(exc).__name__}: {exc}", file=sys.stderr)
+            msg = f"{type(exc).__name__}: {exc}"[:600]
+            if len(muestra_errores) < 3:
+                muestra_errores.append({"url": a["url"], "error": msg})
+            print(f"[error] {a['url']}: {msg}", file=sys.stderr)
+            if errores >= 3 and f["evaluados"] == 0 and len(muestra_errores) == errores:
+                print("[error] las primeras 3 evaluaciones fallaron; se detiene para no gastar cuota", file=sys.stderr)
+                break
             continue
+        vistos.add(a["url"])
         f["evaluados"] += 1
         for s in extraidas:
             c = scoring.clasificar(s)
@@ -96,6 +103,7 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
         "descartes_prefiltro": descartes,
         "evaluados": sum(f["evaluados"] for f in por_fuente.values()),
         "errores_evaluacion": errores,
+        "muestra_errores": muestra_errores,
         "startups": sum(f["startups"] for f in por_fuente.values()),
         "pasan_filtros": sum(f["pasan_filtros"] for f in por_fuente.values()),
         "calificadas_nuevas": len(nuevas_calificadas),
@@ -113,6 +121,11 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
     corridas.append(metricas)
     store.guardar(deals, vistos, corridas)
     return metricas
+
+
+def salud(m: dict) -> int:
+    """Código de salida: 1 si hubo notas para evaluar y ninguna se pudo evaluar (la corrida se marca en rojo)."""
+    return 1 if m["errores_evaluacion"] and m["evaluados"] == 0 else 0
 
 
 def _modo_demo():
@@ -152,3 +165,4 @@ if __name__ == "__main__":
     else:
         m = corrida()
     print(json.dumps({k: v for k, v in m.items() if k != "por_fuente"}, ensure_ascii=False, indent=2))
+    sys.exit(salud(m))

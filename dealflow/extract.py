@@ -109,7 +109,8 @@ def _evaluar_github(articulo: dict) -> list[dict]:
         if r.status_code == 429 and intento < 3:  # límite de uso gratuito: esperar y reintentar
             time.sleep(int(r.headers.get("retry-after", 20 * (intento + 1))))
             continue
-        r.raise_for_status()
+        if r.status_code >= 400:
+            raise RuntimeError(f"GitHub Models HTTP {r.status_code}: {r.text[:400]}")
         break
     llamadas = r.json()["choices"][0]["message"].get("tool_calls") or []
     for ll in llamadas:

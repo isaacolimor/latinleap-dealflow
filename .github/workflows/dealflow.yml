@@ -40,6 +40,7 @@ jobs:
         run: python run.py
 
       - name: Guardar resultados en el repo
+        if: always()   # guarda también los mensajes de error para diagnosticar
         run: |
           git config user.name "latinleap-dealflow-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

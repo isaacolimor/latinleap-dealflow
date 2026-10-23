@@ -72,14 +72,20 @@ def rss(nombre: str, url: str) -> list[dict]:
 
 
 def google_news() -> list[dict]:
-    articulos = []
+    articulos, fallas = [], []
     for q in config.GOOGLE_NEWS_QUERIES:
         url = config.GOOGLE_NEWS_URL.format(q=urllib.parse.quote_plus(q))
-        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
-        r.raise_for_status()
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+            r.raise_for_status()
+        except requests.RequestException as exc:
+            fallas.append(str(exc)[:120])
+            continue
         for a in _desde_feed("Google News", r.content):
             a["tags"].append(f"query:{q}")
             articulos.append(a)
+    if fallas and not articulos:
+        raise RuntimeError(f"todas las búsquedas fallaron: {fallas[0]}")
     return articulos
 
 
