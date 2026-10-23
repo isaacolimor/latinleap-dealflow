@@ -90,7 +90,7 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
 
     metricas = {
         "fecha": datetime.now(timezone.utc).isoformat(),
-        "modelo": (os.environ.get("DEALFLOW_MODEL") or config.MODELO),
+        "modelo": extract.modelo(),
         "articulos_leidos": len(articulos),
         "articulos_nuevos": len(candidatos) + sum(v for k, v in descartes.items() if k != "ya_visto"),
         "descartes_prefiltro": descartes,

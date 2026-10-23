@@ -72,13 +72,61 @@ def _texto_articulo(a: dict) -> str:
     return f"Fuente: {a['fuente']}\nFecha: {a['fecha'][:10]}\nTítulo: {a['titulo']}\nEtiquetas: {tags}\n\n{a['texto']}"
 
 
+def proveedor() -> str:
+    """Claude si hay ANTHROPIC_API_KEY; si no, GitHub Models (gratis dentro de GitHub Actions)."""
+    return "anthropic" if os.environ.get("ANTHROPIC_API_KEY") else "github"
+
+
+def modelo() -> str:
+    if os.environ.get("DEALFLOW_MODEL"):
+        return os.environ["DEALFLOW_MODEL"]
+    return config.MODELO if proveedor() == "anthropic" else config.MODELO_GITHUB
+
+
+def _evaluar_github(articulo: dict) -> list[dict]:
+    """GitHub Models: API compatible con OpenAI, autenticada con el GITHUB_TOKEN del workflow."""
+    import time
+
+    import requests
+
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError("Sin ANTHROPIC_API_KEY ni GITHUB_TOKEN: no hay modelo disponible")
+    herramienta = {"type": "function", "function": {
+        "name": HERRAMIENTA["name"], "description": HERRAMIENTA["description"],
+        "parameters": HERRAMIENTA["input_schema"]}}
+    cuerpo = {
+        "model": modelo(),
+        "temperature": 0,
+        "messages": [{"role": "system", "content": SISTEMA},
+                     {"role": "user", "content": _texto_articulo(articulo)}],
+        "tools": [herramienta],
+        "tool_choice": {"type": "function", "function": {"name": HERRAMIENTA["name"]}},
+    }
+    for intento in range(4):
+        r = requests.post(config.GITHUB_MODELS_URL, json=cuerpo, timeout=90,
+                          headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+        if r.status_code == 429 and intento < 3:  # límite de uso gratuito: esperar y reintentar
+            time.sleep(int(r.headers.get("retry-after", 20 * (intento + 1))))
+            continue
+        r.raise_for_status()
+        break
+    llamadas = r.json()["choices"][0]["message"].get("tool_calls") or []
+    for ll in llamadas:
+        if ll["function"]["name"] == HERRAMIENTA["name"]:
+            return json.loads(ll["function"]["arguments"]).get("startups", [])
+    return []
+
+
 def evaluar(articulo: dict, cliente=None) -> list[dict]:
     """Devuelve la lista de startups extraídas de un artículo."""
+    if cliente is None and proveedor() == "github":
+        return _evaluar_github(articulo)
     if cliente is None:
         import anthropic
         cliente = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     resp = cliente.messages.create(
-        model=(os.environ.get("DEALFLOW_MODEL") or config.MODELO),
+        model=modelo(),
         max_tokens=2500,
         system=SISTEMA,
         tools=[HERRAMIENTA],

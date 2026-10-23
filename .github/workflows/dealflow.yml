@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write   # guardar resultados en docs/data
   issues: write     # publicar el digest y leer las casillas marcadas
+  models: read      # GitHub Models: IA gratuita con el GITHUB_TOKEN, sin API key
 
 concurrency:
   group: dealflow

@@ -64,3 +64,40 @@ def test_prefiltro():
     assert prefiltro(a, {"u3"}, lim) == "ya_visto"
     a = {"url": "u4", "fecha": (hoy - timedelta(days=40)).isoformat(), "titulo": "x", "tags": []}
     assert prefiltro(a, set(), lim) == "fuera_de_ventana"
+
+
+def test_github_models_parsea_tool_call(monkeypatch):
+    """Simula la respuesta de GitHub Models (formato OpenAI) y verifica el parseo y la petición."""
+    import json as _json
+
+    import requests
+
+    from dealflow import extract
+
+    enviado = {}
+
+    class _R:
+        status_code = 200
+        headers = {}
+
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            args = {"startups": [{"nombre": "Fronte", "pais": "Colombia"}]}
+            return {"choices": [{"message": {"tool_calls": [
+                {"function": {"name": "registrar_startups", "arguments": _json.dumps(args)}}]}}]}
+
+    def _post(url, json, timeout, headers):
+        enviado.update(url=url, body=json, auth=headers["Authorization"])
+        return _R()
+
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("DEALFLOW_MODEL", raising=False)
+    monkeypatch.setenv("GITHUB_TOKEN", "t")
+    monkeypatch.setattr(requests, "post", _post)
+    art = {"fuente": "X", "fecha": "2026-10-20T00:00:00", "titulo": "T", "tags": [], "texto": "..."}
+    assert extract.proveedor() == "github"
+    assert extract.evaluar(art) == [{"nombre": "Fronte", "pais": "Colombia"}]
+    assert enviado["body"]["model"] == config.MODELO_GITHUB and enviado["auth"] == "Bearer t"
+    assert enviado["body"]["tools"][0]["function"]["parameters"]["required"]

@@ -85,8 +85,10 @@ DESCUBRE_PAGINAS = 3  # descubre.vc/noticias/0..N-1, 10 notas por página
 # ---------------------------------------------------------------------------
 # Operación
 # ---------------------------------------------------------------------------
-MODELO = "claude-sonnet-5-5"
-MAX_ARTICULOS_POR_CORRIDA = 80   # tope de costo por corrida
+MODELO = "claude-sonnet-5-5"            # se usa si existe el secreto ANTHROPIC_API_KEY
+MODELO_GITHUB = "openai/gpt-4.1-mini"   # si no: GitHub Models, gratis con el GITHUB_TOKEN del workflow
+GITHUB_MODELS_URL = "https://models.github.ai/inference/chat/completions"
+MAX_ARTICULOS_POR_CORRIDA = 40   # tope por corrida (cuida el límite diario gratuito y el costo)
 DIAS_VENTANA = 21                # ignora notas más viejas que esto
 
 # Prefiltro barato antes de gastar una llamada al modelo
