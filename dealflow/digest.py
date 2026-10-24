@@ -63,7 +63,10 @@ def _bloque(d: dict) -> str:
         f"  - Análogo: {analogo}\n"
         f"  - Evidencia: {d['evidencia']}\n"
         f"  - Fuente: [{fuente['fuente']}]({fuente['url']}) ({fuente['fecha'][:10]})\n\n"
-        f"  > {d['borrador_contacto']}\n\n"
+        + (f"  **Memo para la primera llamada**\n  - Tesis: {d['memo']['tesis']}\n"
+           f"  - Riesgos: " + " · ".join(d['memo']['riesgos']) + "\n"
+           f"  - Preguntas: " + " · ".join(d['memo']['preguntas']) + "\n\n" if d.get("memo") else "")
+        + f"  > {d['borrador_contacto']}\n\n"
         f"  </details>\n"
     )
 

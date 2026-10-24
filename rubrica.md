@@ -17,7 +17,7 @@ Fuente de los criterios: tesis publicada en latinleap.vc (secciones Latam Early 
 
 | Criterio | Peso | 0 puntos | Puntaje máximo |
 |---|---|---|---|
-| Sector prioritario | 20 | Fuera de la lista | Fintech, healthtech, HR tech, insurtech, cleantech, mobility, next-gen retail, foodtech, AI SaaS |
+| Sector prioritario | 20 | Fuera de la lista | Fintech, healthtech, HR tech, insurtech, cleantech, mobility, next-gen retail, foodtech, AI SaaS, agtech, proptech |
 | Copycat probado | 20 | Modelo sin análogo validado | Mismo modelo de negocio que una empresa extranjera exitosa (0.5 si solo comparte sector o problema) |
 | Señales de tracción / PMF | 20 | Solo idea | Usuarios, ingresos o clientes reportados |
 | Geografía | 15 | Otro país hispano (5 pts) | México, Colombia o Chile: 15 · Perú, Ecuador, Argentina, Uruguay: 10 |
@@ -36,3 +36,4 @@ Nombre · país · sector · etapa · score · desglose por criterio · análogo
 - Pesos definidos por Isaac: el fondo prioriza qué tan bueno es el negocio (sector, copycat, tracción) sobre dónde y cuándo.
 - Argentina y Uruguay incluidos: el reto pide LATAM hispanohablante; la web marca la Alianza del Pacífico como núcleo, por eso MX/CO/CL puntúan más alto.
 - v0.3 (23 oct 2026), tras la primera corrida real: filtro de empresas adquiridas y criterio copycat más estricto (6 de 7 calificadas habían recibido el máximo).
+- v0.4 (24 oct 2026), tras el backtest con 7 empresas del portafolio: se agregan agtech y proptech (están en latinleap.vc/verticals). Detección de inversiones reales: 86% → 100%. Ojo: el 100% ya no es fuera de muestra.

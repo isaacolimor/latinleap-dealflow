@@ -158,7 +158,7 @@ def modelo() -> str:
     return _MODELO_GEMINI
 
 
-def _evaluar_gemini(contenido: str) -> list[dict]:
+def _llamar_gemini(contenido: str, herramienta_def: dict = HERRAMIENTA, sistema: str = SISTEMA) -> dict:
     """Gemini vía su API compatible con OpenAI (function calling)."""
     import time
 
@@ -166,15 +166,15 @@ def _evaluar_gemini(contenido: str) -> list[dict]:
 
     key = os.environ["GEMINI_API_KEY"]
     herramienta = {"type": "function", "function": {
-        "name": HERRAMIENTA["name"], "description": HERRAMIENTA["description"],
-        "parameters": HERRAMIENTA["input_schema"]}}
+        "name": herramienta_def["name"], "description": herramienta_def["description"],
+        "parameters": herramienta_def["input_schema"]}}
     cuerpo = {
         "model": modelo(),
         "temperature": 0,
-        "messages": [{"role": "system", "content": SISTEMA},
+        "messages": [{"role": "system", "content": sistema},
                      {"role": "user", "content": contenido}],
         "tools": [herramienta],
-        "tool_choice": {"type": "function", "function": {"name": HERRAMIENTA["name"]}},
+        "tool_choice": {"type": "function", "function": {"name": herramienta_def["name"]}},
     }
     intento = 0
     while True:
@@ -204,23 +204,19 @@ def _evaluar_gemini(contenido: str) -> list[dict]:
         raise RuntimeError(f"Respuesta no JSON (HTTP {r.status_code}): {r.text[:300]!r}") from None
     mensaje = datos["choices"][0]["message"]
     for ll in mensaje.get("tool_calls") or []:
-        if ll["function"]["name"] == HERRAMIENTA["name"]:
+        if ll["function"]["name"] == herramienta_def["name"]:
             args = ll["function"].get("arguments") or ""
             try:
-                return (json.loads(args) if isinstance(args, str) else args).get("startups", [])
+                return json.loads(args) if isinstance(args, str) else args
             except ValueError:
                 raise RuntimeError(f"Argumentos no JSON: {args[:300]!r}") from None
     texto = (mensaje.get("content") or "").strip().removeprefix("```json").removesuffix("```").strip()
     if texto.startswith("{"):
-        return json.loads(texto).get("startups", [])
-    return []
+        return json.loads(texto)
+    return {}
 
 
-def evaluar_lote(articulos: list[dict], cliente=None) -> list[list[dict]]:
-    """Evalúa varias notas en una sola consulta. Devuelve, por cada nota, su lista de startups."""
-    contenido = _texto_lote(articulos)
-    if cliente is None and proveedor() == "gemini":
-        return _repartir(_evaluar_gemini(contenido), len(articulos))
+def _llamar_anthropic(contenido: str, herramienta_def: dict, sistema: str, cliente=None) -> dict:
     if cliente is None:
         import anthropic
         cliente = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -228,20 +224,76 @@ def evaluar_lote(articulos: list[dict], cliente=None) -> list[list[dict]]:
     else:  # cliente inyectado (modo demo o pruebas): no requiere llave
         nombre_modelo = os.environ.get("DEALFLOW_MODEL") or config.MODELO
     resp = cliente.messages.create(
-        model=nombre_modelo,
-        max_tokens=8000,
-        system=SISTEMA,
-        tools=[HERRAMIENTA],
-        tool_choice={"type": "tool", "name": HERRAMIENTA["name"]},
+        model=nombre_modelo, max_tokens=8000, system=sistema, tools=[herramienta_def],
+        tool_choice={"type": "tool", "name": herramienta_def["name"]},
         messages=[{"role": "user", "content": contenido}],
     )
     for bloque in resp.content:
         if getattr(bloque, "type", "") == "tool_use":
-            datos = bloque.input
-            if isinstance(datos, str):
-                datos = json.loads(datos)
-            return _repartir(datos.get("startups", []), len(articulos))
-    return [[] for _ in articulos]
+            return json.loads(bloque.input) if isinstance(bloque.input, str) else bloque.input
+    return {}
+
+
+def _llamar(contenido: str, herramienta_def: dict, sistema: str, cliente=None) -> dict:
+    if cliente is None and proveedor() == "gemini":
+        return _llamar_gemini(contenido, herramienta_def, sistema)
+    return _llamar_anthropic(contenido, herramienta_def, sistema, cliente)
+
+
+def evaluar_lote(articulos: list[dict], cliente=None) -> list[list[dict]]:
+    """Evalúa varias notas en una sola consulta. Devuelve, por cada nota, su lista de startups."""
+    datos = _llamar(_texto_lote(articulos), HERRAMIENTA, SISTEMA, cliente)
+    return _repartir(datos.get("startups", []), len(articulos))
+
+
+HERRAMIENTA_MEMO = {
+    "name": "registrar_memos",
+    "description": "Registra un mini memo de primera llamada por cada startup.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "memos": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "nombre": {"type": "string", "description": "Nombre exacto de la startup tal como se recibió."},
+                        "tesis": {"type": "string", "description": "Por qué podría encajar en Latin Leap, en una frase."},
+                        "riesgos": {"type": "array", "items": {"type": "string"}, "description": "Los 3 riesgos principales, una frase cada uno."},
+                        "preguntas": {"type": "array", "items": {"type": "string"}, "description": "3 preguntas concretas para la primera llamada con el founder, que despejen esos riesgos."},
+                    },
+                    "required": ["nombre", "tesis", "riesgos", "preguntas"],
+                },
+            }
+        },
+        "required": ["memos"],
+    },
+}
+
+SISTEMA_MEMO = """Eres Associate de Latin Leap (VC pre-seed y seed en LATAM hispanohablante; tesis AI-first,
+purpose-driven, modelos probados en otros mercados). Para cada startup recibida, prepara un mini memo para la
+primera llamada: tesis en una frase, 3 riesgos y 3 preguntas específicas que un comité haría (unit economics,
+tamaño de mercado, defensibilidad, equipo, regulación, uso de fondos). Basa todo en los datos recibidos; si falta
+información, conviértelo en pregunta en lugar de suponer. Escribe en español, sin halagos."""
+
+
+def generar_memos(deals: list[dict], cliente=None) -> dict[str, dict]:
+    """Una sola consulta para todas las startups calificadas de la corrida. Devuelve {nombre: memo}."""
+    if not deals:
+        return {}
+    fichas = "\n\n".join(
+        f"### {d['nombre']}\nPaís: {d.get('pais')} · Sector: {d.get('sector')} · Etapa: {d.get('etapa')} · "
+        f"Ronda: {d.get('ronda_reciente') or 'sin dato'}\nQué hace: {d.get('descripcion')}\n"
+        f"Evidencia: {d.get('evidencia')}\nAnálogo: {d.get('copycat_analogo') or 'sin análogo claro'}\n"
+        f"Score: {d.get('score')} ({d.get('desglose')})" for d in deals)
+    datos = _llamar(fichas, HERRAMIENTA_MEMO, SISTEMA_MEMO, cliente)
+    por_nombre = {d["nombre"]: d for d in deals}
+    salida = {}
+    for m in datos.get("memos", []):
+        if m.get("nombre") in por_nombre:
+            salida[m["nombre"]] = {"tesis": m.get("tesis", ""), "riesgos": m.get("riesgos", [])[:3],
+                                   "preguntas": m.get("preguntas", [])[:3]}
+    return salida
 
 
 def evaluar(articulo: dict, cliente=None) -> list[dict]:

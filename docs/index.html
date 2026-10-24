@@ -104,6 +104,16 @@ a{color:var(--accent)}
     </table></div>
   </section>
 
+  <section id="bt-sec" hidden>
+    <h2>Backtest: ¿habría detectado sus inversiones reales?</h2>
+    <div class="tiles" id="bt-tiles"></div>
+    <div class="card scroll" style="margin-top:12px"><table>
+      <thead><tr><th>Empresa del portafolio</th><th>Ronda evaluada</th><th class="hide-sm">Sector</th><th class="num">Score</th><th>Resultado</th></tr></thead>
+      <tbody id="bt"></tbody>
+    </table>
+    <p class="meta" id="bt-nota"></p></div>
+  </section>
+
   <section>
     <h2>Por fuente</h2>
     <div class="card scroll"><table>
@@ -190,7 +200,10 @@ function detalle(d){
       <p><b>Ronda:</b> ${esc(d.ronda_reciente || "sin dato")}<br><b>Análogo:</b> ${esc(d.copycat_analogo || "sin análogo claro")}<br>
       <b>Evidencia:</b> ${esc(d.evidencia)}<br><b>Fuentes:</b> ${men}${d.sitio_web ? `<br><b>Web:</b> <a href="${safeUrl(d.sitio_web)}" target="_blank" rel="noopener">${esc(d.sitio_web)}</a>` : ""}</p></div>
     <div>${bd}</div>
-    <div><b>Borrador de primer contacto</b><blockquote>${esc(d.borrador_contacto || "No aplica.")}</blockquote></div>
+    <div><b>Borrador de primer contacto</b><blockquote>${esc(d.borrador_contacto || "No aplica.")}</blockquote>
+      ${d.memo ? `<p style="margin-top:12px"><b>Memo para la primera llamada</b><br>${esc(d.memo.tesis)}</p>
+        <p><b>Riesgos</b></p><ul>${d.memo.riesgos.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+        <p><b>Preguntas</b></p><ol>${d.memo.preguntas.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>` : ""}</div>
   </div></td></tr>`;
 }
 
@@ -217,6 +230,20 @@ function tabla(){
   });
 }
 
+function backtest(bt){
+  document.getElementById("bt-sec").hidden = false;
+  const h = (bt.historial||[]).slice(-1)[0];
+  document.getElementById("bt-tiles").innerHTML = `
+    <div class="tile"><div class="lbl">Inversiones reales detectadas</div><div class="val">${bt.califican} de ${bt.filas.length}</div>
+      <div class="prog"><i style="width:${bt.recall*100}%"></i></div><div class="sub">${Math.round(bt.recall*100)}% habría superado el umbral de ${bt.umbral}${h ? ` · antes del ajuste: ${Math.round(h.recall_antes*100)}%` : ""}</div></div>
+    <div class="tile"><div class="lbl">Score promedio</div><div class="val">${bt.score_promedio}</div><div class="sub">Sobre 100, con la rúbrica actual</div></div>`;
+  document.getElementById("bt").innerHTML = bt.filas.map(f => `<tr><td><a href="${safeUrl(f.url)}" target="_blank" rel="noopener"><b>${esc(f.empresa)}</b></a></td>
+    <td>${esc(f.ronda)}</td><td class="hide-sm">${esc(f.sector||"")}</td><td class="num"><b>${f.score}</b></td>
+    <td><span class="chip ${f.califica ? "c-calificada" : "c-bajo_umbral"}">${f.califica ? "Detectada" : "No detectada"}</span></td></tr>`).join("");
+  document.getElementById("bt-nota").textContent = "Cómo leerlo: solo hay casos positivos (empresas donde el fondo sí invirtió), así que mide si la herramienta las habría propuesto, no si todo lo que propone es bueno. "
+    + (h ? `Ajuste aplicado tras el primer backtest: ${h.cambio}. ` : "") + `Modelo: ${bt.modelo}.`;
+}
+
 document.querySelectorAll("#filters button").forEach(b => b.addEventListener("click", () => {
   const f = b.dataset.f; filtros.has(f) ? filtros.delete(f) : filtros.add(f);
   b.setAttribute("aria-pressed", filtros.has(f)); tabla();
@@ -224,7 +251,8 @@ document.querySelectorAll("#filters button").forEach(b => b.addEventListener("cl
 document.getElementById("q").addEventListener("input", tabla);
 
 (async () => {
-  const [deals, corridas] = await Promise.all([cargar("data/deals.json", []), cargar("data/corridas.json", [])]);
+  const [deals, corridas, bt] = await Promise.all([cargar("data/deals.json", []), cargar("data/corridas.json", []), cargar("data/backtest.json", null)]);
+  if (bt && bt.filas) backtest(bt);
   DEALS = deals;
   const ult = corridas[corridas.length-1];
   document.getElementById("meta").innerHTML = ult

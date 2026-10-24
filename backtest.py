@@ -90,7 +90,7 @@ def correr() -> dict:
                           "califica": score >= config.UMBRAL_DIGEST, "filtros_fallidos": fallas,
                           "desglose": c["desglose"], "etapa": c.get("etapa"), "pais": c.get("pais"),
                           "sector": c.get("sector"), "copycat_analogo": c.get("copycat_analogo", ""),
-                          "evidencia": c.get("evidencia", "")})
+                          "evidencia": c.get("evidencia", ""), "campos": elegida})
 
     evaluadas = [f for f in filas if f["detectada"]]
     resumen = {

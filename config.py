@@ -38,12 +38,13 @@ GEO_OTRO_HISPANO = {
 PUNTOS_GEO = {**GEO_NUCLEO, **GEO_SECUNDARIO, **GEO_OTRO_HISPANO}
 PAISES_VALIDOS = list(PUNTOS_GEO.keys())
 
-# Sectores prioritarios según latinleap.vc (Latam Early Stage / Areas of Expertise)
+# Sectores prioritarios según latinleap.vc (Latam Early Stage, Areas of Expertise y Verticals)
 SECTORES_PRIORITARIOS = [
     "fintech", "healthtech", "hrtech", "insurtech", "cleantech", "mobility",
     "next-gen retail", "foodtech", "ai saas",
+    "agtech", "proptech",  # en latinleap.vc/verticals; agregados tras el backtest (Agrizon, portafolio, había quedado fuera)
 ]
-SECTORES_OTROS = ["agtech", "proptech", "edtech", "logistica", "legaltech", "otro"]
+SECTORES_OTROS = ["edtech", "logistica", "legaltech", "otro"]
 SECTORES = SECTORES_PRIORITARIOS + SECTORES_OTROS
 
 # Etapas que pasan el filtro (sweet spot "Pre- to Post-Seed")

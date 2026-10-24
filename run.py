@@ -123,6 +123,19 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
                     nuevas_calificadas.append(d)
                     f["calificadas_nuevas"] += 1
 
+    # Mini memo de primera llamada: una sola consulta extra para todas las calificadas nuevas.
+    # Incluye calificadas previas que aún no tienen memo (máx. 10 por corrida).
+    sin_memo = [d for d in deals.values() if d.get("estado") == "calificada" and not d.get("memo")][:10]
+    memos_ok = 0
+    try:
+        for nombre, memo in extract.generar_memos(sin_memo, cliente).items():
+            for d in sin_memo:
+                if d["nombre"] == nombre:
+                    d["memo"] = memo
+                    memos_ok += 1
+    except Exception as exc:
+        print(f"[error] no se pudieron generar memos: {type(exc).__name__}: {exc}"[:400], file=sys.stderr)
+
     metricas = {
         "fecha": datetime.now(timezone.utc).isoformat(),
         "modelo": _modelo_seguro(),
@@ -134,7 +147,8 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
         "muestra_errores": muestra_errores,
         "pendientes_por_tiempo": pendientes_por_tiempo,
         "esperas_por_limite": extract.ESPERAS["n"],
-        "consultas_ia": lotes_ok + lotes_fallidos,
+        "consultas_ia": lotes_ok + lotes_fallidos + (1 if sin_memo else 0),
+        "memos_generados": memos_ok,
         "minutos_evaluando": round((time.monotonic() - inicio) / 60, 1),
         "startups": sum(f["startups"] for f in por_fuente.values()),
         "pasan_filtros": sum(f["pasan_filtros"] for f in por_fuente.values()),
@@ -178,6 +192,12 @@ def _modo_demo():
         class messages:  # noqa: N801
             @staticmethod
             def create(**kw):
+                if kw["tools"][0]["name"] == "registrar_memos":
+                    nombres = [b.split("\n")[0] for b in kw["messages"][0]["content"].split("### ")[1:]]
+                    return _Resp({"memos": [{"nombre": n, "tesis": f"(demo) {n}: tesis simulada.",
+                                             "riesgos": ["(demo) riesgo 1", "(demo) riesgo 2", "(demo) riesgo 3"],
+                                             "preguntas": ["(demo) pregunta 1", "(demo) pregunta 2", "(demo) pregunta 3"]}
+                                            for n in nombres]})
                 notas = kw["messages"][0]["content"].split("### Nota ")[1:]
                 startups = []
                 for i, nota in enumerate(notas):
