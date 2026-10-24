@@ -31,6 +31,9 @@ jobs:
       - name: Pruebas de la rúbrica
         run: python -m pytest -q
 
+      - name: Recalcular puntajes con la rúbrica vigente (sin IA)
+        run: python rescore.py
+
       - name: Correr pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
