@@ -160,3 +160,11 @@ def test_gemini_salta_modelo_sin_cuota(monkeypatch):
     assert extract.evaluar(art) == []
     assert usados == ["gemini-3.8-flash", "gemini-3.5-flash"]  # omni excluido; 3.8 sin cuota -> 3.5
     assert extract.modelo() == "gemini-3.5-flash"
+
+
+def test_lote_reparte_por_nota():
+    from dealflow import extract
+
+    sts = [{"nota": 1, "nombre": "B"}, {"nota": 0, "nombre": "A"}, {"nota": 7, "nombre": "fuera"}, {"nombre": "sin"}]
+    assert extract._repartir(sts, 2) == [[{"nombre": "A"}], [{"nombre": "B"}]]
+    assert extract._repartir([{"nombre": "X"}], 1) == [[{"nombre": "X"}]]  # una sola nota: no requiere índice

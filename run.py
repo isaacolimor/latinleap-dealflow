@@ -84,38 +84,44 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
                 alternados.append(lista.pop(0))
     candidatos = alternados[: config.MAX_ARTICULOS_POR_CORRIDA]
     nuevas_calificadas, errores, muestra_errores = [], 0, []
+    lotes_fallidos, lotes_ok = 0, 0
     inicio, pendientes_por_tiempo = time.monotonic(), 0
-    for i, a in enumerate(candidatos):
+    n = config.NOTAS_POR_CONSULTA
+    lotes = [candidatos[i:i + n] for i in range(0, len(candidatos), n)]
+    for j, lote in enumerate(lotes):
         if time.monotonic() - inicio > config.PRESUPUESTO_MINUTOS * 60:
-            pendientes_por_tiempo = len(candidatos) - i  # quedan sin marcar: se evalúan la próxima vez
+            pendientes_por_tiempo = sum(len(x) for x in lotes[j:])  # sin marcar: se evalúan la próxima vez
             print(f"[info] presupuesto de tiempo agotado; {pendientes_por_tiempo} notas quedan para la siguiente corrida")
             break
-        f = por_fuente[a["fuente"]]
         try:
-            extraidas = extract.evaluar(a, cliente)
+            resultados = extract.evaluar_lote(lote, cliente)
         except Exception as exc:
-            # No se marca como vista: se reintenta en la siguiente corrida.
-            errores += 1
+            # No se marcan como vistas: se reintentan en la siguiente corrida.
+            errores += len(lote)
+            lotes_fallidos += 1
             msg = f"{type(exc).__name__}: {exc}"[:600]
             if len(muestra_errores) < 3:
-                muestra_errores.append({"url": a["url"], "error": msg})
-            print(f"[error] {a['url']}: {msg}", file=sys.stderr)
-            if errores >= 3 and f["evaluados"] == 0 and len(muestra_errores) == errores:
-                print("[error] las primeras 3 evaluaciones fallaron; se detiene para no gastar cuota", file=sys.stderr)
+                muestra_errores.append({"url": lote[0]["url"], "error": msg})
+            print(f"[error] lote {j + 1}/{len(lotes)}: {msg}", file=sys.stderr)
+            if lotes_fallidos >= 2 and lotes_ok == 0:
+                print("[error] los primeros 2 lotes fallaron; se detiene para no gastar cuota", file=sys.stderr)
                 break
             continue
-        vistos.add(a["url"])
-        f["evaluados"] += 1
-        for s in extraidas:
-            c = scoring.clasificar(s)
-            f["startups"] += 1
-            f["pasan_filtros"] += int(not c["filtros_fallidos"])
-            estado_previo = deals.get(scoring.normalizar(c.get("nombre", "")), {}).get("estado")
-            key, _ = store.integrar(deals, c, a)
-            d = deals.get(key)
-            if d and d["estado"] == "calificada" and estado_previo != "calificada" and not d.get("issue"):
-                nuevas_calificadas.append(d)
-                f["calificadas_nuevas"] += 1
+        lotes_ok += 1
+        for a, extraidas in zip(lote, resultados):
+            vistos.add(a["url"])
+            f = por_fuente[a["fuente"]]
+            f["evaluados"] += 1
+            for s in extraidas:
+                c = scoring.clasificar(s)
+                f["startups"] += 1
+                f["pasan_filtros"] += int(not c["filtros_fallidos"])
+                estado_previo = deals.get(scoring.normalizar(c.get("nombre", "")), {}).get("estado")
+                key, _ = store.integrar(deals, c, a)
+                d = deals.get(key)
+                if d and d["estado"] == "calificada" and estado_previo != "calificada" and not d.get("issue"):
+                    nuevas_calificadas.append(d)
+                    f["calificadas_nuevas"] += 1
 
     metricas = {
         "fecha": datetime.now(timezone.utc).isoformat(),
@@ -128,6 +134,7 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
         "muestra_errores": muestra_errores,
         "pendientes_por_tiempo": pendientes_por_tiempo,
         "esperas_por_limite": extract.ESPERAS["n"],
+        "consultas_ia": lotes_ok + lotes_fallidos,
         "minutos_evaluando": round((time.monotonic() - inicio) / 60, 1),
         "startups": sum(f["startups"] for f in por_fuente.values()),
         "pasan_filtros": sum(f["pasan_filtros"] for f in por_fuente.values()),
@@ -171,8 +178,12 @@ def _modo_demo():
         class messages:  # noqa: N801
             @staticmethod
             def create(**kw):
-                titulo = kw["messages"][0]["content"].split("Título: ")[1].split("\n")[0]
-                return _Resp({"startups": fixtures["respuestas"].get(titulo, [])})
+                notas = kw["messages"][0]["content"].split("### Nota ")[1:]
+                startups = []
+                for i, nota in enumerate(notas):
+                    titulo = nota.split("Título: ")[1].split("\n")[0]
+                    startups += [{**st, "nota": i} for st in fixtures["respuestas"].get(titulo, [])]
+                return _Resp({"startups": startups})
 
     ahora = datetime.now(timezone.utc).isoformat()
     for a in fixtures["articulos"]:

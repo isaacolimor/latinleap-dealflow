@@ -1,4 +1,6 @@
-"""Extracción y evaluación con Claude.
+"""Extracción y evaluación con IA (Claude o Gemini).
+
+Las notas se mandan en lotes (varias por consulta) para cuidar la cuota gratuita.
 
 Diseño clave: el modelo NO calcula el score. Solo extrae hechos y califica cada
 criterio en niveles discretos (0, 0.5, 1) con su evidencia textual. El score lo
@@ -16,16 +18,17 @@ NIVEL = {"type": "number", "enum": [0, 0.5, 1]}
 
 HERRAMIENTA = {
     "name": "registrar_startups",
-    "description": "Registra cada startup mencionada en el artículo con hechos extraídos y calificación por criterio.",
+    "description": "Registra cada startup protagonista de las notas, con hechos extraídos y calificación por criterio.",
     "input_schema": {
         "type": "object",
         "properties": {
             "startups": {
                 "type": "array",
-                "description": "Una entrada por empresa mencionada como protagonista. Lista vacía si el artículo no trata de ninguna startup.",
+                "description": "Una entrada por startup protagonista. Las notas sin startups no generan entradas.",
                 "items": {
                     "type": "object",
                     "properties": {
+                        "nota": {"type": "integer", "description": "Número de la nota de donde sale esta startup (el N de '### Nota N')."},
                         "nombre": {"type": "string"},
                         "sitio_web": {"type": "string", "description": "URL si aparece en el texto; si no, cadena vacía. No inventes."},
                         "pais": {"type": "string", "description": "País de sede u operación principal. 'Desconocido' si no se dice. 'Brasil', 'Estados Unidos', etc. si no es hispano."},
@@ -44,7 +47,7 @@ HERRAMIENTA = {
                         "evidencia": {"type": "string", "description": "Máximo 2 frases: los datos del artículo que justifican las calificaciones."},
                         "borrador_contacto": {"type": "string", "description": "Correo breve (máx. 90 palabras) en español de un Associate de Latin Leap al founder: menciona algo específico de la nota y propone una llamada de 20 min. Sin halagos genéricos."},
                     },
-                    "required": ["nombre", "pais", "es_startup", "es_tecnologia", "etapa", "sector", "descripcion",
+                    "required": ["nota", "nombre", "pais", "es_startup", "es_tecnologia", "etapa", "sector", "descripcion",
                                  "ai_first", "copycat", "traccion", "momento", "purpose", "evidencia", "borrador_contacto"],
                 },
             }
@@ -58,7 +61,8 @@ en LATAM hispanohablante (núcleo: México, Colombia, Chile). Tesis publicada: e
 purpose-driven, con señales de product-market fit, preferentemente modelos ya probados en EE.UU., Europa o el
 Sudeste Asiático ("proven copycat models"). Sectores prioritarios: {', '.join(config.SECTORES_PRIORITARIOS)}.
 
-Lees una nota de prensa y registras SOLO las startups protagonistas de la nota.
+Recibes varias notas de prensa numeradas. Por cada nota, registras SOLO las startups protagonistas,
+indicando en "nota" el número de la nota de donde salen. Evalúa cada nota de forma independiente.
 Reglas estrictas:
 - Usa únicamente lo que dice el texto. Si un dato no aparece, usa 'Desconocido', 'desconocida', cadena vacía o 0.
 - No inventes sitios web, cifras ni análogos. Un análogo copycat debe ser una empresa extranjera real y conocida.
@@ -67,9 +71,27 @@ Reglas estrictas:
 """
 
 
-def _texto_articulo(a: dict) -> str:
+def _texto_articulo(a: dict, max_chars: int = 2500) -> str:
     tags = ", ".join(t for t in a.get("tags", []) if t)
-    return f"Fuente: {a['fuente']}\nFecha: {a['fecha'][:10]}\nTítulo: {a['titulo']}\nEtiquetas: {tags}\n\n{a['texto']}"
+    return (f"Fuente: {a['fuente']}\nFecha: {a['fecha'][:10]}\nTítulo: {a['titulo']}\nEtiquetas: {tags}\n\n"
+            f"{a['texto'][:max_chars]}")
+
+
+def _texto_lote(articulos: list[dict]) -> str:
+    return "\n\n".join(f"### Nota {i}\n{_texto_articulo(a)}" for i, a in enumerate(articulos))
+
+
+def _repartir(startups: list[dict], n: int) -> list[list[dict]]:
+    """Asigna cada startup a su nota según el campo 'nota'."""
+    salida: list[list[dict]] = [[] for _ in range(n)]
+    for st in startups:
+        try:
+            i = int(st.pop("nota", 0 if n == 1 else -1))
+        except (TypeError, ValueError):
+            i = -1
+        if 0 <= i < n:
+            salida[i].append(st)
+    return salida
 
 
 def proveedor() -> str:
@@ -135,7 +157,7 @@ def modelo() -> str:
     return _MODELO_GEMINI
 
 
-def _evaluar_gemini(articulo: dict) -> list[dict]:
+def _evaluar_gemini(contenido: str) -> list[dict]:
     """Gemini vía su API compatible con OpenAI (function calling)."""
     import time
 
@@ -149,30 +171,32 @@ def _evaluar_gemini(articulo: dict) -> list[dict]:
         "model": modelo(),
         "temperature": 0,
         "messages": [{"role": "system", "content": SISTEMA},
-                     {"role": "user", "content": _texto_articulo(articulo)}],
+                     {"role": "user", "content": contenido}],
         "tools": [herramienta],
         "tool_choice": {"type": "function", "function": {"name": HERRAMIENTA["name"]}},
     }
     intento = 0
     while True:
         cuerpo["model"] = modelo()
-        r = requests.post(config.GEMINI_URL + "chat/completions", json=cuerpo, timeout=120,
+        r = requests.post(config.GEMINI_URL + "chat/completions", json=cuerpo, timeout=300,
                           headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
-        sin_cuota = r.status_code == 429 and "limit: 0" in r.text
-        if sin_cuota and not os.environ.get("DEALFLOW_MODEL"):
-            print(f"[info] {cuerpo['model']} no tiene cuota gratuita; probando el siguiente")
+        # Cuota agotada para este modelo (límite 0, o la cuota diaria): cada modelo tiene la suya, se pasa al siguiente.
+        agotada = r.status_code == 429 and ("limit: 0" in r.text or "PerDay" in r.text or (intento >= 2))
+        if agotada and not os.environ.get("DEALFLOW_MODEL"):
+            print(f"[info] {cuerpo['model']} sin cuota disponible; probando el siguiente modelo")
             if _descartar_modelo_actual():
+                intento = 0
                 continue
-            raise RuntimeError("Ningún modelo Gemini disponible tiene cuota gratuita para esta llave")
+            raise RuntimeError("Todos los modelos Gemini agotaron su cuota gratuita por hoy: " + r.text[:300])
         intento += 1
-        if r.status_code in (429, 503) and intento < 4:  # límite gratuito o saturación: esperar y reintentar
+        if r.status_code in (429, 503) and intento < 4:  # límite por minuto o saturación: esperar y reintentar
             ESPERAS["n"] += 1
-            time.sleep(min(int(r.headers.get("retry-after", 15 * intento)), 60))
+            time.sleep(min(int(r.headers.get("retry-after", 20 * intento)), 60))
             continue
         if r.status_code >= 400:
             raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:400]}")
         break
-    time.sleep(config.PAUSA_GEMINI_SEG)  # respeta ~10 consultas por minuto de la capa gratuita
+    time.sleep(config.PAUSA_GEMINI_SEG)  # respeta el límite de consultas por minuto de la capa gratuita
     try:
         datos = r.json()
     except ValueError:
@@ -191,10 +215,11 @@ def _evaluar_gemini(articulo: dict) -> list[dict]:
     return []
 
 
-def evaluar(articulo: dict, cliente=None) -> list[dict]:
-    """Devuelve la lista de startups extraídas de un artículo."""
+def evaluar_lote(articulos: list[dict], cliente=None) -> list[list[dict]]:
+    """Evalúa varias notas en una sola consulta. Devuelve, por cada nota, su lista de startups."""
+    contenido = _texto_lote(articulos)
     if cliente is None and proveedor() == "gemini":
-        return _evaluar_gemini(articulo)
+        return _repartir(_evaluar_gemini(contenido), len(articulos))
     if cliente is None:
         import anthropic
         cliente = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
@@ -203,16 +228,21 @@ def evaluar(articulo: dict, cliente=None) -> list[dict]:
         nombre_modelo = os.environ.get("DEALFLOW_MODEL") or config.MODELO
     resp = cliente.messages.create(
         model=nombre_modelo,
-        max_tokens=2500,
+        max_tokens=8000,
         system=SISTEMA,
         tools=[HERRAMIENTA],
         tool_choice={"type": "tool", "name": HERRAMIENTA["name"]},
-        messages=[{"role": "user", "content": _texto_articulo(articulo)}],
+        messages=[{"role": "user", "content": contenido}],
     )
     for bloque in resp.content:
         if getattr(bloque, "type", "") == "tool_use":
             datos = bloque.input
             if isinstance(datos, str):
                 datos = json.loads(datos)
-            return datos.get("startups", [])
-    return []
+            return _repartir(datos.get("startups", []), len(articulos))
+    return [[] for _ in articulos]
+
+
+def evaluar(articulo: dict, cliente=None) -> list[dict]:
+    """Atajo para una sola nota."""
+    return evaluar_lote([articulo], cliente)[0]
