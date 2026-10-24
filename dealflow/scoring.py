@@ -21,6 +21,21 @@ def normalizar(nombre: str) -> str:
 
 
 PORTAFOLIO_NORM = {normalizar(p) for p in config.PORTAFOLIO}
+
+
+def _cargar_verificaciones() -> dict:
+    import json
+    from pathlib import Path
+
+    p = Path(__file__).resolve().parent.parent / "verificaciones.json"
+    if not p.exists():
+        return {}
+    datos = json.loads(p.read_text(encoding="utf-8"))
+    return {normalizar(k): v for k, v in datos.items() if not k.startswith("_")}
+
+
+VERIFICACIONES = _cargar_verificaciones()
+_CAMPOS_VERIFICABLES = ("etapa", "pais", "adquirida", "es_startup", "ronda_reciente", "sector")
 _PAISES_NORM = {normalizar(p): p for p in config.PAISES_VALIDOS}
 
 
@@ -65,12 +80,18 @@ def calcular_score(s: dict) -> tuple[float, dict]:
 
 def clasificar(s: dict) -> dict:
     """Agrega filtros, score, desglose y estado a una startup extraída."""
+    v = VERIFICACIONES.get(normalizar(s.get("nombre", "")))
+    if v:  # la revisión humana con fuente manda sobre lo que extrajo la IA
+        s = {**s, **{k: v[k] for k in _CAMPOS_VERIFICABLES if k in v},
+             "verificacion": {k: v[k] for k in ("fecha", "fuente", "nota") if k in v}}
     fallas = evaluar_filtros(s)
     score, desglose = calcular_score(s)
     if "ya_en_portafolio" in fallas:
         estado = "portafolio"
     elif fallas:
         estado = "descartada"
+    elif score >= config.UMBRAL_DIGEST and s.get("etapa") == "desconocida":
+        estado = "por_verificar"  # buen puntaje, pero sin etapa no se puede saber si es pre-seed/seed
     elif score >= config.UMBRAL_DIGEST:
         estado = "calificada"
     else:

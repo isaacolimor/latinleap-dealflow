@@ -49,6 +49,7 @@ tr.deal:hover td{background:var(--accent-soft)}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;white-space:nowrap}
 .c-calificada{background:var(--good-soft);color:var(--good)}
 .c-bajo_umbral{background:var(--warn-soft);color:var(--warn)}
+.c-por_verificar{background:var(--warn-soft);color:var(--warn)}
 .c-descartada{background:var(--bad-soft);color:var(--bad)}
 .c-portafolio{background:var(--accent-soft);color:var(--accent)}
 .hot{color:var(--hot);font-size:12px;font-weight:600}
@@ -94,6 +95,7 @@ a{color:var(--accent)}
     <h2>Oportunidades</h2>
     <div class="filters" id="filters">
       <button data-f="calificada" aria-pressed="true">Calificadas</button>
+      <button data-f="por_verificar" aria-pressed="false">Por verificar</button>
       <button data-f="bajo_umbral" aria-pressed="false">Bajo umbral</button>
       <button data-f="descartada" aria-pressed="false">Descartadas</button>
       <button data-f="portafolio" aria-pressed="false">Ya en portafolio</button>
@@ -142,7 +144,7 @@ a{color:var(--accent)}
 const PESOS = {sector:20, copycat:20, traccion:20, geografia:15, ai_first:15, momento:5, purpose:5};
 const NOMBRES = {sector:"Sector", copycat:"Copycat", traccion:"Tracción", geografia:"Geografía", ai_first:"IA", momento:"Momento", purpose:"Purpose"};
 const ETAPAS = {idea_sin_ronda:"Sin ronda", pre_seed:"Pre-seed", seed:"Seed", post_seed_pre_a:"Post-seed / pre-A", serie_a_o_mas:"Serie A o más", desconocida:"Sin dato"};
-const ESTADOS = {calificada:"Calificada", bajo_umbral:"Bajo umbral", descartada:"Descartada", portafolio:"Portafolio"};
+const ESTADOS = {por_verificar:"Por verificar", calificada:"Calificada", bajo_umbral:"Bajo umbral", descartada:"Descartada", portafolio:"Portafolio"};
 const META = 6, UMBRAL = 60;
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? esc(u) : "#";
@@ -195,9 +197,10 @@ function fuentes(corridas){
 function detalle(d){
   const bd = Object.keys(PESOS).map(k => `<div class="bd"><span>${NOMBRES[k]}</span><span class="b"><i style="width:${(d.desglose?.[k]||0)/PESOS[k]*100}%"></i></span><span>${d.desglose?.[k]??0}/${PESOS[k]}</span></div>`).join("");
   const men = (d.menciones||[]).map(m => `<a href="${safeUrl(m.url)}" target="_blank" rel="noopener">${esc(m.fuente)}</a> (${fmtFecha(m.fecha)})`).join(", ");
+  const verif = d.verificacion ? `<p><b>Revisión humana (${esc(d.verificacion.fecha||"")}):</b> ${esc(d.verificacion.nota||"")} <a href="${safeUrl(d.verificacion.fuente)}" target="_blank" rel="noopener">fuente</a></p>` : "";
   const fallas = (d.filtros_fallidos||[]).length ? `<p><b>Filtros fallidos:</b> ${esc(d.filtros_fallidos.join(", "))} (score sin filtros: ${d.score_bruto})</p>` : "";
   return `<tr class="detail"><td colspan="6"><div class="grid">
-    <div><p><b>${esc(d.descripcion)}</b></p>${fallas}
+    <div><p><b>${esc(d.descripcion)}</b></p>${verif}${fallas}
       <p><b>Ronda:</b> ${esc(d.ronda_reciente || "sin dato")}<br><b>Análogo:</b> ${esc(d.copycat_analogo || "sin análogo claro")}<br>
       <b>Evidencia:</b> ${esc(d.evidencia)}<br><b>Fuentes:</b> ${men}${d.sitio_web ? `<br><b>Web:</b> <a href="${safeUrl(d.sitio_web)}" target="_blank" rel="noopener">${esc(d.sitio_web)}</a>` : ""}</p></div>
     <div>${bd}</div>
@@ -217,7 +220,7 @@ function tabla(){
   tb.innerHTML = filas.length ? filas.map((d,i) => `<tr class="deal" data-i="${i}" tabindex="0" aria-expanded="false">
       <td><b>${esc(d.nombre)}</b> ${d.levantando_ahora ? '<span class="hot">· levantando ahora</span>' : ""} ${d.etapa==="desconocida" && d.estado==="calificada" ? '<span class="warn-t">· etapa por confirmar</span>' : ""} ${d.decision_equipo==="aceptada" ? '<span class="ok">· aceptada</span>' : ""}</td>
       <td>${esc(d.pais)}</td><td class="hide-sm">${esc(d.sector)}</td><td class="hide-sm">${ETAPAS[d.etapa]||esc(d.etapa)}</td>
-      <td class="num"><b>${d.estado==="calificada"||d.estado==="bajo_umbral" ? d.score : "–"}</b></td>
+      <td class="num"><b>${["calificada","bajo_umbral","por_verificar"].includes(d.estado) ? d.score : "–"}</b></td>
       <td><span class="chip c-${esc(d.estado)}">${ESTADOS[d.estado]||esc(d.estado)}</span></td></tr>`).join("")
     : `<tr><td colspan="6" class="empty">No hay oportunidades con este filtro.</td></tr>`;
   tb.querySelectorAll("tr.deal").forEach(tr => {

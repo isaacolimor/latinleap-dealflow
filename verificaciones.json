@@ -1,0 +1,49 @@
+{
+  "_nota": "Correcciones de revisión humana con fuente. scoring.clasificar las aplica siempre, por encima de lo que extrajo la IA. Llave: nombre de la startup.",
+  "Valida": {
+    "adquirida": true,
+    "fecha": "2026-10-23",
+    "fuente": "https://www.descubre.vc/noticia/unico-adquiere-a-la-argentina-valida-para-expandir-su-negocio-de-identidad-digital-2026-10-22",
+    "nota": "Adquirida por Unico."
+  },
+  "Magnar": {
+    "etapa": "serie_a_o_mas",
+    "ronda_reciente": "Serie A US$8M, sep 2026",
+    "fecha": "2026-10-24",
+    "fuente": "https://startupslatam.com/multiplicar-por-diez-la-apuesta-del-cofundador-y-ceo-de-magnar/",
+    "nota": "Anunció Serie A de US$8M liderada por 6 Degrees Capital."
+  },
+  "Yuno": {
+    "etapa": "serie_a_o_mas",
+    "ronda_reciente": "Serie A US$25M (valuación US$150M), mar 2024",
+    "fecha": "2026-10-24",
+    "fuente": "https://latamlist.com/colombian-fintech-yuno-raises-25m-in-series-a-round/",
+    "nota": "Serie A liderada por DST Global con a16z y Tiger Global."
+  },
+  "GoTrendier": {
+    "etapa": "serie_a_o_mas",
+    "fecha": "2026-10-24",
+    "fuente": "https://www.merca2.es/2024/10/01/squirrel-media-gotrendier-1975669/",
+    "nota": "Squirrel Media compró 10.5% por €4.4M en 2024 (valuación implícita de unos €42M)."
+  },
+  "Reuse": {
+    "etapa": "serie_a_o_mas",
+    "ronda_reciente": "US$21M, oct 2026",
+    "fecha": "2026-10-24",
+    "fuente": "https://ecosistemastartup.com/reuse-levanta-us-21m-con-at-one-ventures-de-san-francisco/",
+    "nota": "Ronda de US$21M liderada por At One Ventures; factura unos US$5M al mes."
+  },
+  "Bioelements": {
+    "etapa": "serie_a_o_mas",
+    "fecha": "2026-10-24",
+    "fuente": "https://www.df.cl/df-mas/punto-de-partida/los-planes-de-expansion-de-la-startup-chilena-bioelements-tras-recibir",
+    "nota": "Empresa chilena con ventas de unos US$50M anuales ya en 2021.",
+    "pais": "Chile"
+  },
+  "EFY Finance": {
+    "pais": "Colombia",
+    "fecha": "2026-10-24",
+    "fuente": "https://www.latamfintech.co/articles/efy-finance-fintech-colombiana-de-activos-digitales-recibe-inversion-de-tether-para-acelerar-el-uso-institucional-de-stablecoins-en-latam",
+    "nota": "Sede en Barranquilla, Colombia (LatamList la reportó como panameña)."
+  }
+}

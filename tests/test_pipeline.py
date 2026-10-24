@@ -194,3 +194,15 @@ def test_backtest_ignora_filtro_de_portafolio(monkeypatch, tmp_path):
     assert r["con_nota_legible"] == len(casos)
     assert all(f["califica"] and "ya_en_portafolio" not in f["filtros_fallidos"] for f in r["filas"])
     assert r["recall"] == 1.0
+
+
+def test_etapa_desconocida_queda_por_verificar():
+    c = scoring.clasificar(_s(nombre="Sinetapa", etapa="desconocida"))
+    assert c["estado"] == "por_verificar" and c["score"] == 100
+
+
+def test_verificacion_humana_manda(monkeypatch):
+    monkeypatch.setattr(scoring, "VERIFICACIONES", {"magnar": {"etapa": "serie_a_o_mas", "fuente": "u", "nota": "n"}})
+    c = scoring.clasificar(_s(nombre="Magnar", etapa="desconocida"))
+    assert c["estado"] == "descartada" and "etapa_tardia" in c["filtros_fallidos"]
+    assert c["verificacion"]["fuente"] == "u"
