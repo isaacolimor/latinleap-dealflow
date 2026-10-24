@@ -6,6 +6,21 @@ Herramienta automatizada que origina oportunidades pre-seed y seed en LATAM hisp
 - **Digests semanales:** pestaña *Issues* de este repositorio, etiqueta `dealflow-digest`
 - **Ejecuciones:** pestaña *Actions*, workflow "Dealflow semanal"
 
+## Resultados al 24 de octubre de 2026
+
+Dos corridas automáticas completas y una revisión humana:
+
+| Etapa | Resultado |
+|---|---|
+| Notas nuevas evaluadas con IA | 80 (en 11 consultas, 8 notas por consulta) |
+| Empresas detectadas | 55; 20 pasan los filtros eliminatorios |
+| Propuestas por la herramienta (score ≥ 60) | 10 |
+| **Verificadas a mano como oportunidades reales** | **4: Neopausia, EFY Finance, Giraffe Bio y Rebill** |
+| Backtest con 7 inversiones reales de Latin Leap | 7 de 7 detectadas (6 de 7 antes de agregar agtech y proptech) |
+| Costo mensual | 0 (capa gratuita de Gemini y GitHub) |
+
+La verificación encontró que 5 de las propuestas ya habían superado la etapa seed y una había sido adquirida. Todas tenían algo en común: la nota no decía su etapa. Desde entonces, una etapa desconocida queda **por verificar** en lugar de calificar, y cada corrección humana vive en [`verificaciones.json`](verificaciones.json) con su fuente. Las fuentes de rondas (LatamList, Startups Latam) dieron las 4 reales; las de noticias generales (Google News, Descubre.vc), ninguna.
+
 ## El problema y la meta
 
 El baseline es de 60 deals al mes; la meta es al menos 6 adicionales (+10%). Para un fondo de USD 20M con equipo chico, el cuello de botella no es leer más notas sino encontrar las pocas que encajan con la tesis antes que otros. Por eso la herramienta optimiza calidad: de cada 10 notas de ecosistema, la mayoría son Serie B en adelante, empresas brasileñas, corporativos o adquisiciones.
@@ -53,7 +68,10 @@ config.py                 rúbrica, países, sectores, fuentes, portafolio, umbr
 run.py                    orquestador (python run.py | python run.py --demo)
 dealflow/sources.py       recolección por fuente; una fuente caída no tumba la corrida
 dealflow/extract.py       extracción estructurada con IA (Claude o Gemini, function calling)
-dealflow/scoring.py       filtros, score ponderado y deduplicación
+dealflow/scoring.py       filtros, score ponderado, deduplicación y verificaciones humanas
+verificaciones.json       correcciones humanas con fuente (mandan sobre la IA)
+backtest.py               prueba de la rúbrica con empresas del portafolio
+rescore.py                recalcula puntajes con la rúbrica vigente sin usar IA
 dealflow/store.py         persistencia en docs/data/*.json
 dealflow/digest.py        issue semanal y lectura de casillas marcadas
 docs/index.html           tablero (GitHub Pages)
@@ -83,3 +101,5 @@ Configuración del repositorio: un secreto con la llave de IA. `GEMINI_API_KEY` 
 - Las noticias de rondas llegan tarde para pre-seed; la siguiente fuente a agregar son las listas de cohortes de aceleradoras (Start-Up Chile, Corfo y similares) y un formulario de aplicación para founders con el mismo scoring.
 - Google News solo entrega título y medio, así que esas evaluaciones tienen menos evidencia.
 - El scraping de Descubre.vc depende de su HTML actual.
+- Cuando una nota no dice la etapa, la IA puede confundir empresas grandes con jóvenes; por eso esos casos quedan "por verificar" y requieren revisión humana.
+- Para medir lo que es realmente adicional hace falta cruzar contra el pipeline del fondo (su CRM); hoy solo se deduplica contra el portafolio y lo ya visto.
