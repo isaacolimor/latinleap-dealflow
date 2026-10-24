@@ -173,8 +173,10 @@ function tiles(deals, corridas){
 function funnel(corridas){
   const s = k => corridas.reduce((a,c) => a + (c[k]||0), 0);
   const pasos = [["Notas leídas","articulos_leidos"],["Notas nuevas","articulos_nuevos"],["Evaluadas con IA","evaluados"],
-                 ["Startups detectadas","startups"],["Pasan filtros","pasan_filtros"],["Calificadas (≥"+UMBRAL+")","calificadas_nuevas"]];
-  const vals = pasos.map(([l,k]) => [l, s(k)]), max = Math.max(1, ...vals.map(v=>v[1]));
+                 ["Startups detectadas","startups"],["Pasan filtros","pasan_filtros"],["Propuestas (≥"+UMBRAL+")","calificadas_nuevas"]];
+  const vals = pasos.map(([l,k]) => [l, s(k)]);
+  vals.push(["Verificadas como reales", DEALS.filter(d => d.estado==="calificada").length]);
+  const max = Math.max(1, ...vals.map(v=>v[1]));
   document.getElementById("funnel").innerHTML = corridas.length ? vals.map(([l,v],i) => {
     const prev = i ? vals[i-1][1] : null, conv = prev ? ` · ${Math.round(v/prev*100)}% del paso anterior` : "";
     return `<div class="row" title="${esc(l)}: ${v}${conv}"><div class="lbl">${esc(l)}</div><div class="bar"><i style="width:${v/max*100}%"></i></div><div class="n">${v}</div></div>`;
