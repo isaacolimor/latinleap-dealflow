@@ -68,5 +68,75 @@
       }
     },
     "digest": "https://github.com/isaacolimor/latinleap-dealflow/issues/1"
+  },
+  {
+    "fecha": "2026-10-24T15:12:52.189580+00:00",
+    "modelo": "gemini-3.8-flash",
+    "articulos_leidos": 175,
+    "articulos_nuevos": 40,
+    "descartes_prefiltro": {
+      "ya_visto": 50
+    },
+    "evaluados": 40,
+    "errores_evaluacion": 0,
+    "muestra_errores": [],
+    "pendientes_por_tiempo": 0,
+    "esperas_por_limite": 3,
+    "consultas_ia": 6,
+    "memos_generados": 9,
+    "minutos_evaluando": 22.2,
+    "startups": 21,
+    "pasan_filtros": 9,
+    "calificadas_nuevas": 3,
+    "decisiones_registradas": 0,
+    "por_fuente": {
+      "LatamList": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Startups Latam": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Google News": {
+        "leidos": 125,
+        "evaluados": 25,
+        "startups": 11,
+        "pasan_filtros": 6,
+        "calificadas_nuevas": 0
+      },
+      "Descubre.vc": {
+        "leidos": 30,
+        "evaluados": 15,
+        "startups": 10,
+        "pasan_filtros": 3,
+        "calificadas_nuevas": 3
+      }
+    },
+    "estado_fuentes": {
+      "LatamList": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Startups Latam": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Google News": {
+        "ok": true,
+        "articulos": 125
+      },
+      "Descubre.vc": {
+        "ok": true,
+        "articulos": 30
+      }
+    },
+    "digest": "https://github.com/isaacolimor/latinleap-dealflow/issues/2"
   }
 ]

@@ -1,5 +1,65 @@
 [
   {
+    "nombre": "GoTrendier",
+    "borrador_contacto": "Hola equipo de GoTrendier, impresionante ver su expansión hacia categorías como hogar y entretenimiento en México y Colombia, sumando 30.000 productos nuevos en una semana y alcanzando 14M de usuarios. En Latin Leap seguimos con atención el comercio circular en la región. Me encantaría conectar en una llamada de 20 minutos para conocer sus próximos pasos. ¿Tendrían disponibilidad la próxima semana?",
+    "sitio_web": "",
+    "traccion": 1,
+    "es_tecnologia": true,
+    "sector": "next-gen retail",
+    "ronda_reciente": "",
+    "copycat_analogo": "Vinted (Europa): marketplace de compra y venta de ropa y artículos de segunda mano entre particulares (C2C).",
+    "copycat": 1,
+    "pais": "México",
+    "etapa": "desconocida",
+    "adquirida": false,
+    "ai_first": 0,
+    "es_startup": true,
+    "evidencia": "Cuenta con 14 millones de usuarios y más de 30,000 productos publicados en la primera semana de expansión hacia hogar y entretenimiento.",
+    "momento": 0,
+    "descripcion": "Marketplace de compra y venta de artículos de segunda mano como moda, hogar y entretenimiento en México y Colombia.",
+    "purpose": 1,
+    "filtros_fallidos": [],
+    "score": 80.0,
+    "score_bruto": 80.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 5.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "gotrendier",
+    "primera_vez": "2026-10-24T14:59:25.263455+00:00",
+    "ultima_vez": "2026-10-24T14:59:25.263455+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/gotrendier-se-expande-m-s-all-de-la-moda-hacia-hogar-y-entretenimiento-en-latam-2026-10-20",
+        "titulo": "🚀 🏠 GoTrendier se expande más allá de la moda hacia hogar y entretenimiento en LATAM",
+        "fecha": "2026-10-20T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 2,
+    "memo": {
+      "tesis": "Replica con escala comprobada el modelo de Vinted en LATAM, impulsando una fuerte agenda purpose-driven basada en consumo responsable y moda circular.",
+      "riesgos": [
+        "Madurez operativa avanzada (14 millones de usuarios) que apunta a etapas de Growth/Serie B+, fuera del alcance pre-seed/seed.",
+        "Complejidad logística y costos de intermediación C2C que presionan los márgenes netos en México y Colombia.",
+        "Déficit de enfoque nativo AI-first en su plataforma transaccional de comercio electrónico."
+      ],
+      "preguntas": [
+        "¿Cuál es la etapa de financiamiento actual y qué viabilidad existe de ingresar con un ticket pre-seed o seed?",
+        "¿Cuáles son los unit economics consolidados (take rate neto, margen de contribución post-envío, CAC y frecuencia de recompra)?",
+        "¿Cómo aplican actualmente inteligencia artificial para resolver los cuellos de botella de catalogación, fijación de precios y logística C2C?"
+      ]
+    }
+  },
+  {
     "evidencia": "Levantó US$5.4M en Pre-Series A. Cuatriplicó sus comercios activos y triplicó el volumen mensual de pagos entre enero y septiembre de 2026.",
     "pais": "Argentina",
     "momento": 0.5,
@@ -33,7 +93,7 @@
     "levantando_ahora": false,
     "key": "rebill",
     "primera_vez": "2026-10-24T00:07:34.195305+00:00",
-    "ultima_vez": "2026-10-24T00:08:48.754870+00:00",
+    "ultima_vez": "2026-10-24T15:04:14.222088+00:00",
     "menciones": [
       {
         "fuente": "LatamList",
@@ -46,10 +106,35 @@
         "url": "https://startupslatam.com/fintech-argentina-cierra-ronda-de-us54-millones-con-guillermo-rauch-y-ejecutivos-de-spacex/",
         "titulo": "Fintech argentina cierra ronda de US$5,4 millones con Guillermo Rauch y ejecutivos de SpaceX",
         "fecha": "2026-10-21T13:30:00+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcUlKV016NW51alk0bDMyY3BCbENoWlQ4LVlYVXdob0dNWDEyMUl0NWNRcGZnS254TXBRQU1UdWU3YlloU0NiN3pyUXVYNkxnZzV1SlJtc1hwSkpTNHFYNmtYNzJwU3BpQnpDbUdCU3hKc0tjNm52czFYOGwycWVJa3JGTGR0V2VS?oc=5",
+        "titulo": "Rebill, fintech argentina, levanta US$5,4M pre-Serie A - El Ecosistema Startup",
+        "fecha": "2026-10-22T15:48:43+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZ3dZZ3M4VFY4NFlJRC1sekJ2SVV0UG9DbUluT0s4TDZrQW1QbkZsa3dBZGlGSmxwY3djTWpfMlVfeWdLU1pQM3I2U3Z1WWh4elB2U1lUaU1QMnVWcERyVjloSS1SZ0dtdHUxNktyVlFuRzFXSlRpZTVCb3kxdGpVc0pTV1A1UThtLXFr?oc=5",
+        "titulo": "Rebill, la fintech argentina de pagos, levanta US$5,4M - El Ecosistema Startup",
+        "fecha": "2026-10-21T18:51:38+00:00"
       }
     ],
     "decision_equipo": null,
-    "issue": 1
+    "issue": 1,
+    "memo": {
+      "tesis": "Replica exitosamente el modelo probado de Stripe en LATAM hispanohablante, resolviendo la barrera de incorporación local para cobros recurrentes y multimoneda.",
+      "riesgos": [
+        "Desalineación de etapa y valuación frente al mandato pre-seed/seed de Latin Leap tras haber captado US$5.4M.",
+        "Ausencia evidente de componentes AI-first o impacto purpose-driven dentro de su propuesta de infraestructura.",
+        "Riesgo regulatorio y de cumplimiento fiscal/cambiario transfronterizo al liquidar operaciones multimoneda en múltiples jurisdicciones."
+      ],
+      "preguntas": [
+        "¿Cuáles son sus márgenes netos de procesamiento (take rate vs. costos de adquirencia local) y el LTV/CAC por segmento de comercio?",
+        "Habiendo cerrado recientemente una Pre-Series A de US$5.4M, ¿cuál es el uso específico de fondos y qué espacio real existe para un ticket seed/early stage de Latin Leap?",
+        "¿Cómo mitigan la exposición regulatoria, fiscal y cambiaria en cada mercado latinoamericano al procesar pagos sin que el comercio cuente con entidad local?"
+      ]
+    }
   },
   {
     "etapa": "desconocida",
@@ -95,7 +180,20 @@
       }
     ],
     "decision_equipo": null,
-    "issue": 1
+    "issue": 1,
+    "memo": {
+      "tesis": "Encaja en la tesis purpose-driven de economía circular replicando en la región el modelo probado de Back Market para tecnología reacondicionada.",
+      "riesgos": [
+        "Modelo de negocio con alta intensidad de inventario y márgenes brutos típicamente comprimidos frente a marketplaces puros.",
+        "Nula diferenciación tecnológica o componente AI-first evidente en el proceso de reacondicionamiento y venta.",
+        "Incertidumbre sobre la etapa de financiamiento actual y la estructura de capitalización de la empresa."
+      ],
+      "preguntas": [
+        "¿Cuáles son sus unit economics actuales (margen bruto por dispositivo reacondicionado, costo de garantía/devolución y CAC) en Chile y Perú?",
+        "¿Qué etapa y monto de financiamiento están levantando actualmente, y cuál es el desglose previsto para el uso de fondos?",
+        "¿Cuál es su estrategia de abastecimiento de inventario para escalar sin comprometer el capital de trabajo ni depender del retail tradicional?"
+      ]
+    }
   },
   {
     "purpose": 0.5,
@@ -141,7 +239,20 @@
       }
     ],
     "decision_equipo": null,
-    "issue": 1
+    "issue": 1,
+    "memo": {
+      "tesis": "Se posiciona en etapa Seed adaptando modelos probados de infraestructura cripto/stablecoins (tipo Bridge o MoonPay) para abaratar pagos transfronterizos en la región.",
+      "riesgos": [
+        "Exposición a riesgos regulatorios y de compliance severos asociados a activos digitales y transferencias transfronterizas multi-país.",
+        "Falta de un desarrollo AI-first nativo en su infraestructura de pagos y custodia.",
+        "Posible dependencia estratégica o restricciones de gobernanza derivadas del vínculo con Tether como inversor líder."
+      ],
+      "preguntas": [
+        "¿Cuál es el volumen mensual procesado (TPV), el take rate transaccional efectivo y la retención neta de ingresos de las 25,000 cuentas activas?",
+        "¿Bajo qué licencias financieras y esquema de cumplimiento operan la custodia de activos y pagos transfronterizos en las 17 jurisdicciones?",
+        "¿Cuánto capital captaron en la ronda Seed liderada por Tether y qué hitos operativos cubrirán los fondos levantados?"
+      ]
+    }
   },
   {
     "ai_first": 0.5,
@@ -177,17 +288,36 @@
     "levantando_ahora": true,
     "key": "giraffebio",
     "primera_vez": "2026-10-24T00:10:00.461324+00:00",
-    "ultima_vez": "2026-10-24T00:10:00.461324+00:00",
+    "ultima_vez": "2026-10-24T15:04:14.222196+00:00",
     "menciones": [
       {
         "fuente": "LatamList",
         "url": "https://latamlist.com/argentine-giraffe-bio-raises-6-4m-seed-round-to-improve-copper-recovery/",
         "titulo": "Argentine Giraffe Bio raises $6.4M seed round to improve copper recovery",
         "fecha": "2026-10-15T19:23:21+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQczFrbzB4djVZMk54MGNSOHRpRWVpRTNYOWdIV0ppanYxTUFyU2JyTU5BaXk2S08xQVNENXpwYzZuNU1QSmR6cHA4aXRCbmpVLUtOeDhScmtJMEdvZHhxNXoycHdabkNpMHBWUGQwTldOdWZ1MTJzblc3bTJzNzJKcldiSmU4ZVAy?oc=5",
+        "titulo": "Giraffe Bio, startup argentina, levanta US$6,4M con IA - El Ecosistema Startup",
+        "fecha": "2026-10-21T18:12:50+00:00"
       }
     ],
     "decision_equipo": null,
-    "issue": 1
+    "issue": 1,
+    "memo": {
+      "tesis": "Combina de forma integral un núcleo AI-first con impacto purpose-driven tangible en sostenibilidad minera, validado por un modelo bioindustrial especializado.",
+      "riesgos": [
+        "Ciclos de venta B2B corporativos excesivamente largos y sujetos a validaciones técnicas rigurosas por parte de la gran minería.",
+        "Monto de ronda Seed (US$6.4M) que puede implicar una valuación por encima del rango de entrada habitual de Latin Leap.",
+        "Barreras de adopción frente a soluciones químicas convencionales suministradas por grandes multinacionales consolidadas."
+      ],
+      "preguntas": [
+        "¿Qué propiedad intelectual respalda sus reactivos bioquímicos y cómo interviene específicamente el modelo de IA en el ciclo de formulación?",
+        "¿Cuáles son los unit economics de los contratos vigentes con mineras en Chile (ACV, margen bruto del producto y ciclo promedio de venta)?",
+        "Habiendo asegurado US$6.4M de Orion Industrial Ventures, ¿cuál es el plan de hitos tecnológicos y qué participación puede tener Latin Leap?"
+      ]
+    }
   },
   {
     "copycat_analogo": "Harvey: plataforma de inteligencia artificial generativa aplicada al sector legal y análisis de documentos.",
@@ -239,7 +369,20 @@
     ],
     "decision_equipo": null,
     "issue": 1,
-    "ultima_vez": "2026-10-24T00:12:23.912635+00:00"
+    "ultima_vez": "2026-10-24T00:12:23.912635+00:00",
+    "memo": {
+      "tesis": "Oportunidad directa en la tesis AI-first al tropicalizar para LATAM hispanohablante el modelo probado de Harvey en automatización legal e institucional.",
+      "riesgos": [
+        "Tracción comercial temprana concentrada en el ámbito académico sin evidencia de monetización B2B escalable.",
+        "Riesgo de comoditización tecnológica acelerada ante la proliferación global de soluciones legaltech basadas en IA.",
+        "Falta de información sobre la etapa formal de levantamiento, el equipo fundador y la estructura de capital."
+      ],
+      "preguntas": [
+        "¿Qué desarrollo de IA propio y defensibilidad tecnológica poseen frente a wrappers comerciales construidos sobre LLMs genéricos?",
+        "¿Cuáles son sus métricas de tracción actuales (ARR, contratos comerciales pagos fuera del ámbito académico y margen de retención)?",
+        "¿Quiénes componen el equipo fundador/técnico y qué etapa, monto y uso de fondos tienen previstos para su próxima ronda?"
+      ]
+    }
   },
   {
     "borrador_contacto": "Hola Nathalie, leí la nota sobre Neopausia y tu trayectoria construyendo empresas en Chile. Me impresionó tu visión para abordar la salud femenina y menopausia, un segmento con enorme potencial. En Latin Leap invertimos en startups healthtech purpose-driven en LATAM. Me gustaría agendar una llamada de 20 minutos para conocer tus planes con Neopausia y ver cómo apoyarte. ¿Tienes disponibilidad esta semana?",
@@ -285,7 +428,140 @@
       }
     ],
     "decision_equipo": null,
-    "issue": 1
+    "issue": 1,
+    "memo": {
+      "tesis": "Encaja con el mandato pre-seed y el pilar purpose-driven de salud femenina, replicando el modelo exitoso de telesalud especializada de Midi Health.",
+      "riesgos": [
+        "Etapa sumamente temprana sin métricas operativas ni tracción comercial comprobada.",
+        "Restricciones regulatorias en prescripción médica y telemedicina que pueden ralentizar la expansión internacional.",
+        "Ausencia de un componente AI-first que diferencie la oferta frente a plataformas convencionales de teleconsulta médica."
+      ],
+      "preguntas": [
+        "¿Cuáles son los unit economics proyectados (CAC, valor promedio por tratamiento/consulta, margen de contribución y LTV del paciente)?",
+        "¿Cuál es la estrategia de cumplimiento regulatorio para telemedicina y prescripción de terapias hormonales fuera de Chile?",
+        "¿Cuál es el monto de la ronda pre-seed que está levantando Nathalie Wilk, cuál será el uso de fondos y cómo se compone el equipo médico y técnico?"
+      ]
+    }
+  },
+  {
+    "evidencia": "Plataforma colombiana de orquestación de pagos con más de 1.000 métodos que se alía globalmente con SEON para mitigar fraude y expandirse a APAC.",
+    "copycat": 1,
+    "adquirida": false,
+    "ronda_reciente": "",
+    "descripcion": "Plataforma de orquestación de pagos que integra múltiples métodos transaccionales y herramientas contra el fraude.",
+    "es_startup": true,
+    "sitio_web": "",
+    "copycat_analogo": "Spreedly / Primer (orquestación e integración unificada de pagos y pasarelas globales).",
+    "es_tecnologia": true,
+    "etapa": "desconocida",
+    "traccion": 0.5,
+    "borrador_contacto": "Hola, felicitaciones por la alianza global entre Yuno y SEON para robustecer la prevención de fraude y habilitar la expansión en APAC con más de 1.000 métodos de pago. En Latin Leap invertimos en infraestructura fintech y seguimos de cerca a los líderes regionales. Me gustaría proponerte una llamada de 20 minutos para conversar sobre sus planes de internacionalización. ¿Tendrías espacio esta semana?",
+    "pais": "Colombia",
+    "momento": 0,
+    "ai_first": 0,
+    "nombre": "Yuno",
+    "purpose": 0,
+    "sector": "fintech",
+    "filtros_fallidos": [],
+    "score": 65.0,
+    "score_bruto": 65.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "yuno",
+    "primera_vez": "2026-10-24T14:53:20.469238+00:00",
+    "ultima_vez": "2026-10-24T14:53:20.469238+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/yuno-y-seon-se-al-an-para-fortalecer-la-prevenci-n-de-fraude-y-la-expansi-n-global-de-pagos-2026-10-21",
+        "titulo": "🌎 🛡️ Yuno y SEON se alían para fortalecer la prevención de fraude y la expansión global de pagos",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 2,
+    "memo": {
+      "tesis": "Aplica con éxito un modelo probado de orquestación transaccional (tipo Primer o Spreedly) resolviendo la fragmentación de medios de pago en economías emergentes.",
+      "riesgos": [
+        "Probable descalce de etapa y tamaño de ticket para un fondo pre-seed/seed, dado su nivel de tracción y expansión intercontinental.",
+        "Poco alineamiento con los pilares de purpose-driven e impacto social directo.",
+        "Competencia directa contra proveedores consolidados de orquestación de pagos con altos presupuestos globales."
+      ],
+      "preguntas": [
+        "¿Cuál es la etapa actual de financiamiento, la valuación objetivo y el espacio disponible para inversionistas tempranos?",
+        "¿Cuáles son los unit economics de la plataforma (comisión promedio por transacción orquestada, ACV y margen bruto operativo)?",
+        "¿Qué uso específico de IA tienen integrado en su enrutamiento y prevención de fraude para diferenciarse de orquestadores globales?"
+      ]
+    }
+  },
+  {
+    "sector": "cleantech",
+    "traccion": 1,
+    "copycat_analogo": "",
+    "sitio_web": "",
+    "descripcion": "Empresa de innovación que desarrolla y fabrica empaques compostables basados en subproductos de maíz.",
+    "adquirida": false,
+    "momento": 0,
+    "es_startup": true,
+    "evidencia": "Alianza con DiDi Shop para entregar 500.000 bolsas mensuales compostables en México, proyectando alcanzar 3,5 millones y mitigar 38 toneladas de plástico.",
+    "borrador_contacto": "Hola, vi su reciente alianza con DiDi Shop y la UNAM para distribuir 500.000 empaques compostables mensuales en México. En Latin Leap invertimos en startups cleantech y de sostenibilidad con alto potencial de impacto y escala en LATAM. Nos encantaría conocer más sobre su tecnología y planes de expansión. ¿Tendrías 20 minutos para una breve conversación esta semana? Saludos.",
+    "etapa": "desconocida",
+    "ronda_reciente": "",
+    "pais": "México",
+    "ai_first": 0,
+    "es_tecnologia": true,
+    "copycat": 0,
+    "purpose": 1,
+    "nombre": "Bioelements",
+    "filtros_fallidos": [],
+    "score": 60.0,
+    "score_bruto": 60.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 5.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "bioelements",
+    "primera_vez": "2026-10-24T14:57:02.466102+00:00",
+    "ultima_vez": "2026-10-24T14:57:02.466102+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/didi-shop-y-bioelements-lanzan-iniciativa-de-empaques-compostables-con-aval-de-la-unam-2026-10-21",
+        "titulo": "🚀 ♻️ DiDi Shop y Bioelements lanzan iniciativa de empaques compostables con aval de la UNAM",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 2,
+    "memo": {
+      "tesis": "Alineada con la tesis purpose-driven de descarbonización y sustitución de plásticos, respaldada por volumen comercial validado con grandes cuentas corporativas.",
+      "riesgos": [
+        "Modelo industrial intensivo en capital de manufactura y distribución física, distante del perfil de software escalable.",
+        "Ausencia de componentes AI-first dentro del núcleo de la propuesta de valor.",
+        "Dependencia de certificaciones regulatorias complejas y fluctuación de costos de materias primas agrícolas."
+      ],
+      "preguntas": [
+        "¿Cuáles son los márgenes brutos unitarios por bolsa compostable producida y vendida frente al costo de los plásticos convencionales?",
+        "¿Qué patentes o barreras de entrada protegen la fórmula a base de subproductos de maíz ante réplicas de bioplásticos en la industria?",
+        "¿Qué ronda de capital están estructurando, cuánto requerirán para Capex industrial versus OPEX y qué papel jugaría el venture capital?"
+      ]
+    }
   },
   {
     "descripcion": "Desarrolla soluciones de aislantes térmicos y materiales para la construcción.",
@@ -332,6 +608,106 @@
     ],
     "decision_equipo": null,
     "issue": null
+  },
+  {
+    "etapa": "desconocida",
+    "copycat": 0.5,
+    "ronda_reciente": "",
+    "ai_first": 0,
+    "copycat_analogo": "Handshake (EE.UU.), plataforma de conexión laboral y empleo especializada en estudiantes universitarios.",
+    "es_tecnologia": true,
+    "momento": 0,
+    "nombre": "Tasky",
+    "es_startup": true,
+    "purpose": 0.5,
+    "sitio_web": "",
+    "descripcion": "Plataforma chilena de empleo orientada a estudiantes universitarios.",
+    "traccion": 0,
+    "borrador_contacto": "Hola [Fundador], leí la noticia sobre la valuación de US$5M de Tasky y su foco en el empleo universitario en Chile. En Latin Leap invertimos en etapas tempranas en el Cono Sur y vemos un gran potencial en plataformas que abordan la empleabilidad juvenil. Me encantaría coordinar una breve llamada de 20 minutos para entender más sobre su tracción actual y visión. ¿Tendrías disponibilidad esta semana?",
+    "adquirida": false,
+    "sector": "hrtech",
+    "pais": "Chile",
+    "evidencia": "Startup chilena orientada al empleo de estudiantes universitarios reportada con una valuación de US$5M, sin detalles de ronda reciente.",
+    "filtros_fallidos": [],
+    "score": 47.5,
+    "score_bruto": 47.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 10.0,
+      "traccion": 0.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": false,
+    "key": "tasky",
+    "primera_vez": "2026-10-24T15:08:56.270046+00:00",
+    "ultima_vez": "2026-10-24T15:08:56.270046+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQNDR5RFpjaDcxcDJpc29GTXRQZ2ZhZW5PNmh0d042dTBQR1BvcThfWWtzS3NnRTdRU0hvbm5JazQ4Ml90cHJLaEdhVUl5clptXzZEQTVtR2hXYjBkUXFfemVfdVAtWFRFbkpJM3M4NDlzUVo3M3R3SzNBU2E4SzdxR1Y3WnhSMldUS0R6SmVpaw?oc=5",
+        "titulo": "Tasky: startup chilena de empleo universitario vale US$5M - El Ecosistema Startup",
+        "fecha": "2026-10-21T08:22:11+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_tecnologia": true,
+    "copycat": 0,
+    "ai_first": 0,
+    "nombre": "Peso",
+    "descripcion": "Fintech boliviana que desarrolla soluciones de pago con USDT en Latinoamérica.",
+    "etapa": "pre_seed",
+    "purpose": 0.5,
+    "momento": 1,
+    "es_startup": true,
+    "copycat_analogo": "",
+    "adquirida": false,
+    "evidencia": "La nota indica que captó una ronda pre-seed con Tether para ampliar pagos en USDT en Latinoamérica.",
+    "sector": "fintech",
+    "traccion": 0,
+    "sitio_web": "",
+    "ronda_reciente": "Pre-seed con Tether, oct 2026",
+    "pais": "Bolivia",
+    "borrador_contacto": "Hola [Fundador], vi la reciente inversión pre-seed de Tether en Peso para impulsar pagos con USDT en Latinoamérica. En Latin Leap invertimos en etapas tempranas en la región y seguimos con mucho interés la infraestructura de pagos y stablecoins. Me gustaría coordinar una breve llamada de 20 minutos para conocer sus planes de expansión y evaluar sinergias con nuestro fondo. ¿Tendrías disponibilidad esta semana?",
+    "filtros_fallidos": [],
+    "score": 32.5,
+    "score_bruto": 32.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 5.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 2.5
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": true,
+    "key": "peso",
+    "primera_vez": "2026-10-24T15:04:14.222038+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNelpFRWU3Q3lpNV9mTnZicEJJd1B1NXliSm9kUTdmTWh1c3U4OWJxLXR0YmljSVBnVnoyeVh0SGp1VkIyc0hkYjZ3NVJ6dF94S3BDc3V6NlQzYXlUTGw2MWZqNFJDdy0tSE5pZWJFLXgyQnQySGViLUdBZTF5Wlk3NS1ZSjJKQXh3MFJpSVpKWFAzUXl2Z2tqd2hGWVd2SlZfbDNQUGh0bThjeGV0aU5jZEZLeDFPT0ttTVlrWHJ1N2RNcmNmaTRIeHBTcWRjU0ROUk1Nd01YZXc?oc=5",
+        "titulo": "Tether respalda a la fintech boliviana Peso para expandir pagos con USDT en América Latina - DiarioBitcoin",
+        "fecha": "2026-10-21T19:56:58+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDbUxWU0t0dWV4aE8xWk9qZTJPRVB0YkxSSEJsNHpldi1KUmNLMVVGRFVRY2RmaUNneHBwVHppT0t6dTdrbDl4MEZEYmtLRjRFVTMwTi1oeW9rU0NFaXJfM2xsbmo5WGh1MUQ5S1J5dWc4Zw?oc=5",
+        "titulo": "Fintech boliviana Peso capta pre-seed con Tether para ampliar pagos USDT en Latinoamérica - CryptoRank",
+        "fecha": "2026-10-21T13:25:21+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null,
+    "ultima_vez": "2026-10-24T15:08:56.269950+00:00"
   },
   {
     "pais": "Colombia",
@@ -472,6 +848,57 @@
         "url": "https://www.descubre.vc/noticia/belo-lanza-programa-educativo-y-planea-expansi-n-a-cinco-pa-ses-de-la-regi-n-2026-10-21",
         "titulo": "🌎 🎓 Belo lanza programa educativo y planea expansión a cinco países de la región",
         "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "momento": 0,
+    "traccion": 1,
+    "purpose": 0.5,
+    "sitio_web": "",
+    "nombre": "Binance",
+    "copycat_analogo": "",
+    "copycat": 0,
+    "descripcion": "Plataforma global de criptoactivos y servicios financieros digitales.",
+    "sector": "fintech",
+    "pais": "Desconocido",
+    "es_tecnologia": true,
+    "es_startup": false,
+    "ai_first": 0,
+    "adquirida": false,
+    "borrador_contacto": "Hola Salvador, felicidades por la estrategia de Binance de invertir más de 1,000 millones de pesos en México para evolucionar hacia una superapp financiera regulada con IFPE. En Latin Leap monitoreamos de cerca la infraestructura fintech y pagos en LATAM. Nos encantaría tener una llamada de 20 minutos para explorar sinergias con nuestro portafolio fintech. ¿Podríamos coordinar la próxima semana?",
+    "evidencia": "Binance anuncia inversión de >1.000 mdp en México para convertirse en superapp y busca adquirir una IFPE; es un corporativo global.",
+    "ronda_reciente": "",
+    "etapa": "serie_a_o_mas",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 42.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "binance",
+    "primera_vez": "2026-10-24T14:59:25.263396+00:00",
+    "ultima_vez": "2026-10-24T14:59:25.263396+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/binance-busca-convertirse-en-superapp-financiera-en-m-xico-con-millonaria-inversi-n-2026-10-20",
+        "titulo": "🤝 📱 Binance busca convertirse en \"superapp\" financiera en México con millonaria inversión",
+        "fecha": "2026-10-20T12:00:00+00:00"
       }
     ],
     "decision_equipo": null,
@@ -740,6 +1167,105 @@
     "issue": null
   },
   {
+    "copycat": 0,
+    "descripcion": "Desarrolla agentes de inteligencia artificial para WhatsApp.",
+    "nombre": "Eclectic AI",
+    "copycat_analogo": "",
+    "evidencia": "La nota reporta que Eclectic AI desarrolla agentes de IA para WhatsApp y cuenta con una facturación recurrente de US$37.893 MRR.",
+    "etapa": "desconocida",
+    "adquirida": false,
+    "ai_first": 1,
+    "pais": "Desconocido",
+    "sector": "ai saas",
+    "sitio_web": "",
+    "momento": 0,
+    "traccion": 1,
+    "borrador_contacto": "Hola, estuve siguiendo el avance de Eclectic AI y me llamó la atención su tracción de US$37.893 en MRR aplicando agentes de IA sobre WhatsApp. En Latin Leap invertimos en etapas tempranas en startups AI-first de la región. Me gustaría proponerte una breve llamada de 20 minutos para conocer más sobre su producto y planes de escala. ¿Tendrías disponibilidad esta semana?",
+    "ronda_reciente": "",
+    "purpose": 0,
+    "es_tecnologia": true,
+    "es_startup": true,
+    "filtros_fallidos": [
+      "fuera_de_geografia"
+    ],
+    "score": 0.0,
+    "score_bruto": 55.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "eclecticai",
+    "primera_vez": "2026-10-24T14:53:20.469146+00:00",
+    "ultima_vez": "2026-10-24T14:53:20.469146+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPb1RIdFUwOUUyVl9BdWItczNlMS1adDljYWJkN3ZrdERITUZrdjBkQXZEakpKRk5WVWJ2aWViX2hsSEVXb01DSmxZS3ZGbEl5WEl0YUdWY0NUOXBPSHFfamNMNUYybFJuYmx1SzVhd09xUzFhTE1mS1RoMVRWMzg3UFJ0akpkd3RlN3lialdObkQ?oc=5",
+        "titulo": "Eclectic AI: agentes de IA para WhatsApp, con US$37.893 MRR - El Ecosistema Startup",
+        "fecha": "2026-10-24T00:06:38+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_tecnologia": true,
+    "sitio_web": "",
+    "pais": "Desconocido",
+    "ai_first": 0,
+    "es_startup": true,
+    "evidencia": "Se menciona que levantó una ronda de US$11,2M para su solución tecnológica enfocada en plantas.",
+    "borrador_contacto": "Hola [Fundador], felicitaciones por la ronda de US$11,2M levantada por Electric Plant para su tecnología de monitoreo acústico de plantas. En Latin Leap monitoreamos innovaciones deeptech y agtech de impacto. Aunque la ronda supera nuestro ticket inicial de pre-seed/seed, nos gustaría tener una llamada de 20 minutos para conocer mejor el roadmap del producto y abrir canales de contacto futuro. ¿Tendrías un espacio la próxima semana?",
+    "adquirida": false,
+    "descripcion": "Startup agtech que desarrolla tecnología para escuchar y monitorear plantas.",
+    "nombre": "Electric Plant",
+    "etapa": "serie_a_o_mas",
+    "copycat": 0,
+    "traccion": 0,
+    "copycat_analogo": "",
+    "ronda_reciente": "US$11,2M, oct 2026",
+    "momento": 0.5,
+    "purpose": 0.5,
+    "sector": "agtech",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 25.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "electricplant",
+    "primera_vez": "2026-10-24T15:08:56.270012+00:00",
+    "ultima_vez": "2026-10-24T15:08:56.270012+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPUndaTE9LUG1uZ0lLZTB3UnFxQ25oTG9rby0yWjR6c0hITjhYVm1ORkZRLXFhZG9tRkEyU2lhRG9lTHExSVF5U3V1bVpBUzdOQzNiVG5yWlh6WGJJRUxvTGFFNWxKbFVMUWNmLUltdS1nc21XaDN3Y0J1QWR2NUhyY1BqRERtV0c3aUFoNUJrQ1M?oc=5",
+        "titulo": "Electric Plant, la startup que oye plantas, levanta US$11,2M - El Ecosistema Startup",
+        "fecha": "2026-10-21T09:12:45+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "ronda_reciente": "",
     "copycat_analogo": "",
     "ai_first": 0,
@@ -783,6 +1309,56 @@
         "url": "https://startupslatam.com/el-etmday-2026-lleva-a-santiago-a-freddy-vega-alejandro-vazquez-y-otros-referentes-latinoamericanos-del-emprendimiento/",
         "titulo": "El EtMday 2026 lleva a Santiago a Freddy Vega, Alejandro Vázquez y otros referentes latinoamericanos del emprendimiento",
         "fecha": "2026-10-23T13:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "copycat": 0,
+    "nombre": "Enact",
+    "sector": "ai saas",
+    "ronda_reciente": "USD $30M",
+    "traccion": 0,
+    "borrador_contacto": "Hola, felicidades por el cierre de su ronda de USD $30 millones en Enact para enseñar a los robots a sentir fuerza y tacto. En Latin Leap seguimos de cerca las tecnologías de frontera impulsadas por IA. Me encantaría coordinar una llamada de 20 minutos para conocer más sobre su roadmap técnico y visión a futuro. ¿Cómo viene tu agenda esta semana?",
+    "ai_first": 1,
+    "momento": 0,
+    "copycat_analogo": "",
+    "etapa": "serie_a_o_mas",
+    "pais": "Desconocido",
+    "es_startup": true,
+    "es_tecnologia": true,
+    "purpose": 0,
+    "sitio_web": "",
+    "evidencia": "La compañía levantó USD $30 millones para enseñar a robots a sentir fuerza y tacto.",
+    "descripcion": "Desarrolla tecnología de inteligencia artificial para dotar a los robots de capacidades de tacto y fuerza.",
+    "adquirida": false,
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 35.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "enact",
+    "primera_vez": "2026-10-24T14:53:20.469200+00:00",
+    "ultima_vez": "2026-10-24T14:53:20.469200+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPeVJTbVh5YUZaUXdxR1VjZWJLdWtGYkVYS2lpa3FVVjRDSncyNzloM1dtSlRZck1kTVpyWXllN1NmaEJmNGJaajZrSDRobTdhUi1kRTRIMDBMRVhhbUhySkVtX1hfYVJ3eEJjVDA3cWlTX1k1VzMwS1lkWmpQd2tESmhyX01fN1lERjVRUVFpbkVNQ0s2RzNRMXJHTVJyQ0l6S1RYNTdreGVsRGRvRVZTU3NIaUc2LXJYZGlXN3VXakZYb3JCOWpn?oc=5",
+        "titulo": "Startup Enact capta USD $30 millones para enseñar a los robots a sentir fuerza y tacto - DiarioBitcoin",
+        "fecha": "2026-10-22T16:52:48+00:00"
       }
     ],
     "decision_equipo": null,
@@ -843,6 +1419,56 @@
     "issue": null
   },
   {
+    "es_tecnologia": true,
+    "borrador_contacto": "Hola equipo de Flapping Airplanes, impresionante hito levantar US$1.000M en Serie A en su primer año como startup de IA. En Latin Leap invertimos en startups AI-driven con presencia o impacto en la región. Me encantaría conocer más sobre su tecnología y su visión de escalabilidad global. ¿Tendrían 20 minutos para una llamada introductoria la próxima semana?",
+    "sector": "ai saas",
+    "pais": "Desconocido",
+    "sitio_web": "",
+    "descripcion": "Startup de inteligencia artificial.",
+    "ai_first": 1,
+    "es_startup": true,
+    "nombre": "Flapping Airplanes",
+    "ronda_reciente": "Serie A US$1.000M, oct 2026",
+    "copycat": 0,
+    "copycat_analogo": "",
+    "evidencia": "El titular reporta que la startup de IA levantó US$1.000M en Serie A a un año de nacer.",
+    "purpose": 0,
+    "etapa": "serie_a_o_mas",
+    "adquirida": false,
+    "traccion": 0,
+    "momento": 0.5,
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 37.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "flappingairplanes",
+    "primera_vez": "2026-10-24T14:59:25.263362+00:00",
+    "ultima_vez": "2026-10-24T14:59:25.263362+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOeTROdjdVWG0yQkdlSkJXU2xLTTJOanBscnlhdWZCRUhwNjdkWEpXZEEtQmZOaENReDZrSWxXcjNoeFNnQzlhVHJkTUJrU2VNT2FhYzhfVUZ2RnNMNWpsWGIydXVLbkZRUmJkNnJJQWI4dUlpMVIwdFJfc2NpQkF6Tk1pNU5PN2NrbTRxbTNhSVU?oc=5",
+        "titulo": "Flapping Airplanes: US$1.000M en Serie A a un año de nacer - El Ecosistema Startup",
+        "fecha": "2026-10-22T01:52:01+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "ai_first": 0,
     "borrador_contacto": "Hola David, vi la organización de Impactaland 2026 en el marco de la Chile Tech Week. En Latin Leap invertimos en startups B2B tech de impacto en LATAM. Me gustaría agendar una llamada de 20 minutos para explorar oportunidades de coinversión durante el evento.",
     "sector": "otro",
@@ -891,6 +1517,56 @@
         "fuente": "Descubre.vc",
         "url": "https://www.descubre.vc/noticia/impacta-vc-celebra-cinco-a-os-reuniendo-al-ecosistema-en-impactaland-2026-2026-10-21",
         "titulo": "🚀 Impacta VC celebra cinco años reuniendo al ecosistema en Impactaland 2026",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "ronda_reciente": "",
+    "etapa": "serie_a_o_mas",
+    "borrador_contacto": "Hola, vi la integración de MODO con Frávega para transaccionar vía IA dentro de ChatGPT. En Latin Leap seguimos de cerca la convergencia de IA y pagos en LATAM. ¿Tendrían disponibilidad para una breve charla de 20 minutos sobre sus próximos lanzamientos de comercio agéntico? Saludos.",
+    "pais": "Argentina",
+    "es_tecnologia": true,
+    "descripcion": "Billetera digital y solución de pagos respaldada por un consorcio de bancos en Argentina.",
+    "traccion": 0.5,
+    "nombre": "MODO",
+    "evidencia": "Lanzó una funcionalidad de comercio agéntico integrando compras y checkout bancario directamente en ChatGPT en alianza con Frávega.",
+    "momento": 0,
+    "ai_first": 0.5,
+    "adquirida": false,
+    "sector": "fintech",
+    "sitio_web": "",
+    "copycat_analogo": "",
+    "es_startup": false,
+    "copycat": 0,
+    "purpose": 0,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 47.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 10.0,
+      "geografia": 10.0,
+      "ai_first": 7.5,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "modo",
+    "primera_vez": "2026-10-24T14:57:02.466197+00:00",
+    "ultima_vez": "2026-10-24T14:57:02.466197+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/modo-habilita-compras-y-pagos-con-ia-directamente-desde-chatgpt-junto-a-fr-vega-2026-10-21",
+        "titulo": "🤖 MODO habilita compras y pagos con IA directamente desde ChatGPT junto a Frávega",
         "fecha": "2026-10-21T12:00:00+00:00"
       }
     ],
@@ -997,6 +1673,156 @@
     "issue": null
   },
   {
+    "es_startup": true,
+    "evidencia": "Recaudó US$15M en Serie A liderada por Tether y reporta procesar más de US$2.100 millones con clientes corporativos. Desarrolla controles de pagos para agentes de IA.",
+    "copycat": 0,
+    "borrador_contacto": "Hola equipo de Mural,\n\nFelicitaciones por la Serie A de US$15M liderada por Tether y el notable volumen de US$2,1B procesado con clientes como Deel y Opera. En Latin Leap invertimos en infraestructura tecnológica con foco regional.\n\nNos interesaría coordinar una llamada de 20 minutos para explorar sinergias y conocer el desarrollo de sus controles para pagos con agentes de IA.\n\nSaludos,\nAssociate, Latin Leap",
+    "descripcion": "Plataforma de infraestructura financiera para pagos transfronterizos, cumplimiento normativo y pagos para agentes de IA.",
+    "adquirida": false,
+    "purpose": 0,
+    "pais": "Estados Unidos",
+    "copycat_analogo": "",
+    "ai_first": 0.5,
+    "traccion": 1,
+    "nombre": "Mural",
+    "sector": "fintech",
+    "ronda_reciente": "Serie A US$15M, oct 2026",
+    "es_tecnologia": true,
+    "momento": 0.5,
+    "etapa": "serie_a_o_mas",
+    "sitio_web": "",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 50.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 7.5,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "mural",
+    "primera_vez": "2026-10-24T15:04:14.222164+00:00",
+    "ultima_vez": "2026-10-24T15:04:14.222164+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/mural-recauda-15m-para-escalar-su-infraestructura-de-pagos-y-agentes-de-ia-en-latam-2026-10-20",
+        "titulo": "💰 💸 Mural recauda $15M para escalar su infraestructura de pagos y agentes de IA en Latam",
+        "fecha": "2026-10-20T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "sector": "fintech",
+    "momento": 0,
+    "es_tecnologia": true,
+    "evidencia": "Lanzó una herramienta de cuenta compartida para hasta 10 usuarios con pago de servicios e intereses diarios sobre saldos en Argentina.",
+    "etapa": "serie_a_o_mas",
+    "es_startup": false,
+    "ai_first": 0,
+    "copycat_analogo": "",
+    "descripcion": "Fintech y brazo de servicios financieros digitales corporativo en Argentina.",
+    "sitio_web": "",
+    "copycat": 0,
+    "borrador_contacto": "Hola, vi el lanzamiento de Cuenta Compartida de Naranja X para gestión grupal de gastos en Argentina. En Latin Leap seguimos la innovación en productos financieros de uso cotidiano. ¿Tendrían 20 minutos para comentar los aprendizajes de esta nueva funcionalidad? Saludos.",
+    "pais": "Argentina",
+    "traccion": 0.5,
+    "ronda_reciente": "",
+    "adquirida": false,
+    "purpose": 0.5,
+    "nombre": "Naranja X",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 42.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 10.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "naranjax",
+    "primera_vez": "2026-10-24T14:57:02.466229+00:00",
+    "ultima_vez": "2026-10-24T14:57:02.466229+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/naranja-x-lanza-la-primera-cuenta-compartida-para-gestionar-gastos-grupales-2026-10-20",
+        "titulo": "💳 Naranja X lanza la primera cuenta compartida para gestionar gastos grupales",
+        "fecha": "2026-10-20T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "copycat_analogo": "Marqeta (EE.UU.), infraestructura moderna para emisión y procesamiento de tarjetas y pagos.",
+    "ai_first": 0,
+    "momento": 0,
+    "sitio_web": "",
+    "nombre": "Pomelo",
+    "descripcion": "Fintech de infraestructura tecnológica para la emisión y procesamiento de tarjetas y soluciones de pagos tokenizados.",
+    "es_tecnologia": true,
+    "adquirida": false,
+    "pais": "Desconocido",
+    "es_startup": true,
+    "sector": "fintech",
+    "copycat": 1,
+    "evidencia": "Moderniza infraestructura de emisión y procesamiento de tarjetas para 6 entidades líderes como BBVA, Bancolombia y Santander, con adopción de pagos tokenizados escalando de 1% a 20%.",
+    "ronda_reciente": "",
+    "purpose": 0,
+    "etapa": "serie_a_o_mas",
+    "traccion": 1,
+    "borrador_contacto": "Hola, leí sobre la alianza de Pomelo con entidades como BBVA, Bancolombia y Santander, así como el incremento de transacciones tokenizadas al 20%. En Latin Leap seguimos de cerca la infraestructura fintech regional y nos entusiasma su liderazgo tecnológico. ¿Tendrías 20 minutos para una breve llamada sobre sus planes de expansión en la región? Saludos.",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 60.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "pomelo",
+    "primera_vez": "2026-10-24T14:57:02.466139+00:00",
+    "ultima_vez": "2026-10-24T14:57:02.466139+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/pomelo-moderniza-la-infraestructura-de-pagos-de-bbva-bancolombia-y-otros-bancos-2026-10-21",
+        "titulo": "💳 Pomelo moderniza la infraestructura de pagos de BBVA, Bancolombia y otros bancos",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "pais": "Colombia",
     "ai_first": 0,
     "evidencia": "Invertirá aproximadamente 198 millones de pesos en especie para revitalizar bajopuentes en Bogotá junto a la Alcaldía.",
@@ -1040,6 +1866,57 @@
         "url": "https://www.descubre.vc/noticia/rappi-participar-en-la-revitalizaci-n-de-los-bajopuentes-en-bogot-2026-10-21",
         "titulo": "🚀 🌉 Rappi participará en la revitalización de los bajopuentes en Bogotá",
         "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "ai_first": 0,
+    "sitio_web": "",
+    "momento": 0,
+    "etapa": "serie_a_o_mas",
+    "es_tecnologia": true,
+    "purpose": 0.5,
+    "es_startup": false,
+    "borrador_contacto": "",
+    "copycat_analogo": "",
+    "traccion": 1,
+    "evidencia": "Revolut es un unicornio global establecido internacionalmente, no una startup en etapa temprana.",
+    "descripcion": "Neobanco global que planea iniciar operaciones bancarias 100% digitales en Perú.",
+    "adquirida": false,
+    "copycat": 0,
+    "sector": "fintech",
+    "nombre": "Revolut",
+    "ronda_reciente": "",
+    "pais": "Reino Unido",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 42.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "revolut",
+    "primera_vez": "2026-10-24T15:04:14.222132+00:00",
+    "ultima_vez": "2026-10-24T15:04:14.222132+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/revolut-aterrizar-en-per-como-banco-100-digital-2026-10-20",
+        "titulo": "🌎 🇵🇪 Revolut aterrizará en Perú como banco 100% digital",
+        "fecha": "2026-10-20T12:00:00+00:00"
       }
     ],
     "decision_equipo": null,
@@ -1094,6 +1971,56 @@
     "issue": null
   },
   {
+    "borrador_contacto": "Hola, felicitaciones por la ronda de US$27M recientemente anunciada para Slingshot. En Latin Leap monitoreamos el ecosistema insurtech y nos interesa entender su modelo de seguros embebidos y proyecciones de crecimiento en LATAM. ¿Tendrías disponibilidad para una llamada de 20 minutos la próxima semana? Saludos.",
+    "traccion": 0,
+    "es_tecnologia": true,
+    "copycat_analogo": "",
+    "copycat": 0,
+    "nombre": "Slingshot",
+    "pais": "Desconocido",
+    "adquirida": false,
+    "purpose": 0,
+    "es_startup": true,
+    "sitio_web": "",
+    "ronda_reciente": "US$27M, oct 2026",
+    "descripcion": "Startup especializada en soluciones de seguros embebidos.",
+    "sector": "insurtech",
+    "evidencia": "Startup de seguros embebidos que levantó una ronda de capital de US$27M reportada en octubre de 2026.",
+    "ai_first": 0,
+    "etapa": "serie_a_o_mas",
+    "momento": 0,
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 20.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "slingshot",
+    "primera_vez": "2026-10-24T14:57:02.466169+00:00",
+    "ultima_vez": "2026-10-24T14:57:02.466169+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcjlteUZMRWpoQXBRdUQzZHBMNENiakg4SVY3aTYzXzc5YXJCcDNjZVJtWVFRQkhBVmFLR016Y2ExMmhhZ1lUd2xTdW5qZDl4em5QR1Y3THZGbGNmQXZUVHgxaHB3LW1iWDdUcVZFWXFXaHRBcVVyZl8ydFlHYzRNakt4ZzE0c3V1ZkpJ?oc=5",
+        "titulo": "Slingshot, startup de seguros embebidos, levanta US$27M - El Ecosistema Startup",
+        "fecha": "2026-10-22T13:21:53+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "es_startup": true,
     "etapa": "serie_a_o_mas",
     "ai_first": 1,
@@ -1137,6 +2064,57 @@
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZF9sMzU4UEJpaXJyOFJrMEs1TDYzaFlXTkd2N25RNXJMcGpZVmhqaVIyWUpDVzFld3BWNEJIMHhlVWlzWUx0N3dTajNjc2lkWURNMlY2dXE4UFBuUU9XZ2hMUDZuZTZQRnM4X2xqY2E5LTVBNkZIdWU0QnNQQVZ4ODJtY0cwZHAwRDEydklHOA?oc=5",
         "titulo": "Tenstorrent levanta US$1.500M: las 10 rondas de la semana - El Ecosistema Startup",
         "fecha": "2026-10-23T19:21:36+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "purpose": 0.5,
+    "es_tecnologia": true,
+    "es_startup": false,
+    "momento": 0,
+    "sitio_web": "",
+    "ai_first": 0,
+    "copycat_analogo": "",
+    "copycat": 0,
+    "descripcion": "Plataforma tecnológica de movilidad y transporte de pasajeros.",
+    "borrador_contacto": "Hola equipo de Uber, sigo de cerca los retos regulatorios y la evolución de la movilidad en México tras los recientes acontecimientos en Hidalgo. En Latin Leap invertimos en etapas tempranas en LATAM, pero nos interesa conversar brevemente sobre cómo visualizan la adaptación regulatoria y tecnológica del sector. ¿Tendrían 20 minutos para una llamada la próxima semana?",
+    "pais": "Estados Unidos",
+    "sector": "mobility",
+    "adquirida": false,
+    "etapa": "serie_a_o_mas",
+    "evidencia": "Uber enfrenta una denuncia penal en Hidalgo por operar sin concesiones; es una empresa pública/corporativo global maduro.",
+    "traccion": 1,
+    "nombre": "Uber",
+    "ronda_reciente": "",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 42.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "uber",
+    "primera_vez": "2026-10-24T14:59:25.263313+00:00",
+    "ultima_vez": "2026-10-24T14:59:25.263313+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/hidalgo-prepara-denuncia-penal-contra-uber-por-operar-sin-autorizaci-n-estatal-2026-10-20",
+        "titulo": "🚀 ⚖️ Hidalgo prepara denuncia penal contra Uber por operar sin autorización estatal",
+        "fecha": "2026-10-20T12:00:00+00:00"
       }
     ],
     "decision_equipo": null,
