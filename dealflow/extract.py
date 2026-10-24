@@ -69,6 +69,9 @@ Reglas estrictas:
 - No inventes sitios web, cifras ni análogos. Un análogo copycat debe ser una empresa extranjera real y conocida.
 - Los países van en español con acento (México, Perú, Panamá).
 - Si la nota trata de un corporativo, un fondo, un evento o una adquisición de una empresa grande, marca es_startup=false.
+- Etapa: si la nota no la dice, infiérela de señales. Millones de usuarios, operación en varios países con
+  equipos grandes, más de ~5 años operando o capital acumulado mayor a ~US$5M indican 'serie_a_o_mas'.
+  Usa 'desconocida' solo si de verdad no hay señales.
 """
 
 

@@ -85,4 +85,5 @@ def clasificar(s: dict) -> dict:
         "desglose": desglose,
         "estado": estado,
         "levantando_ahora": float(s.get("momento", 0)) == 1.0,
+        "etapa_por_confirmar": s.get("etapa") == "desconocida",
     }

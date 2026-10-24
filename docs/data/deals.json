@@ -57,7 +57,8 @@
         "¿Cuáles son los unit economics consolidados (take rate neto, margen de contribución post-envío, CAC y frecuencia de recompra)?",
         "¿Cómo aplican actualmente inteligencia artificial para resolver los cuellos de botella de catalogación, fijación de precios y logística C2C?"
       ]
-    }
+    },
+    "etapa_por_confirmar": true
   },
   {
     "evidencia": "Levantó US$5.4M en Pre-Series A. Cuatriplicó sus comercios activos y triplicó el volumen mensual de pagos entre enero y septiembre de 2026.",
@@ -134,7 +135,8 @@
         "Habiendo cerrado recientemente una Pre-Series A de US$5.4M, ¿cuál es el uso específico de fondos y qué espacio real existe para un ticket seed/early stage de Latin Leap?",
         "¿Cómo mitigan la exposición regulatoria, fiscal y cambiaria en cada mercado latinoamericano al procesar pagos sin que el comercio cuente con entidad local?"
       ]
-    }
+    },
+    "etapa_por_confirmar": false
   },
   {
     "etapa": "desconocida",
@@ -193,7 +195,8 @@
         "¿Qué etapa y monto de financiamiento están levantando actualmente, y cuál es el desglose previsto para el uso de fondos?",
         "¿Cuál es su estrategia de abastecimiento de inventario para escalar sin comprometer el capital de trabajo ni depender del retail tradicional?"
       ]
-    }
+    },
+    "etapa_por_confirmar": true
   },
   {
     "purpose": 0.5,
@@ -252,7 +255,8 @@
         "¿Bajo qué licencias financieras y esquema de cumplimiento operan la custodia de activos y pagos transfronterizos en las 17 jurisdicciones?",
         "¿Cuánto capital captaron en la ronda Seed liderada por Tether y qué hitos operativos cubrirán los fondos levantados?"
       ]
-    }
+    },
+    "etapa_por_confirmar": false
   },
   {
     "ai_first": 0.5,
@@ -317,7 +321,8 @@
         "¿Cuáles son los unit economics de los contratos vigentes con mineras en Chile (ACV, margen bruto del producto y ciclo promedio de venta)?",
         "Habiendo asegurado US$6.4M de Orion Industrial Ventures, ¿cuál es el plan de hitos tecnológicos y qué participación puede tener Latin Leap?"
       ]
-    }
+    },
+    "etapa_por_confirmar": false
   },
   {
     "copycat_analogo": "Harvey: plataforma de inteligencia artificial generativa aplicada al sector legal y análisis de documentos.",
@@ -382,7 +387,8 @@
         "¿Cuáles son sus métricas de tracción actuales (ARR, contratos comerciales pagos fuera del ámbito académico y margen de retención)?",
         "¿Quiénes componen el equipo fundador/técnico y qué etapa, monto y uso de fondos tienen previstos para su próxima ronda?"
       ]
-    }
+    },
+    "etapa_por_confirmar": true
   },
   {
     "borrador_contacto": "Hola Nathalie, leí la nota sobre Neopausia y tu trayectoria construyendo empresas en Chile. Me impresionó tu visión para abordar la salud femenina y menopausia, un segmento con enorme potencial. En Latin Leap invertimos en startups healthtech purpose-driven en LATAM. Me gustaría agendar una llamada de 20 minutos para conocer tus planes con Neopausia y ver cómo apoyarte. ¿Tienes disponibilidad esta semana?",
@@ -441,7 +447,8 @@
         "¿Cuál es la estrategia de cumplimiento regulatorio para telemedicina y prescripción de terapias hormonales fuera de Chile?",
         "¿Cuál es el monto de la ronda pre-seed que está levantando Nathalie Wilk, cuál será el uso de fondos y cómo se compone el equipo médico y técnico?"
       ]
-    }
+    },
+    "etapa_por_confirmar": false
   },
   {
     "evidencia": "Plataforma colombiana de orquestación de pagos con más de 1.000 métodos que se alía globalmente con SEON para mitigar fraude y expandirse a APAC.",
@@ -501,7 +508,8 @@
         "¿Cuáles son los unit economics de la plataforma (comisión promedio por transacción orquestada, ACV y margen bruto operativo)?",
         "¿Qué uso específico de IA tienen integrado en su enrutamiento y prevención de fraude para diferenciarse de orquestadores globales?"
       ]
-    }
+    },
+    "etapa_por_confirmar": true
   },
   {
     "sector": "cleantech",
@@ -561,7 +569,8 @@
         "¿Qué patentes o barreras de entrada protegen la fórmula a base de subproductos de maíz ante réplicas de bioplásticos en la industria?",
         "¿Qué ronda de capital están estructurando, cuánto requerirán para Capex industrial versus OPEX y qué papel jugaría el venture capital?"
       ]
-    }
+    },
+    "etapa_por_confirmar": true
   },
   {
     "descripcion": "Desarrolla soluciones de aislantes térmicos y materiales para la construcción.",
@@ -607,7 +616,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": true
   },
   {
     "etapa": "desconocida",
@@ -654,7 +664,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": true
   },
   {
     "es_tecnologia": true,
@@ -707,7 +718,8 @@
     ],
     "decision_equipo": null,
     "issue": null,
-    "ultima_vez": "2026-10-24T15:08:56.269950+00:00"
+    "ultima_vez": "2026-10-24T15:08:56.269950+00:00",
+    "etapa_por_confirmar": false
   },
   {
     "pais": "Colombia",
@@ -755,7 +767,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "traccion": 0.5,
@@ -803,7 +816,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "descripcion": "Fintech que ofrece soluciones financieras digitales y desarrolla programas de educación en tecnología y finanzas.",
@@ -851,7 +865,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "momento": 0,
@@ -902,7 +917,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_tecnologia": true,
@@ -962,7 +978,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "pais": "Perú",
@@ -1010,7 +1027,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "sector": "ai saas",
@@ -1064,7 +1082,8 @@
     ],
     "decision_equipo": null,
     "issue": null,
-    "ultima_vez": "2026-10-24T00:10:00.461346+00:00"
+    "ultima_vez": "2026-10-24T00:10:00.461346+00:00",
+    "etapa_por_confirmar": false
   },
   {
     "sitio_web": "",
@@ -1114,7 +1133,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_startup": false,
@@ -1164,7 +1184,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "copycat": 0,
@@ -1213,7 +1234,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": true
   },
   {
     "es_tecnologia": true,
@@ -1263,7 +1285,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "ronda_reciente": "",
@@ -1312,7 +1335,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": true
   },
   {
     "copycat": 0,
@@ -1362,7 +1386,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "traccion": 1,
@@ -1416,7 +1441,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_tecnologia": true,
@@ -1466,7 +1492,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "ai_first": 0,
@@ -1521,7 +1548,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": true
   },
   {
     "ronda_reciente": "",
@@ -1571,7 +1599,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "purpose": 0,
@@ -1621,7 +1650,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "purpose": 0.5,
@@ -1670,7 +1700,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_startup": true,
@@ -1720,7 +1751,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "sector": "fintech",
@@ -1770,7 +1802,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "copycat_analogo": "Marqeta (EE.UU.), infraestructura moderna para emisión y procesamiento de tarjetas y pagos.",
@@ -1820,7 +1853,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "pais": "Colombia",
@@ -1869,7 +1903,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "ai_first": 0,
@@ -1920,7 +1955,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "copycat": 1,
@@ -1968,7 +2004,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "borrador_contacto": "Hola, felicitaciones por la ronda de US$27M recientemente anunciada para Slingshot. En Latin Leap monitoreamos el ecosistema insurtech y nos interesa entender su modelo de seguros embebidos y proyecciones de crecimiento en LATAM. ¿Tendrías disponibilidad para una llamada de 20 minutos la próxima semana? Saludos.",
@@ -2018,7 +2055,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_startup": true,
@@ -2067,7 +2105,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "purpose": 0.5,
@@ -2118,7 +2157,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "evidencia": "Comprador corporativo de la startup argentina Valida para expandir su presencia regional.",
@@ -2168,7 +2208,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_startup": true,
@@ -2218,7 +2259,8 @@
     "decision_equipo": null,
     "issue": 1,
     "adquirida": true,
-    "nota_revision": "Corregido en revisión humana (23 oct 2026): la nota reporta su adquisición por Unico. Motivó el filtro 'adquirida'."
+    "nota_revision": "Corregido en revisión humana (23 oct 2026): la nota reporta su adquisición por Unico. Motivó el filtro 'adquirida'.",
+    "etapa_por_confirmar": true
   },
   {
     "pais": "Desconocido",
@@ -2267,7 +2309,8 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   },
   {
     "es_tecnologia": true,
@@ -2317,6 +2360,7 @@
       }
     ],
     "decision_equipo": null,
-    "issue": null
+    "issue": null,
+    "etapa_por_confirmar": false
   }
 ]

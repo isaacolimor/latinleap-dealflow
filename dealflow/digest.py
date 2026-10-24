@@ -52,7 +52,8 @@ def _bloque(d: dict) -> str:
     ds = d["desglose"]
     fuente = d["menciones"][0]
     analogo = d.get("copycat_analogo") or "sin análogo claro"
-    etiqueta = " · 🔥 levantando ahora" if d.get("levantando_ahora") else ""
+    etiqueta = (" · 🔥 levantando ahora" if d.get("levantando_ahora") else "") + \
+               (" · ⚠️ etapa por confirmar" if d.get("etapa_por_confirmar") else "")
     return (
         f"- [ ] **{d['nombre']}** · {d['pais']} · {d['sector']} · score **{d['score']:.0f}**{etiqueta}\n"
         f"  {d['descripcion']}\n"

@@ -52,6 +52,7 @@ tr.deal:hover td{background:var(--accent-soft)}
 .c-descartada{background:var(--bad-soft);color:var(--bad)}
 .c-portafolio{background:var(--accent-soft);color:var(--accent)}
 .hot{color:var(--hot);font-size:12px;font-weight:600}
+.warn-t{color:var(--warn);font-size:12px;font-weight:600}
 .ok{color:var(--good);font-size:12px;font-weight:600}
 .detail td{background:var(--bg);font-size:13.5px;color:var(--ink2)}
 .detail .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
@@ -214,7 +215,7 @@ function tabla(){
     .sort((a,b) => (b.score - a.score) || (b.score_bruto - a.score_bruto));
   const tb = document.getElementById("deals");
   tb.innerHTML = filas.length ? filas.map((d,i) => `<tr class="deal" data-i="${i}" tabindex="0" aria-expanded="false">
-      <td><b>${esc(d.nombre)}</b> ${d.levantando_ahora ? '<span class="hot">· levantando ahora</span>' : ""} ${d.decision_equipo==="aceptada" ? '<span class="ok">· aceptada</span>' : ""}</td>
+      <td><b>${esc(d.nombre)}</b> ${d.levantando_ahora ? '<span class="hot">· levantando ahora</span>' : ""} ${d.etapa==="desconocida" && d.estado==="calificada" ? '<span class="warn-t">· etapa por confirmar</span>' : ""} ${d.decision_equipo==="aceptada" ? '<span class="ok">· aceptada</span>' : ""}</td>
       <td>${esc(d.pais)}</td><td class="hide-sm">${esc(d.sector)}</td><td class="hide-sm">${ETAPAS[d.etapa]||esc(d.etapa)}</td>
       <td class="num"><b>${d.estado==="calificada"||d.estado==="bajo_umbral" ? d.score : "–"}</b></td>
       <td><span class="chip c-${esc(d.estado)}">${ESTADOS[d.estado]||esc(d.estado)}</span></td></tr>`).join("")
