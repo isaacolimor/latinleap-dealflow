@@ -58,8 +58,9 @@ def backtest() -> list[tuple[str, float, float]]:
     r["score_promedio"] = round(sum(f["score_bruto"] for f in ev) / len(ev), 1)
     r["promedio_por_criterio"] = {k: round(sum(f["desglose"].get(k, 0) for f in ev) / len(ev), 1) for k in config.PESOS}
     r["filas"].sort(key=lambda f: -f["score"])
-    r.setdefault("historial", []).append({"cambio": "sectores agtech y proptech agregados (latinleap.vc/verticals)",
-                                          "recall_antes": 0.86, "recall_despues": r["recall"]})
+    if cambios:  # registra el ajuste solo si movió algún puntaje
+        r.setdefault("historial", []).append({"cambio": "recálculo con la rúbrica vigente en config.py",
+                                              "recall_antes": None, "recall_despues": r["recall"]})
     p.write_text(json.dumps(r, ensure_ascii=False, indent=2), encoding="utf-8")
     return cambios
 
