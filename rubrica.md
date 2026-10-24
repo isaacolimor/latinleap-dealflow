@@ -37,3 +37,4 @@ Nombre · país · sector · etapa · score · desglose por criterio · análogo
 - Argentina y Uruguay incluidos: el reto pide LATAM hispanohablante; la web marca la Alianza del Pacífico como núcleo, por eso MX/CO/CL puntúan más alto.
 - v0.3 (23 oct 2026), tras la primera corrida real: filtro de empresas adquiridas y criterio copycat más estricto (6 de 7 calificadas habían recibido el máximo).
 - v0.4 (24 oct 2026), tras el backtest con 7 empresas del portafolio: se agregan agtech y proptech (están en latinleap.vc/verticals). Detección de inversiones reales: 86% → 100%. Ojo: el 100% ya no es fuera de muestra.
+- v0.5 (24 oct 2026), tras verificar a mano las 9 calificadas: 5 ya eran Serie A o más (todas con etapa desconocida). Una etapa desconocida ahora queda 'por verificar' en lugar de calificar, y las correcciones humanas con fuente viven en verificaciones.json.
