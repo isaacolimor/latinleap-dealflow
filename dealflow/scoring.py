@@ -33,6 +33,8 @@ def evaluar_filtros(s: dict) -> list[str]:
     fallas = []
     if not s.get("es_startup", False):
         fallas.append("no_es_startup")
+    if s.get("adquirida", False):
+        fallas.append("adquirida")
     if not s.get("es_tecnologia", False):
         fallas.append("no_es_tecnologia")
     if pais_canonico(s.get("pais", "")) is None:

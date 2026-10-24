@@ -1,51 +1,5 @@
 [
   {
-    "es_startup": true,
-    "traccion": 1,
-    "copycat_analogo": "Onfido / Veriff: verificación de identidad digital y biometría facial.",
-    "purpose": 0,
-    "borrador_contacto": "Hola José, felicitaciones por la adquisición de Valida por parte de Unico y por liderar la expansión en Argentina. En Latin Leap seguimos de cerca la biometría y la identidad digital en la región y nos encantaría mantener el contacto.",
-    "nombre": "Valida",
-    "es_tecnologia": true,
-    "etapa": "desconocida",
-    "descripcion": "Startup de biometría facial e identidad digital para el sector financiero.",
-    "ronda_reciente": "",
-    "sector": "ai saas",
-    "ai_first": 1,
-    "sitio_web": "",
-    "evidencia": "Adquirida por la brasileña Unico. Cuenta con el 50% de participación en el sector bancario argentino.",
-    "pais": "Argentina",
-    "momento": 0,
-    "copycat": 1,
-    "filtros_fallidos": [],
-    "score": 85.0,
-    "score_bruto": 85.0,
-    "desglose": {
-      "sector": 20.0,
-      "copycat": 20.0,
-      "traccion": 20.0,
-      "geografia": 10.0,
-      "ai_first": 15.0,
-      "momento": 0.0,
-      "purpose": 0.0
-    },
-    "estado": "calificada",
-    "levantando_ahora": false,
-    "key": "valida",
-    "primera_vez": "2026-10-24T00:08:48.754786+00:00",
-    "ultima_vez": "2026-10-24T00:08:48.754786+00:00",
-    "menciones": [
-      {
-        "fuente": "Descubre.vc",
-        "url": "https://www.descubre.vc/noticia/unico-adquiere-a-la-argentina-valida-para-expandir-su-negocio-de-identidad-digital-2026-10-22",
-        "titulo": "🤝 Unico adquiere a la argentina Valida para expandir su negocio de identidad digital",
-        "fecha": "2026-10-22T12:00:00+00:00"
-      }
-    ],
-    "decision_equipo": null,
-    "issue": 1
-  },
-  {
     "evidencia": "Levantó US$5.4M en Pre-Series A. Cuatriplicó sus comercios activos y triplicó el volumen mensual de pagos entre enero y septiembre de 2026.",
     "pais": "Argentina",
     "momento": 0.5,
@@ -1237,6 +1191,56 @@
     ],
     "decision_equipo": null,
     "issue": null
+  },
+  {
+    "es_startup": true,
+    "traccion": 1,
+    "copycat_analogo": "Onfido / Veriff: verificación de identidad digital y biometría facial.",
+    "purpose": 0,
+    "borrador_contacto": "Hola José, felicitaciones por la adquisición de Valida por parte de Unico y por liderar la expansión en Argentina. En Latin Leap seguimos de cerca la biometría y la identidad digital en la región y nos encantaría mantener el contacto.",
+    "nombre": "Valida",
+    "es_tecnologia": true,
+    "etapa": "desconocida",
+    "descripcion": "Startup de biometría facial e identidad digital para el sector financiero.",
+    "ronda_reciente": "",
+    "sector": "ai saas",
+    "ai_first": 1,
+    "sitio_web": "",
+    "evidencia": "Adquirida por la brasileña Unico. Cuenta con el 50% de participación en el sector bancario argentino.",
+    "pais": "Argentina",
+    "momento": 0,
+    "copycat": 1,
+    "filtros_fallidos": [
+      "adquirida"
+    ],
+    "score": 0.0,
+    "score_bruto": 85.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 15.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "valida",
+    "primera_vez": "2026-10-24T00:08:48.754786+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754786+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/unico-adquiere-a-la-argentina-valida-para-expandir-su-negocio-de-identidad-digital-2026-10-22",
+        "titulo": "🤝 Unico adquiere a la argentina Valida para expandir su negocio de identidad digital",
+        "fecha": "2026-10-22T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1,
+    "adquirida": true,
+    "nota_revision": "Corregido en revisión humana (23 oct 2026): la nota reporta su adquisición por Unico. Motivó el filtro 'adquirida'."
   },
   {
     "pais": "Desconocido",

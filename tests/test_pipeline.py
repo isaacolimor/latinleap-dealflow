@@ -168,3 +168,8 @@ def test_lote_reparte_por_nota():
     sts = [{"nota": 1, "nombre": "B"}, {"nota": 0, "nombre": "A"}, {"nota": 7, "nombre": "fuera"}, {"nombre": "sin"}]
     assert extract._repartir(sts, 2) == [[{"nombre": "A"}], [{"nombre": "B"}]]
     assert extract._repartir([{"nombre": "X"}], 1) == [[{"nombre": "X"}]]  # una sola nota: no requiere índice
+
+
+def test_adquirida_se_descarta():
+    c = scoring.clasificar(_s(nombre="Valida", adquirida=True))
+    assert c["estado"] == "descartada" and "adquirida" in c["filtros_fallidos"]
