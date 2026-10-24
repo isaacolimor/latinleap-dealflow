@@ -173,3 +173,24 @@ def test_lote_reparte_por_nota():
 def test_adquirida_se_descarta():
     c = scoring.clasificar(_s(nombre="Valida", adquirida=True))
     assert c["estado"] == "descartada" and "adquirida" in c["filtros_fallidos"]
+
+
+def test_backtest_ignora_filtro_de_portafolio(monkeypatch, tmp_path):
+    import backtest
+    from dealflow import extract
+
+    monkeypatch.setattr(backtest, "SALIDA", tmp_path / "bt.json")
+    monkeypatch.setattr(backtest, "leer_nota", lambda url: {"fuente": "B", "url": url, "titulo": "t",
+                                                           "texto": "x" * 400, "fecha": "2022-01-17", "tags": []})
+    monkeypatch.setattr(extract, "modelo", lambda: "simulado")
+
+    def _lote(notas):
+        return [[_s(nombre=backtest_nombres.pop(0))] for _ in notas]
+
+    casos = __import__("json").loads(backtest.CASOS.read_text(encoding="utf-8"))["casos"]
+    backtest_nombres = [c["empresa"] for c in casos]
+    monkeypatch.setattr(extract, "evaluar_lote", _lote)
+    r = backtest.correr()
+    assert r["con_nota_legible"] == len(casos)
+    assert all(f["califica"] and "ya_en_portafolio" not in f["filtros_fallidos"] for f in r["filas"])
+    assert r["recall"] == 1.0

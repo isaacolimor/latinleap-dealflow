@@ -1,0 +1,26 @@
+{
+  "_nota": "Empresas del portafolio de Latin Leap (según latinleap.vc/portfolio) y notas de prensa de su ronda temprana. Se usa la primera URL que se pueda leer; la segunda es respaldo. Fuentes encontradas el 24 oct 2026.",
+  "casos": [
+    {"empresa": "Vozy", "ronda": "Inversión de Latin Leap, ene 2022",
+     "urls": ["https://www.bloomberglinea.com/2022/01/17/vozy-firma-colombiana-de-voz-con-ia-obtiene-inversion-del-fondo-latin-leap/",
+              "https://forbes.co/2020/11/26/emprendedores/vozy-levanta-us800-000-con-su-servicio-de-voz-con-inteligencia-artificial/"]},
+    {"empresa": "Agrizon", "ronda": "Inversión de Latin Leap, feb 2022",
+     "urls": ["https://www.contxto.com/en/news/agrizon-an-e-commerce-for-agribusiness-receives-investment-from-latin-leap/",
+              "https://www.descubre.vc/noticia/agrizon-recibi-inversi-n-por-parte-de-latin-leap-2022-02-14"]},
+    {"empresa": "Keybe", "ronda": "US$1.7M de ángeles, feb 2022",
+     "urls": ["https://forbes.co/2022/02/01/emprendedores/con-un-asistente-de-ventas-omnicanal-keybe-recoge-us1-7-millones/",
+              "https://www.bloomberglinea.com/2022/02/03/ejecutivos-de-rappi-y-la-haus-invierten-en-la-colombiana-keybe-para-su-expansion/"]},
+    {"empresa": "Dapta", "ronda": "Pre-seed US$1.2M",
+     "urls": ["https://www.enter.co/?p=553260",
+              "https://latamlist.com/?p=14568"]},
+    {"empresa": "Talently", "ronda": "Seed US$3M, jun 2022",
+     "urls": ["https://www.bloomberglinea.com/2022/06/02/peruana-talently-capta-ronda-seed-por-us3m-de-las-mas-grande-para-una-edtech/",
+              "https://forbes.pe/negocios/2022-06-02/talently-levanta-ronda-seed-por-us3-millones-para-ser-un-marketplace-de-talento-tech-en-america-latina-y-ee-uu/"]},
+    {"empresa": "Alfred", "ronda": "US$2.5M, abr 2022",
+     "urls": ["https://forbes.co/2022/04/07/emprendedores/plataforma-de-mantenimiento-de-carros-alfred-capta-us2-5-millones/",
+              "https://www.valoraanalitik.com/?p=170028"]},
+    {"empresa": "Refurbi", "ronda": "Extensión de seed US$4M, ene 2026",
+     "urls": ["https://forbes.co/2026/01/27/emprendedores/refurbi-obtiene-us4-millones-en-extension-de-su-ronda-semilla-para-expandirse-a-mexico/",
+              "https://www.elcolombiano.com/negocios/startup-colombiana-refurbi-inversion-4-millones-expansion-mexico-MN32959674"]}
+  ]
+}
