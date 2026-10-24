@@ -1,0 +1,1340 @@
+[
+  {
+    "es_startup": true,
+    "traccion": 1,
+    "copycat_analogo": "Onfido / Veriff: verificación de identidad digital y biometría facial.",
+    "purpose": 0,
+    "borrador_contacto": "Hola José, felicitaciones por la adquisición de Valida por parte de Unico y por liderar la expansión en Argentina. En Latin Leap seguimos de cerca la biometría y la identidad digital en la región y nos encantaría mantener el contacto.",
+    "nombre": "Valida",
+    "es_tecnologia": true,
+    "etapa": "desconocida",
+    "descripcion": "Startup de biometría facial e identidad digital para el sector financiero.",
+    "ronda_reciente": "",
+    "sector": "ai saas",
+    "ai_first": 1,
+    "sitio_web": "",
+    "evidencia": "Adquirida por la brasileña Unico. Cuenta con el 50% de participación en el sector bancario argentino.",
+    "pais": "Argentina",
+    "momento": 0,
+    "copycat": 1,
+    "filtros_fallidos": [],
+    "score": 85.0,
+    "score_bruto": 85.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 15.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "valida",
+    "primera_vez": "2026-10-24T00:08:48.754786+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754786+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/unico-adquiere-a-la-argentina-valida-para-expandir-su-negocio-de-identidad-digital-2026-10-22",
+        "titulo": "🤝 Unico adquiere a la argentina Valida para expandir su negocio de identidad digital",
+        "fecha": "2026-10-22T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1
+  },
+  {
+    "evidencia": "Levantó US$5.4M en Pre-Series A. Cuatriplicó sus comercios activos y triplicó el volumen mensual de pagos entre enero y septiembre de 2026.",
+    "pais": "Argentina",
+    "momento": 0.5,
+    "borrador_contacto": "Hola, felicitaciones por la ronda Pre-Series A de US$5.4M respaldada por YC y Tiger Global, y el impresionante crecimiento de volumen. En Latin Leap invertimos en infraestructura fintech regional y nos encantaría coordinar una llamada de 20 minutos para conocer sus planes con Rebill Treasury y Platforms. ¿Tienes disponibilidad esta semana? Saludos, Associate en Latin Leap.",
+    "purpose": 0,
+    "es_tecnologia": true,
+    "es_startup": true,
+    "ronda_reciente": "Pre-Series A US$5.4M, oct 2026",
+    "descripcion": "Provee infraestructura de pagos multimoneda y cobros recurrentes para empresas sin requerir entidad legal local.",
+    "sitio_web": "",
+    "traccion": 1,
+    "ai_first": 0,
+    "copycat": 1,
+    "copycat_analogo": "Stripe (EE.UU.): infraestructura de pagos globales, cobro recurrente y gestión multimoneda.",
+    "nombre": "Rebill",
+    "sector": "fintech",
+    "etapa": "post_seed_pre_a",
+    "filtros_fallidos": [],
+    "score": 72.5,
+    "score_bruto": 72.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "rebill",
+    "primera_vez": "2026-10-24T00:07:34.195305+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754870+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/argentine-fintech-rebill-raises-5-4m-pre-series-a-round/",
+        "titulo": "Argentine fintech Rebill raises $5.4M Pre Series A round",
+        "fecha": "2026-10-20T23:24:46+00:00"
+      },
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/fintech-argentina-cierra-ronda-de-us54-millones-con-guillermo-rauch-y-ejecutivos-de-spacex/",
+        "titulo": "Fintech argentina cierra ronda de US$5,4 millones con Guillermo Rauch y ejecutivos de SpaceX",
+        "fecha": "2026-10-21T13:30:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1
+  },
+  {
+    "etapa": "desconocida",
+    "traccion": 0.5,
+    "evidencia": "La startup chilena Reuse proyecta duplicar su facturación en Perú comercializando celulares reacondicionados.",
+    "es_tecnologia": true,
+    "borrador_contacto": "Hola, leí sobre el crecimiento de Reuse y su proyección de duplicar facturación en el mercado peruano. Nos entusiasma el e-commerce circular y la tecnología reacondicionada en LATAM. En Latin Leap invertimos en etapas tempranas y nos gustaría agendar una llamada de 20 minutos para explorar cómo apoyarlos en su expansión regional. ¿Tienes tiempo esta semana?",
+    "copycat_analogo": "Back Market (marketplace de dispositivos electrónicos reacondicionados líder en Europa y EE.UU.)",
+    "momento": 0.5,
+    "purpose": 1,
+    "sector": "next-gen retail",
+    "descripcion": "Plataforma e-commerce de celulares y productos tecnológicos reacondicionados.",
+    "pais": "Chile",
+    "ronda_reciente": "",
+    "nombre": "Reuse",
+    "ai_first": 0,
+    "copycat": 1,
+    "es_startup": true,
+    "sitio_web": "",
+    "filtros_fallidos": [],
+    "score": 72.5,
+    "score_bruto": 72.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 5.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "reuse",
+    "primera_vez": "2026-10-24T00:11:45.628624+00:00",
+    "ultima_vez": "2026-10-24T00:11:45.628624+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPcy0wWTNSaW9adXBLazBWWnp2dlI5N1NfWElYQURaSFlYUmFFZ045eWYwdEdqTGJ6Ti1TeV8tYlEzS3BTbWFXa2YzZzJCNmJBNlVYcVhwX2tNaFhnbVBkeXBxcGhHdXpPY2VlUXoxUVI4WDZfM0xZT2hodjFKSlZOdVV2NHlrNHhKZDg5ay0xS2g3NnRkVm9kd0JOaGhPWFl3a21XUEhrblhKLUFGRGV4QnBvV25kZmVlV0xxZndDbFZWc1FrY1ZuRTFnNnVSSFdBbWtiRGd3bUdaUXIyUmUxQ2ptcEN5Tkto?oc=5",
+        "titulo": "Celulares reacondicionados: startup Reuse duplicará su facturación en Perú - Gestión",
+        "fecha": "2026-10-23T10:45:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1
+  },
+  {
+    "purpose": 0.5,
+    "es_tecnologia": true,
+    "pais": "Panamá",
+    "sitio_web": "",
+    "nombre": "EFY Finance",
+    "evidencia": "Cerró ronda Seed con Tether. Cuenta con más de 25,000 cuentas activas y presencia en 17 países.",
+    "copycat_analogo": "Bridge / MoonPay: infraestructura para cuentas en stablecoins y pagos transfronterizos.",
+    "borrador_contacto": "Hola [Nombre], vi la inversión de Tether en EFY Finance para expandir su infraestructura de stablecoins y pagos transfronterizos en LATAM. En Latin Leap apoyamos fintechs regionales y nos encantaría tener una llamada de 20 minutos para conocer sus próximos pasos.",
+    "descripcion": "Plataforma de infraestructura para pagos transfronterizos, custodia de activos digitales y cuentas en stablecoins.",
+    "traccion": 1,
+    "ronda_reciente": "Seed (monto no revelado), oct 2026",
+    "es_startup": true,
+    "copycat": 1,
+    "momento": 0.5,
+    "sector": "fintech",
+    "ai_first": 0,
+    "etapa": "seed",
+    "filtros_fallidos": [],
+    "score": 70.0,
+    "score_bruto": 70.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 5.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "efyfinance",
+    "primera_vez": "2026-10-24T00:08:48.754735+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754735+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/efy-finance-secures-investment-from-tether-to-expand-across-latin-america/",
+        "titulo": "EFY Finance secures investment from Tether to expand across Latin America",
+        "fecha": "2026-10-20T22:07:06+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1
+  },
+  {
+    "ai_first": 0.5,
+    "nombre": "Giraffe Bio",
+    "sector": "cleantech",
+    "evidencia": "Cerró una ronda Seed de US$6,4M liderada por Orion Industrial Ventures y opera con empresas mineras en Chile.",
+    "es_tecnologia": true,
+    "momento": 1,
+    "sitio_web": "",
+    "pais": "Argentina",
+    "etapa": "seed",
+    "descripcion": "Utiliza IA y biotecnología para desarrollar reactivos bioquímicos que aumentan la recuperación de cobre en faenas mineras.",
+    "ronda_reciente": "Seed US$6.4M, oct 2026",
+    "borrador_contacto": "Hola Alejandro y Juan Pablo, felicitaciones por la ronda Seed de US$6,4M de Giraffe Bio. Me llamó la atención su enfoque en combinar IA y biotecnología para la extracción de cobre en Chile. En Latin Leap invertimos en tecnología e impacto. ¿Tendrían 20 minutos para conversar esta semana?",
+    "es_startup": true,
+    "copycat_analogo": "Allonnia - soluciones biotecnológicas e IA aplicadas a procesos de sostenibilidad en industrias pesadas",
+    "traccion": 0.5,
+    "purpose": 1,
+    "copycat": 0.5,
+    "filtros_fallidos": [],
+    "score": 67.5,
+    "score_bruto": 67.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 10.0,
+      "traccion": 10.0,
+      "geografia": 10.0,
+      "ai_first": 7.5,
+      "momento": 5.0,
+      "purpose": 5.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": true,
+    "key": "giraffebio",
+    "primera_vez": "2026-10-24T00:10:00.461324+00:00",
+    "ultima_vez": "2026-10-24T00:10:00.461324+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/argentine-giraffe-bio-raises-6-4m-seed-round-to-improve-copper-recovery/",
+        "titulo": "Argentine Giraffe Bio raises $6.4M seed round to improve copper recovery",
+        "fecha": "2026-10-15T19:23:21+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1
+  },
+  {
+    "copycat_analogo": "Harvey: plataforma de inteligencia artificial generativa aplicada al sector legal y análisis de documentos.",
+    "es_startup": true,
+    "nombre": "Magnar",
+    "ronda_reciente": "",
+    "pais": "Chile",
+    "momento": 0.5,
+    "traccion": 0.5,
+    "es_tecnologia": true,
+    "purpose": 0.5,
+    "copycat": 1,
+    "sitio_web": "",
+    "evidencia": "Llevó su tecnología de inteligencia artificial para el sector legal a la Universidad de Chile.",
+    "etapa": "desconocida",
+    "sector": "legaltech",
+    "ai_first": 1,
+    "borrador_contacto": "Hola, vi que en Magnar están llevando su solución de inteligencia artificial legal a la Universidad de Chile. En Latin Leap nos enfocamos en startups AI-first en LATAM y nos interesa mucho la aplicación de IA en legaltech. Me gustaría proponer una llamada de 20 minutos para conocer su modelo y planes de escalamiento.",
+    "descripcion": "Legaltech chilena que utiliza inteligencia artificial para automatizar y optimizar procesos legales e institucionales.",
+    "filtros_fallidos": [],
+    "score": 65.0,
+    "score_bruto": 65.0,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 20.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 15.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "key": "magnar",
+    "primera_vez": "2026-10-24T00:07:34.195253+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/multiplicar-por-diez-la-apuesta-del-cofundador-y-ceo-de-magnar/",
+        "titulo": "Multiplicar por diez: la apuesta del cofundador y CEO de Magnar",
+        "fecha": "2026-10-23T16:45:00+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQV2UzVzBSVDhrTjVDTDBmWjhZUE5WOTVRV0RnSU9hcHczTEZKdVgxZU9GV0RLdjdPb19feGRsMHBweDFUaEMwQjhfMXUzcmoxYVZpdFZVVVVVY09HcmU1eUQ4M3BHWGJ4ZnlFdnpIV1Exc2FwM2hWQkJPWTlxVmtEeThwaE1sOFU?oc=5",
+        "titulo": "Magnar, legaltech chilena, lleva IA a la U. de Chile - El Ecosistema Startup",
+        "fecha": "2026-10-22T22:21:40+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1,
+    "ultima_vez": "2026-10-24T00:12:23.912635+00:00"
+  },
+  {
+    "borrador_contacto": "Hola Nathalie, leí la nota sobre Neopausia y tu trayectoria construyendo empresas en Chile. Me impresionó tu visión para abordar la salud femenina y menopausia, un segmento con enorme potencial. En Latin Leap invertimos en startups healthtech purpose-driven en LATAM. Me gustaría agendar una llamada de 20 minutos para conocer tus planes con Neopausia y ver cómo apoyarte. ¿Tienes disponibilidad esta semana?",
+    "ai_first": 0,
+    "etapa": "pre_seed",
+    "ronda_reciente": "",
+    "purpose": 1,
+    "momento": 1,
+    "copycat_analogo": "Midi Health (plataforma de telesalud especializada en menopausia y salud femenina en EE.UU.)",
+    "nombre": "Neopausia",
+    "sitio_web": "",
+    "traccion": 0,
+    "es_tecnologia": true,
+    "pais": "Chile",
+    "es_startup": true,
+    "copycat": 1,
+    "sector": "healthtech",
+    "evidencia": "Nathalie Wilk salió a levantar capital para Neopausia, una clínica online especializada en salud femenina y menopausia en Chile.",
+    "descripcion": "Clínica online enfocada en la salud femenina y el tratamiento de la menopausia.",
+    "filtros_fallidos": [],
+    "score": 65.0,
+    "score_bruto": 65.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 0.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 5.0
+    },
+    "estado": "calificada",
+    "levantando_ahora": true,
+    "key": "neopausia",
+    "primera_vez": "2026-10-24T00:11:45.628534+00:00",
+    "ultima_vez": "2026-10-24T00:11:45.628534+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/que-lindo-tu-proyectito-la-intuicion-de-la-founder-que-construye-neopausia/",
+        "titulo": "Qué lindo tu proyectito: la intuición de la founder que construye Neopausia",
+        "fecha": "2026-10-16T14:39:22+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 1
+  },
+  {
+    "descripcion": "Desarrolla soluciones de aislantes térmicos y materiales para la construcción.",
+    "copycat_analogo": "",
+    "purpose": 1,
+    "es_startup": true,
+    "traccion": 0.5,
+    "ronda_reciente": "",
+    "sector": "cleantech",
+    "pais": "Chile",
+    "es_tecnologia": true,
+    "evidencia": "Ganó el concurso Edifica 2026. Desarrolla materiales aislantes en Chile.",
+    "nombre": "Aislacor",
+    "etapa": "desconocida",
+    "borrador_contacto": "Hola [Nombre], felicitaciones por ganar Edifica 2026 con Aislacor. En Latin Leap invertimos en startups con impacto de la región y nos atrae la innovación en materiales sostenibles. Quisiera agendar una breve llamada de 20 minutos para conocer más sobre sus planes.",
+    "ai_first": 0,
+    "momento": 0,
+    "copycat": 0,
+    "sitio_web": "",
+    "filtros_fallidos": [],
+    "score": 50.0,
+    "score_bruto": 50.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 5.0
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": false,
+    "key": "aislacor",
+    "primera_vez": "2026-10-24T00:08:48.754687+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754687+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONjFSR0N5SXBEdGF1TXhPLUlpZWZwamJ1cUk0N1V1andQVkdQbXMtVFk2VmYycUFIOHJGSWZvQUxka2hvbGNPc3A4Q01teGttbFRheXpfa0dmQ0dvb19DUFJOcTBzLVN0SEhuMzJTQk9jMEhndHVvTzM1Y1ltd2Q5dFNEWWNGbnZWT0hRV1ZXbw?oc=5",
+        "titulo": "Aislacor, startup chilena de aislantes, gana Edifica 2026 - El Ecosistema Startup",
+        "fecha": "2026-10-23T20:21:40+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "pais": "Colombia",
+    "momento": 0,
+    "borrador_contacto": "Hola, vi que en ARQ triplicaron sus usuarios en Colombia y lanzaron ARQ Business y ARQ Crypto. En Latin Leap seguimos de cerca las fintech de la región con alta adopción internacional. Me encantaría coordinar una llamada de 20 minutos para conocer sus próximos pasos y ver posibles vías de colaboración.",
+    "nombre": "ARQ",
+    "copycat_analogo": "Revolut: plataforma multidivisa que ofrece cuentas, transferencias internacionales y servicios cripto y corporativos.",
+    "ai_first": 0,
+    "evidencia": "Superó los 3 millones de usuarios globales y triplicó sus usuarios en Colombia, registrando un aumento de 2.3 veces en recepción de pagos desde el exterior.",
+    "es_tecnologia": true,
+    "descripcion": "Plataforma fintech que ofrece cuentas multidivisa, transferencias internacionales y soluciones financieras para personas y empresas.",
+    "etapa": "serie_a_o_mas",
+    "copycat": 1,
+    "purpose": 0.5,
+    "sector": "fintech",
+    "ronda_reciente": "",
+    "traccion": 1,
+    "es_startup": true,
+    "sitio_web": "",
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 77.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "arq",
+    "primera_vez": "2026-10-24T00:12:23.912501+00:00",
+    "ultima_vez": "2026-10-24T00:12:23.912501+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/arq-triplica-su-base-de-usuarios-en-colombia-y-expande-servicios-a-cripto-y-empresas-2026-10-21",
+        "titulo": "🚀 ARQ triplica su base de usuarios en Colombia y expande servicios a cripto y empresas",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "traccion": 0.5,
+    "purpose": 0.5,
+    "copycat": 1,
+    "es_startup": true,
+    "evidencia": "Abrió lista de espera en República Dominicana para su asistente de IA por WhatsApp orientado a pymes y contadores ante la Ley 32-23.",
+    "sitio_web": "",
+    "nombre": "Alegra",
+    "ai_first": 0.5,
+    "copycat_analogo": "QuickBooks: software de contabilidad, gestión financiera y facturación electrónica para pymes.",
+    "etapa": "serie_a_o_mas",
+    "pais": "Colombia",
+    "es_tecnologia": true,
+    "descripcion": "Software de gestión financiera y facturación electrónica para pymes que incorpora un asistente de IA por WhatsApp.",
+    "sector": "ai saas",
+    "borrador_contacto": "Hola, vi que en Alegra lanzaron la lista de espera para su asistente de IA en República Dominicana ante el hito de la Ley 32-23 de Facturación Electrónica. En Latin Leap invertimos en soluciones B2B impulsadas por IA. Quisiera proponer una llamada de 20 minutos para conocer más sobre el desarrollo de sus agentes de IA.",
+    "ronda_reciente": "",
+    "momento": 1,
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 80.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 7.5,
+      "momento": 5.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": true,
+    "key": "alegra",
+    "primera_vez": "2026-10-24T00:12:23.912613+00:00",
+    "ultima_vez": "2026-10-24T00:12:23.912613+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/alegra-lanza-asistente-de-ia-para-pymes-ante-plazo-de-facturaci-n-electr-nica-en-rd-2026-10-21",
+        "titulo": "🤖 Alegra lanza asistente de IA para pymes ante plazo de facturación electrónica en RD",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "descripcion": "Fintech que ofrece soluciones financieras digitales y desarrolla programas de educación en tecnología y finanzas.",
+    "ai_first": 0,
+    "copycat_analogo": "Revolut - fintech multilatam con suite de pagos y servicios financieros digitales",
+    "sector": "fintech",
+    "momento": 0.5,
+    "es_startup": true,
+    "nombre": "Belo",
+    "borrador_contacto": "Hola equipo de Belo, vi el lanzamiento de Belo Campus tras asegurar su Serie A de US$14M y sus planes de expansión regional a México, Colombia, Chile y Perú. En Latin Leap acompañamos fintechs en LATAM. ¿Tendrían 20 minutos para conversar sobre su hoja de ruta?",
+    "es_tecnologia": true,
+    "pais": "Argentina",
+    "sitio_web": "",
+    "etapa": "serie_a_o_mas",
+    "copycat": 1,
+    "traccion": 1,
+    "ronda_reciente": "Serie A US$14M, 2026",
+    "purpose": 0.5,
+    "evidencia": "Anunció su programa educativo tras cerrar una Serie A de US$14M en 2026 y planea expandirse a 5 países hacia 2027.",
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 75.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "belo",
+    "primera_vez": "2026-10-24T00:10:00.461281+00:00",
+    "ultima_vez": "2026-10-24T00:10:00.461281+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/belo-lanza-programa-educativo-y-planea-expansi-n-a-cinco-pa-ses-de-la-regi-n-2026-10-21",
+        "titulo": "🌎 🎓 Belo lanza programa educativo y planea expansión a cinco países de la región",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_tecnologia": true,
+    "ronda_reciente": "Línea de crédito US$11.3M, oct 2026",
+    "sitio_web": "",
+    "copycat": 1,
+    "es_startup": true,
+    "borrador_contacto": "Hola José, felicitaciones por la línea de crédito de US$11.3M con BBVA Spark para expandir el crédito a pymes en Colombia. En Latin Leap seguimos de cerca la evolución fintech en la región y nos encantaría agendar una llamada de 20 minutos para conocer más sobre sus planes de expansión a Perú. ¿Tendrías disponibilidad esta semana? Un saludo, Associate en Latin Leap.",
+    "nombre": "Bold",
+    "sector": "fintech",
+    "momento": 0.5,
+    "copycat_analogo": "Square (EE.UU.): datáfonos y servicios financieros/créditos a pymes.",
+    "etapa": "serie_a_o_mas",
+    "pais": "Colombia",
+    "purpose": 0.5,
+    "evidencia": "Suma más de 700,000 comercios atendidos y procesa US$5.4B anuales. Obtuvo una línea de crédito de US$11.3M de BBVA Spark.",
+    "descripcion": "Fintech colombiana que ofrece servicios financieros, datáfonos y créditos a pequeñas y medianas empresas.",
+    "ai_first": 0,
+    "traccion": 1,
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 80.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "bold",
+    "primera_vez": "2026-10-24T00:07:34.195203+00:00",
+    "ultima_vez": "2026-10-24T00:12:23.912541+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/colombian-fintech-bold-secures-11-3m-credit-facility-from-bbva-spark/",
+        "titulo": "Colombian fintech Bold secures $11.3M credit facility from BBVA Spark",
+        "fecha": "2026-10-23T22:47:35+00:00"
+      },
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/la-colombiana-bold-obtiene-credito-de-bbva-spark-para-ampliar-sus-prestamos-a-pymes/",
+        "titulo": "La colombiana Bold obtiene crédito de BBVA Spark para ampliar sus préstamos a pymes",
+        "fecha": "2026-10-23T14:00:00+00:00"
+      },
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/bold-obtiene-37-450-millones-de-bbva-spark-para-ampliar-cr-ditos-a-pymes-2026-10-21",
+        "titulo": "💳 Bold obtiene $37.450 millones de BBVA Spark para ampliar créditos a pymes",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "pais": "Perú",
+    "nombre": "Crehana",
+    "sector": "hrtech",
+    "evidencia": "Evolucionó a scale-up rentable de HRTech en LATAM y prepara el lanzamiento de un producto de gestión de nómina en Perú.",
+    "purpose": 0.5,
+    "copycat_analogo": "Lattice (EE.UU.): plataforma SaaS para gestión del desempeño y recursos humanos corporativo.",
+    "borrador_contacto": "Hola Diego, muy interesante la transformación de Crehana hacia una scale-up rentable de HRTech y la preparación de su módulo de nómina en Perú. En Latin Leap seguimos activamente el sector de SaaS B2B en la región y nos encantaría agendar una breve llamada de 20 minutos para intercambiar visiones. ¿Tendrías disponibilidad? Saludos, Associate en Latin Leap.",
+    "es_tecnologia": true,
+    "momento": 0,
+    "es_startup": true,
+    "traccion": 0.5,
+    "ai_first": 0,
+    "ronda_reciente": "",
+    "sitio_web": "",
+    "descripcion": "Plataforma SaaS de gestión de recursos humanos y desarrollo de talento para empresas.",
+    "copycat": 1,
+    "etapa": "serie_a_o_mas",
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 62.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 10.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "crehana",
+    "primera_vez": "2026-10-24T00:07:34.195362+00:00",
+    "ultima_vez": "2026-10-24T00:07:34.195362+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/crehana-de-plataforma-de-cursos-a-scale-up-rentable-de-hrtech-y-sus-planes-en-per-2026-10-22",
+        "titulo": "🚀 Crehana: De plataforma de cursos a scale-up rentable de HRTech y sus planes en Perú",
+        "fecha": "2026-10-22T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "sector": "ai saas",
+    "traccion": 1,
+    "borrador_contacto": "Hola Nicolás, felicitaciones por el levantamiento de US$6M para Dapta y los US$4M en ARR alcanzados con Dapti. Me parece muy innovador su modelo de cobro por reuniones calificadas. En Latin Leap invertimos en AI SaaS B2B en LATAM. ¿Tendrás 20 minutos para una llamada la próxima semana?",
+    "descripcion": "Desarrolla agentes de IA autónomos que automatizan la prospección y cualificación de ventas B2B en español.",
+    "evidencia": "Cerró ronda Seed de US$6M, reporta US$4M de ARR y más de 200.000 usuarios con clientes como Rappi y Mercado Libre.",
+    "nombre": "Dapta",
+    "momento": 1,
+    "es_startup": true,
+    "sitio_web": "",
+    "ronda_reciente": "Seed US$6M, oct 2026",
+    "etapa": "seed",
+    "purpose": 0,
+    "copycat_analogo": "11x.ai - agentes autónomos de IA para la prospección y automatización de ventas B2B",
+    "ai_first": 1,
+    "es_tecnologia": true,
+    "pais": "Colombia",
+    "copycat": 1,
+    "filtros_fallidos": [
+      "ya_en_portafolio"
+    ],
+    "score": 0.0,
+    "score_bruto": 95.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 15.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "portafolio",
+    "levantando_ahora": true,
+    "key": "dapta",
+    "primera_vez": "2026-10-24T00:08:48.754850+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/dapta-raises-6m-seed-round-led-by-chingona-ventures/",
+        "titulo": "Dapta raises $6M seed round led by Chingona Ventures",
+        "fecha": "2026-10-20T21:53:03+00:00"
+      },
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/startup-colombiana-levanta-us6-millones-para-escalar-sus-agentes-de-ia-en-ventas-para-el-mercado-hispanohablante/",
+        "titulo": "Startup colombiana levanta US$6 millones para escalar sus agentes de IA en ventas para el mercado hispanohablante",
+        "fecha": "2026-10-19T13:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null,
+    "ultima_vez": "2026-10-24T00:10:00.461346+00:00"
+  },
+  {
+    "sitio_web": "",
+    "es_tecnologia": true,
+    "momento": 0.5,
+    "purpose": 0,
+    "borrador_contacto": "Hola, leí sobre el lanzamiento de Pangaea por parte de Deel para optimizar nómina y RRHH con modelos especializados de IA. En Latin Leap invertimos en startups AI-first y HRTech en LATAM. Nos gustaría tener una llamada de 20 minutos para conversar sobre tendencias de IA en gestión de talento. ¿Tendrán espacio esta semana?",
+    "pais": "Estados Unidos",
+    "copycat_analogo": "",
+    "ronda_reciente": "",
+    "traccion": 1,
+    "nombre": "Deel",
+    "copycat": 0,
+    "es_startup": false,
+    "ai_first": 1,
+    "evidencia": "Deel lanzó Pangaea, un conjunto de modelos de IA especializados en recursos humanos que procesan consultas en 7,7 segundos.",
+    "sector": "hrtech",
+    "descripcion": "Plataforma global de contratación y nómina que desarrolló modelos de IA especializados para RRHH.",
+    "etapa": "serie_a_o_mas",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 57.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "deel",
+    "primera_vez": "2026-10-24T00:11:45.628648+00:00",
+    "ultima_vez": "2026-10-24T00:11:45.628648+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/deel-lanza-pangaea-modelos-de-ia-especializados-para-optimizar-n-mina-y-rrhh-2026-10-21",
+        "titulo": "🤖 Deel lanza Pangaea: modelos de IA especializados para optimizar nómina y RRHH",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_startup": false,
+    "borrador_contacto": "",
+    "copycat": 0,
+    "nombre": "EBANX",
+    "sitio_web": "",
+    "sector": "fintech",
+    "etapa": "serie_a_o_mas",
+    "traccion": 1,
+    "ai_first": 0,
+    "es_tecnologia": true,
+    "momento": 0,
+    "ronda_reciente": "",
+    "purpose": 0.5,
+    "pais": "Brasil",
+    "descripcion": "Plataforma global de pagos transfronterizos y cobros recurrentes para empresas SaaS y streaming.",
+    "evidencia": "Fintech brasileña global de pagos que se alió con OPay en Nigeria para habilitar cobros recurrentes a 40M de usuarios activos.",
+    "copycat_analogo": "",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 42.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "ebanx",
+    "primera_vez": "2026-10-24T00:07:34.195280+00:00",
+    "ultima_vez": "2026-10-24T00:07:34.195280+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/ebanx-lanza-pagos-recurrentes-en-nigeria-a-trav-s-de-una-alianza-con-opay-2026-10-22",
+        "titulo": "🚀 EBANX lanza pagos recurrentes en Nigeria a través de una alianza con OPay",
+        "fecha": "2026-10-22T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "ronda_reciente": "",
+    "copycat_analogo": "",
+    "ai_first": 0,
+    "purpose": 0.5,
+    "nombre": "Emprende tu Mente",
+    "es_tecnologia": false,
+    "etapa": "desconocida",
+    "evidencia": "Organización sin fines de lucro que organiza el evento EtMday 2026 reuniendo a más de 60,000 asistentes.",
+    "traccion": 0.5,
+    "sector": "otro",
+    "es_startup": false,
+    "borrador_contacto": "Hola [Nombre], vi la gran convocatoria del EtMday 2026 en Santiago. En Latin Leap seguimos de cerca las iniciativas que impulsan el ecosistema emprendedor en LATAM y nos gustaría conectar para explorar futuras colaboraciones.",
+    "pais": "Chile",
+    "descripcion": "Corporación sin fines de lucro chilena organizadora del encuentro de emprendimiento e innovación EtMday.",
+    "momento": 0,
+    "copycat": 0,
+    "sitio_web": "",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "no_es_tecnologia"
+    ],
+    "score": 0.0,
+    "score_bruto": 27.5,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 0.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "emprendetumente",
+    "primera_vez": "2026-10-24T00:08:48.754763+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754763+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/el-etmday-2026-lleva-a-santiago-a-freddy-vega-alejandro-vazquez-y-otros-referentes-latinoamericanos-del-emprendimiento/",
+        "titulo": "El EtMday 2026 lleva a Santiago a Freddy Vega, Alejandro Vázquez y otros referentes latinoamericanos del emprendimiento",
+        "fecha": "2026-10-23T13:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "traccion": 1,
+    "descripcion": "Plataforma digital de inversiones y gestión de activos que creará su propia AFP.",
+    "borrador_contacto": "Hola [Nombre], vi la noticia de que Fintual creará su propia AFP en Chile. Nos parece un paso muy relevante para modernizar el ahorro previsional en la región. Me gustaría agendar 20 minutos para intercambiar visiones sobre el sector fintech en LATAM.",
+    "copycat": 1,
+    "momento": 0,
+    "es_tecnologia": true,
+    "nombre": "Fintual",
+    "etapa": "serie_a_o_mas",
+    "copycat_analogo": "Betterment / Wealthfront: gestión de inversiones automatizada y productos de retiro.",
+    "sector": "fintech",
+    "ai_first": 0,
+    "ronda_reciente": "",
+    "sitio_web": "",
+    "pais": "Chile",
+    "evidencia": "Anunció la creación de una AFP propia en Chile para desafiar a las gestoras tradicionales.",
+    "purpose": 0.5,
+    "es_startup": true,
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 77.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "fintual",
+    "primera_vez": "2026-10-24T00:08:48.754828+00:00",
+    "ultima_vez": "2026-10-24T00:10:00.461186+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZ3M3a25oSFRqcnktNW5GSmNxQkRPaFMxWF9yclQ0WHhLaWw1ZkZsY3BqZmdmcGNxN3RtY1hVWHEtV0FVOTVUa3dxazd3N1ptSm5tcDRtTmc0TmYxT3hTYm1kUkIyUERibTZFZGh2QlhRRlVCQnV5WVEzS0Fxdmo2WlJDSDhKd3Zra0EtaEhlRU0?oc=5",
+        "titulo": "Fintual creará una AFP y desafía a las gestoras chilenas - El Ecosistema Startup",
+        "fecha": "2026-10-23T20:21:40+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdTRJUV8wYy1BUDN6bkJNZUlvVXN4eHIwMWhHZ3RUMTFnbTNMc1hQVGFWSU03VUlJc1E4SXRvZFBPTlgyclVhcTd0Tk1lUGJsWWpSNEt0UVlsaHpvTE83MlpKaTFnTnJNVFBOLXRTS1FGZFZ5Vy0xb3htNWliVzFYYw?oc=5",
+        "titulo": "Quiénes están detrás de Fintual, la fintech que busca entrar al negocio de las AFP en medio de la crisis del Fondo E - Ex-ante",
+        "fecha": "2026-10-23T19:49:38+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "ai_first": 0,
+    "borrador_contacto": "Hola David, vi la organización de Impactaland 2026 en el marco de la Chile Tech Week. En Latin Leap invertimos en startups B2B tech de impacto en LATAM. Me gustaría agendar una llamada de 20 minutos para explorar oportunidades de coinversión durante el evento.",
+    "sector": "otro",
+    "pais": "Chile",
+    "descripcion": "Fondo latinoamericano de venture capital enfocado en startups e iniciativas de impacto social y ambiental.",
+    "copycat": 0,
+    "nombre": "Impacta VC",
+    "etapa": "desconocida",
+    "purpose": 1,
+    "sitio_web": "",
+    "es_tecnologia": false,
+    "copycat_analogo": "",
+    "traccion": 0,
+    "momento": 0,
+    "es_startup": false,
+    "evidencia": "Fondo de VC que celebra cinco años organizando el hub de inversión Impactaland dentro del ETM Day.",
+    "ronda_reciente": "",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "no_es_tecnologia"
+    ],
+    "score": 0.0,
+    "score_bruto": 20.0,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 5.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "impactavc",
+    "primera_vez": "2026-10-24T00:10:00.461258+00:00",
+    "ultima_vez": "2026-10-24T00:10:00.461374+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/impacta-vc-celebra-cinco-anos-con-una-nueva-edicion-de-impactaland-en-el-etm-day-del-parque-bicentenario/",
+        "titulo": "Impacta VC celebra cinco años con una nueva edición de Impactaland en el ETM Day del Parque Bicentenario",
+        "fecha": "2026-10-19T14:00:00+00:00"
+      },
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/impacta-vc-celebra-cinco-a-os-reuniendo-al-ecosistema-en-impactaland-2026-2026-10-21",
+        "titulo": "🚀 Impacta VC celebra cinco años reuniendo al ecosistema en Impactaland 2026",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "purpose": 0,
+    "momento": 0,
+    "sector": "fintech",
+    "ai_first": 0,
+    "evidencia": "Mastercard presentó Wallet Pay junto a Clip, Mercado Pago y DaviPlata para conectar billeteras digitales en más de 200 países.",
+    "borrador_contacto": "Hola, leí sobre el lanzamiento de Wallet Pay por parte de Mastercard para conectar billeteras digitales en América Latina. En Latin Leap seguimos de cerca las innovaciones en infraestructura de pagos. Me gustaría agendar una breve llamada de 20 minutos para conversar sobre oportunidades de colaboración con nuestro portafolio de startups fintech. ¿Tendrán tiempo esta semana?",
+    "es_tecnologia": true,
+    "copycat_analogo": "",
+    "pais": "Estados Unidos",
+    "sitio_web": "",
+    "nombre": "Mastercard",
+    "es_startup": false,
+    "copycat": 0,
+    "etapa": "serie_a_o_mas",
+    "ronda_reciente": "",
+    "traccion": 1,
+    "descripcion": "Red global de pagos que lanzó Wallet Pay para conectar billeteras digitales.",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 40.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "mastercard",
+    "primera_vez": "2026-10-24T00:11:45.628575+00:00",
+    "ultima_vez": "2026-10-24T00:11:45.628575+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/mastercard-lanza-wallet-pay-con-la-participaci-n-de-clip-y-mercado-pago-2026-10-21",
+        "titulo": "💳 Mastercard lanza Wallet Pay con la participación de Clip y Mercado Pago",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "purpose": 0.5,
+    "momento": 0,
+    "borrador_contacto": "Hola, vi la noticia sobre la expansión de la red logística de Mercado Libre en San Juan, Argentina. En Latin Leap apoyamos startups de e-commerce y logística en LATAM. Nos gustaría tener una llamada de 20 minutos para explorar posibles sinergias entre sus iniciativas regionales y nuestro portafolio. ¿Tienen disponibilidad esta semana?",
+    "pais": "Argentina",
+    "traccion": 1,
+    "sitio_web": "",
+    "sector": "next-gen retail",
+    "copycat": 0,
+    "etapa": "serie_a_o_mas",
+    "descripcion": "Plataforma de e-commerce y logística que amplía su infraestructura logística en San Juan, Argentina.",
+    "copycat_analogo": "",
+    "ronda_reciente": "",
+    "nombre": "Mercado Libre",
+    "es_startup": false,
+    "ai_first": 0,
+    "es_tecnologia": true,
+    "evidencia": "Mercado Libre proyecta un nuevo centro logístico de hasta 12.000 m2 en San Juan para impulsar el e-commerce local.",
+    "filtros_fallidos": [
+      "no_es_startup",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 52.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "mercadolibre",
+    "primera_vez": "2026-10-24T00:11:45.628602+00:00",
+    "ultima_vez": "2026-10-24T00:11:45.628602+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/mercado-libre-expande-su-red-log-stica-en-san-juan-para-potenciar-el-comercio-local-2026-10-21",
+        "titulo": "🌎 📦 Mercado Libre expande su red logística en San Juan para potenciar el comercio local",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "pais": "Colombia",
+    "ai_first": 0,
+    "evidencia": "Invertirá aproximadamente 198 millones de pesos en especie para revitalizar bajopuentes en Bogotá junto a la Alcaldía.",
+    "sector": "logistica",
+    "sitio_web": "",
+    "traccion": 1,
+    "es_tecnologia": true,
+    "momento": 0,
+    "copycat_analogo": "DoorDash: superapp de logística urbana y entregas a domicilio.",
+    "purpose": 0.5,
+    "copycat": 1,
+    "descripcion": "Superapp de entregas a domicilio y servicios logísticos urbanos.",
+    "nombre": "Rappi",
+    "etapa": "serie_a_o_mas",
+    "borrador_contacto": "",
+    "ronda_reciente": "",
+    "es_startup": false,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 57.5,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "rappi",
+    "primera_vez": "2026-10-24T00:12:23.912570+00:00",
+    "ultima_vez": "2026-10-24T00:12:23.912570+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/rappi-participar-en-la-revitalizaci-n-de-los-bajopuentes-en-bogot-2026-10-21",
+        "titulo": "🚀 🌉 Rappi participará en la revitalización de los bajopuentes en Bogotá",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "copycat": 1,
+    "purpose": 0,
+    "sector": "next-gen retail",
+    "nombre": "Scanntech",
+    "borrador_contacto": "Hola equipo de Scanntech, felicitaciones por la ronda de US$180M liderada por L Catterton. En Latin Leap nos enfrenamos en soluciones B2B de tecnología en la región. Me encantaría agendar una llamada de 20 minutos para conocer sus planes de expansión de mercado a partir de 2027.",
+    "pais": "Uruguay",
+    "traccion": 1,
+    "es_tecnologia": true,
+    "ronda_reciente": "Growth US$180M, oct 2026",
+    "descripcion": "Provee tecnología para recopilar datos de ventas minoristas en tiempo real para comercios y empresas de consumo masivo.",
+    "evidencia": "Levantó una ronda de US$180M, procesa más de US$200B en ventas anuales de retail y reporta un crecimiento del 30% anual.",
+    "ai_first": 0,
+    "momento": 0.5,
+    "es_startup": true,
+    "sitio_web": "",
+    "etapa": "serie_a_o_mas",
+    "copycat_analogo": "NielsenIQ - captura y analítica de datos de ventas en retail y consumo masivo",
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 72.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "scanntech",
+    "primera_vez": "2026-10-24T00:10:00.461229+00:00",
+    "ultima_vez": "2026-10-24T00:10:00.461229+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/uruguayan-scanntech-raises-180m-round-led-by-l-catterton/",
+        "titulo": "Uruguayan Scanntech raises $180M round led by L Catterton",
+        "fecha": "2026-10-16T16:40:03+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_startup": true,
+    "etapa": "serie_a_o_mas",
+    "ai_first": 1,
+    "es_tecnologia": true,
+    "copycat_analogo": "",
+    "momento": 0.5,
+    "traccion": 0,
+    "borrador_contacto": "Hola equipo de Tenstorrent, vi el anuncio sobre su ronda de US$1.500M. En Latin Leap seguimos de cerca el avance en infraestructura de inteligencia artificial. Me gustaría agendar una llamada de 20 minutos para entender su visión estratégica respecto a América Latina.",
+    "evidencia": "Levantó una ronda de financiación de US$1.500M destacada entre los cierres de capital de la semana.",
+    "nombre": "Tenstorrent",
+    "copycat": 0,
+    "pais": "Desconocido",
+    "sector": "ai saas",
+    "ronda_reciente": "US$1.500M, oct 2026",
+    "descripcion": "Empresa de tecnología enfocada en el desarrollo de hardware y arquitectura para inteligencia artificial.",
+    "sitio_web": "",
+    "purpose": 0,
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 37.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "tenstorrent",
+    "primera_vez": "2026-10-24T00:10:00.461302+00:00",
+    "ultima_vez": "2026-10-24T00:10:00.461302+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZF9sMzU4UEJpaXJyOFJrMEs1TDYzaFlXTkd2N25RNXJMcGpZVmhqaVIyWUpDVzFld3BWNEJIMHhlVWlzWUx0N3dTajNjc2lkWURNMlY2dXE4UFBuUU9XZ2hMUDZuZTZQRnM4X2xqY2E5LTVBNkZIdWU0QnNQQVZ4ODJtY0cwZHAwRDEydklHOA?oc=5",
+        "titulo": "Tenstorrent levanta US$1.500M: las 10 rondas de la semana - El Ecosistema Startup",
+        "fecha": "2026-10-23T19:21:36+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "evidencia": "Comprador corporativo de la startup argentina Valida para expandir su presencia regional.",
+    "momento": 0,
+    "copycat": 0,
+    "es_startup": false,
+    "es_tecnologia": true,
+    "ronda_reciente": "",
+    "traccion": 1,
+    "borrador_contacto": "Hola [Nombre], felicidades por la adquisición de Valida para consolidar la presencia de Unico en Argentina. En Latin Leap nos interesa el crecimiento de soluciones de identidad digital en LATAM y nos gustaría conversar sobre el mercado regional.",
+    "nombre": "Unico",
+    "descripcion": "Compañía tecnológica brasileña de identidad digital que adquirió a la argentina Valida.",
+    "pais": "Brasil",
+    "sitio_web": "",
+    "etapa": "serie_a_o_mas",
+    "copycat_analogo": "",
+    "sector": "ai saas",
+    "ai_first": 0.5,
+    "purpose": 0,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 47.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 7.5,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "unico",
+    "primera_vez": "2026-10-24T00:08:48.754807+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754807+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/unico-adquiere-a-la-argentina-valida-para-expandir-su-negocio-de-identidad-digital-2026-10-22",
+        "titulo": "🤝 Unico adquiere a la argentina Valida para expandir su negocio de identidad digital",
+        "fecha": "2026-10-22T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "pais": "Desconocido",
+    "traccion": 0,
+    "es_startup": true,
+    "copycat": 0,
+    "purpose": 0,
+    "sector": "otro",
+    "etapa": "serie_a_o_mas",
+    "sitio_web": "",
+    "evidencia": "Levantó una ronda de inversión de US$200 millones según reportes del ecosistema.",
+    "ai_first": 0,
+    "descripcion": "Startup de tecnología de defensa y perros de guerra.",
+    "copycat_analogo": "",
+    "borrador_contacto": "Hola, leí que Warhound levantó US$200M recientemente. En Latin Leap nos interesa conocer más sobre su propuesta tecnológica e hitos operativos. ¿Tendrían disponibilidad para una breve llamada de 20 minutos en los próximos días?",
+    "es_tecnologia": true,
+    "nombre": "Warhound",
+    "momento": 1,
+    "ronda_reciente": "US$200M, oct 2026",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 5.0,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": true,
+    "key": "warhound",
+    "primera_vez": "2026-10-24T00:12:23.912593+00:00",
+    "ultima_vez": "2026-10-24T00:12:23.912593+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQeTI2aEg4WVJZTEZVbUJ6eFRZTDdRT3p2Tzd0SkxTV1hwZm9Mal9PUU92c183NVFpb0lBQXNUaHZ4U1dkaWxibHp1R0tJMnFSdEdpcFR5anRaZUxqamszcmVSYnNlS1Y0QnBFYi1PYy15QzJSS3RuX0IzcDNrTWpNWWNYWGQ2SHplaWc?oc=5",
+        "titulo": "Warhound, startup de perros de guerra, levanta US$200M - El Ecosistema Startup",
+        "fecha": "2026-10-22T23:36:45+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_tecnologia": true,
+    "traccion": 1,
+    "purpose": 0,
+    "evidencia": "Empresa de movilidad global a gran escala que realizó una alianza con Hunter en Ecuador.",
+    "sitio_web": "",
+    "ronda_reciente": "",
+    "nombre": "inDrive",
+    "descripcion": "Plataforma global de movilidad que cerró una alianza estratégica de seguridad vehicular en Ecuador.",
+    "copycat_analogo": "",
+    "sector": "mobility",
+    "es_startup": false,
+    "ai_first": 0,
+    "etapa": "serie_a_o_mas",
+    "pais": "Estados Unidos",
+    "borrador_contacto": "Hola [Nombre], vi la alianza entre inDrive y Hunter en Ecuador para reforzar la seguridad vehicular. En Latin Leap seguimos de cerca las tecnologías aplicadas a la movilidad en LATAM y nos gustaría mantener el contacto.",
+    "copycat": 0,
+    "momento": 0,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 40.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "key": "indrive",
+    "primera_vez": "2026-10-24T00:08:48.754897+00:00",
+    "ultima_vez": "2026-10-24T00:08:48.754897+00:00",
+    "menciones": [
+      {
+        "fuente": "Descubre.vc",
+        "url": "https://www.descubre.vc/noticia/indrive-y-hunter-se-al-an-para-reforzar-la-seguridad-vehicular-en-ecuador-2026-10-21",
+        "titulo": "🚀 🚗 inDrive y Hunter se alían para reforzar la seguridad vehicular en Ecuador",
+        "fecha": "2026-10-21T12:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  }
+]
