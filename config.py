@@ -90,6 +90,7 @@ MODELO = "claude-sonnet-5-5"            # se usa si existe el secreto ANTHROPIC_
 # Si no hay llave de Anthropic: Gemini (capa gratuita de Google, llave en aistudio.google.com).
 # El modelo Flash se descubre solo al arrancar; se puede fijar con la variable DEALFLOW_MODEL.
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
+TIMEOUT_GEMINI_SEG = 150          # si Gemini no responde en este tiempo, se reintenta
 PAUSA_GEMINI_SEG = 13            # pausa entre consultas para no rebasar el límite por minuto de la capa gratuita
 NOTAS_POR_CONSULTA = 8           # lote: 40 notas = 5 consultas (la capa gratuita permite ~20 consultas diarias por modelo)
 PRESUPUESTO_MINUTOS = 18        # deja de evaluar al cumplirse y guarda lo avanzado

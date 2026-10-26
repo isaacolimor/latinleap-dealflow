@@ -94,7 +94,15 @@ def corrida(cliente=None, articulos: list[dict] | None = None, estado_fuentes: d
             print(f"[info] presupuesto de tiempo agotado; {pendientes_por_tiempo} notas quedan para la siguiente corrida")
             break
         try:
-            resultados = extract.evaluar_lote(lote, cliente)
+            try:
+                resultados = extract.evaluar_lote(lote, cliente)
+            except Exception as exc_lote:
+                if len(lote) < 2:
+                    raise
+                # Reintento con el lote partido a la mitad: consultas más chicas tardan menos y fallan menos.
+                print(f"[info] lote {j + 1} falló ({type(exc_lote).__name__}); reintentando en dos mitades")
+                mitad = len(lote) // 2
+                resultados = extract.evaluar_lote(lote[:mitad], cliente) + extract.evaluar_lote(lote[mitad:], cliente)
         except Exception as exc:
             # No se marcan como vistas: se reintentan en la siguiente corrida.
             errores += len(lote)

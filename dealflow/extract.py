@@ -179,11 +179,23 @@ def _llamar_gemini(contenido: str, herramienta_def: dict = HERRAMIENTA, sistema:
         "tools": [herramienta],
         "tool_choice": {"type": "function", "function": {"name": herramienta_def["name"]}},
     }
-    intento = 0
+    intento, fallas_red = 0, 0
     while True:
         cuerpo["model"] = modelo()
-        r = requests.post(config.GEMINI_URL + "chat/completions", json=cuerpo, timeout=300,
-                          headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+        try:
+            r = requests.post(config.GEMINI_URL + "chat/completions", json=cuerpo, timeout=config.TIMEOUT_GEMINI_SEG,
+                              headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+        except (requests.ConnectionError, requests.Timeout) as exc:
+            # Caída o lentitud momentánea del servidor: reintentar con espera; si persiste, probar otro modelo.
+            fallas_red += 1
+            ESPERAS["n"] += 1
+            print(f"[info] {cuerpo['model']}: {type(exc).__name__}; reintento {fallas_red}")
+            if fallas_red in (1, 3):
+                time.sleep(20 * fallas_red)
+                continue
+            if fallas_red == 2 and not os.environ.get("DEALFLOW_MODEL") and _descartar_modelo_actual():
+                continue
+            raise
         # Cuota agotada para este modelo (límite 0, o la cuota diaria): cada modelo tiene la suya, se pasa al siguiente.
         agotada = r.status_code == 429 and ("limit: 0" in r.text or "PerDay" in r.text or (intento >= 2))
         if agotada and not os.environ.get("DEALFLOW_MODEL"):

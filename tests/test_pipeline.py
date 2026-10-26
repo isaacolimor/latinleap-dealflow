@@ -206,3 +206,35 @@ def test_verificacion_humana_manda(monkeypatch):
     c = scoring.clasificar(_s(nombre="Magnar", etapa="desconocida"))
     assert c["estado"] == "descartada" and "etapa_tardia" in c["filtros_fallidos"]
     assert c["verificacion"]["fuente"] == "u"
+
+
+def test_gemini_reintenta_tras_caida_de_red(monkeypatch):
+    import json as _json
+
+    import requests
+
+    from dealflow import extract
+
+    llamadas = {"n": 0}
+
+    class _R:
+        status_code, headers, text = 200, {}, ""
+
+        def json(self):
+            return {"choices": [{"message": {"tool_calls": [
+                {"function": {"name": "registrar_startups", "arguments": _json.dumps({"startups": []})}}]}}]}
+
+    def _post(url, json, timeout, headers):
+        llamadas["n"] += 1
+        if llamadas["n"] == 1:
+            raise requests.ConnectionError("Remote end closed connection")
+        return _R()
+
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("DEALFLOW_MODEL", "gemini-x")
+    monkeypatch.setattr(requests, "post", _post)
+    monkeypatch.setattr(config, "PAUSA_GEMINI_SEG", 0)
+    monkeypatch.setattr("time.sleep", lambda s: None)
+    art = {"fuente": "X", "fecha": "2026-10-20T00:00:00", "titulo": "T", "tags": [], "texto": "..."}
+    assert extract.evaluar(art) == [] and llamadas["n"] == 2
