@@ -269,6 +269,66 @@
     "etapa_por_confirmar": false
   },
   {
+    "purpose": 0.5,
+    "descripcion": "Plataforma boliviana de pagos y cuentas virtuales en USDT para ahorrar, gastar e invertir en América Latina.",
+    "es_tecnologia": true,
+    "ronda_reciente": "Presemilla, oct 2026",
+    "adquirida": false,
+    "borrador_contacto": "Hola Alejandro, felicitaciones por la ronda presemilla liderada por Tether y el hito de 100.000 usuarios activos en menos de un año con Peso. En Latin Leap invertimos en etapas tempranas en LATAM y nos llama la atención cómo están conectando USDT al uso cotidiano con QR y apps como Yango. Me gustaría coordinar una llamada de 20 minutos para conocer su plan de despliegue en Colombia y la región. ¿Cómo está tu agenda la próxima semana?",
+    "nombre": "Peso",
+    "etapa": "pre_seed",
+    "pais": "Bolivia",
+    "momento": 1,
+    "es_startup": true,
+    "copycat": 0.5,
+    "copycat_analogo": "Strike, que integra rieles de pago locales con stablecoins y criptoactivos para uso transaccional diario.",
+    "sector": "fintech",
+    "sitio_web": "",
+    "evidencia": "Cerró ronda presemilla liderada por Tether en octubre de 2026. Reporta 100.000 usuarios activos en menos de un año y operación en Bolivia, Brasil, Colombia y Argentina.",
+    "traccion": 1,
+    "ai_first": 0,
+    "filtros_fallidos": [],
+    "score": 62.5,
+    "score_bruto": 62.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 10.0,
+      "traccion": 20.0,
+      "geografia": 5.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 2.5
+    },
+    "estado": "calificada",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "peso",
+    "primera_vez": "2026-10-24T15:04:14.222038+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNelpFRWU3Q3lpNV9mTnZicEJJd1B1NXliSm9kUTdmTWh1c3U4OWJxLXR0YmljSVBnVnoyeVh0SGp1VkIyc0hkYjZ3NVJ6dF94S3BDc3V6NlQzYXlUTGw2MWZqNFJDdy0tSE5pZWJFLXgyQnQySGViLUdBZTF5Wlk3NS1ZSjJKQXh3MFJpSVpKWFAzUXl2Z2tqd2hGWVd2SlZfbDNQUGh0bThjeGV0aU5jZEZLeDFPT0ttTVlrWHJ1N2RNcmNmaTRIeHBTcWRjU0ROUk1Nd01YZXc?oc=5",
+        "titulo": "Tether respalda a la fintech boliviana Peso para expandir pagos con USDT en América Latina - DiarioBitcoin",
+        "fecha": "2026-10-21T19:56:58+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDbUxWU0t0dWV4aE8xWk9qZTJPRVB0YkxSSEJsNHpldi1KUmNLMVVGRFVRY2RmaUNneHBwVHppT0t6dTdrbDl4MEZEYmtLRjRFVTMwTi1oeW9rU0NFaXJfM2xsbmo5WGh1MUQ5S1J5dWc4Zw?oc=5",
+        "titulo": "Fintech boliviana Peso capta pre-seed con Tether para ampliar pagos USDT en Latinoamérica - CryptoRank",
+        "fecha": "2026-10-21T13:25:21+00:00"
+      },
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/tether-lidera-la-ronda-presemilla-de-peso-la-fintech-boliviana-que-lleva-el-usdt-a-los-pagos-cotidianos-en-america-latina/",
+        "titulo": "Tether lidera la ronda presemilla de Peso, la fintech boliviana que lleva el USDT a los pagos cotidianos en América Latina",
+        "fecha": "2026-10-26T12:45:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 3,
+    "ultima_vez": "2026-10-26T20:26:16.865586+00:00"
+  },
+  {
     "descripcion": "Desarrolla soluciones de aislantes térmicos y materiales para la construcción.",
     "copycat_analogo": "",
     "purpose": 1,
@@ -364,58 +424,52 @@
     "etapa_por_confirmar": true
   },
   {
-    "es_tecnologia": true,
-    "copycat": 0,
-    "ai_first": 0,
-    "nombre": "Peso",
-    "descripcion": "Fintech boliviana que desarrolla soluciones de pago con USDT en Latinoamérica.",
-    "etapa": "pre_seed",
-    "purpose": 0.5,
-    "momento": 1,
     "es_startup": true,
-    "copycat_analogo": "",
-    "adquirida": false,
-    "evidencia": "La nota indica que captó una ronda pre-seed con Tether para ampliar pagos en USDT en Latinoamérica.",
+    "descripcion": "Plataforma chilena enfocada en la gestión e infraestructura de pagos recurrentes.",
+    "ronda_reciente": "",
+    "sitio_web": "",
+    "etapa": "desconocida",
+    "momento": 0,
+    "evidencia": "La nota solo señala que es una startup chilena de pagos recurrentes con planes de expansión hacia EE.UU., sin publicar montos ni métricas.",
+    "borrador_contacto": "Hola, vi la noticia sobre la proyección de Membrezia hacia el mercado de EE.UU. con su plataforma de pagos recurrentes. En Latin Leap invertimos en etapas pre-seed y seed en startups de la región, y seguimos de cerca la evolución del ecosistema fintech chileno. Me gustaría proponerte una breve llamada de 20 minutos para entender mejor su propuesta de valor y planes de internacionalización. ¿Tendrías disponibilidad esta semana?",
+    "copycat": 0.5,
+    "es_tecnologia": true,
+    "ai_first": 0,
     "sector": "fintech",
     "traccion": 0,
-    "sitio_web": "",
-    "ronda_reciente": "Pre-seed con Tether, oct 2026",
-    "pais": "Bolivia",
-    "borrador_contacto": "Hola [Fundador], vi la reciente inversión pre-seed de Tether en Peso para impulsar pagos con USDT en Latinoamérica. En Latin Leap invertimos en etapas tempranas en la región y seguimos con mucho interés la infraestructura de pagos y stablecoins. Me gustaría coordinar una breve llamada de 20 minutos para conocer sus planes de expansión y evaluar sinergias con nuestro fondo. ¿Tendrías disponibilidad esta semana?",
+    "pais": "Chile",
+    "nombre": "Membrezia",
+    "adquirida": false,
+    "copycat_analogo": "Stripe Billing o Zuora, dedicadas a la gestión y automatización de cobranzas y suscripciones recurrentes.",
+    "purpose": 0,
     "filtros_fallidos": [],
-    "score": 32.5,
-    "score_bruto": 32.5,
+    "score": 45.0,
+    "score_bruto": 45.0,
     "desglose": {
       "sector": 20.0,
-      "copycat": 0.0,
+      "copycat": 10.0,
       "traccion": 0.0,
-      "geografia": 5.0,
+      "geografia": 15.0,
       "ai_first": 0.0,
-      "momento": 5.0,
-      "purpose": 2.5
+      "momento": 0.0,
+      "purpose": 0.0
     },
     "estado": "bajo_umbral",
-    "levantando_ahora": true,
-    "key": "peso",
-    "primera_vez": "2026-10-24T15:04:14.222038+00:00",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": true,
+    "key": "membrezia",
+    "primera_vez": "2026-10-26T20:26:16.865643+00:00",
+    "ultima_vez": "2026-10-26T20:26:16.865643+00:00",
     "menciones": [
       {
         "fuente": "Google News",
-        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNelpFRWU3Q3lpNV9mTnZicEJJd1B1NXliSm9kUTdmTWh1c3U4OWJxLXR0YmljSVBnVnoyeVh0SGp1VkIyc0hkYjZ3NVJ6dF94S3BDc3V6NlQzYXlUTGw2MWZqNFJDdy0tSE5pZWJFLXgyQnQySGViLUdBZTF5Wlk3NS1ZSjJKQXh3MFJpSVpKWFAzUXl2Z2tqd2hGWVd2SlZfbDNQUGh0bThjeGV0aU5jZEZLeDFPT0ttTVlrWHJ1N2RNcmNmaTRIeHBTcWRjU0ROUk1Nd01YZXc?oc=5",
-        "titulo": "Tether respalda a la fintech boliviana Peso para expandir pagos con USDT en América Latina - DiarioBitcoin",
-        "fecha": "2026-10-21T19:56:58+00:00"
-      },
-      {
-        "fuente": "Google News",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDbUxWU0t0dWV4aE8xWk9qZTJPRVB0YkxSSEJsNHpldi1KUmNLMVVGRFVRY2RmaUNneHBwVHppT0t6dTdrbDl4MEZEYmtLRjRFVTMwTi1oeW9rU0NFaXJfM2xsbmo5WGh1MUQ5S1J5dWc4Zw?oc=5",
-        "titulo": "Fintech boliviana Peso capta pre-seed con Tether para ampliar pagos USDT en Latinoamérica - CryptoRank",
-        "fecha": "2026-10-21T13:25:21+00:00"
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdVZIN2twM25kRk5yal9Sd0lvVXRBaUthdFpXYTZHWGtMRnBFVExjMFVGN1p0UTE4dDltWkJJVW5mZmFjXzZHX3pSVXpHV0FiY3ZYaVJGOU03TnNjNnl5MW5Rd25Ma2VMNGRFME83eWxUZnNkWVlBLWVnUFllaFB6Q09Ea2tpYmtYOXROaU42Q1BuQQ?oc=5",
+        "titulo": "Membrezia: startup chilena de pagos recurrentes mira EE.UU. - El Ecosistema Startup",
+        "fecha": "2026-10-26T17:07:01+00:00"
       }
     ],
     "decision_equipo": null,
-    "issue": null,
-    "ultima_vez": "2026-10-24T15:08:56.269950+00:00",
-    "etapa_por_confirmar": false
+    "issue": null
   },
   {
     "pais": "Colombia",
@@ -1711,6 +1765,57 @@
     "etapa_por_confirmar": false
   },
   {
+    "adquirida": false,
+    "descripcion": "Herramienta de inteligencia artificial diseñada para optimizar y asistir las tareas de asesores financieros.",
+    "sector": "ai saas",
+    "es_tecnologia": true,
+    "copycat": 0,
+    "momento": 1,
+    "etapa": "serie_a_o_mas",
+    "borrador_contacto": "Hola, felicitaciones por el levantamiento de US$70M para Nevis. En Latin Leap invertimos en tecnología AI-first y seguimos de cerca soluciones que transforman la productividad en servicios financieros. Si están explorando alianzas estratégicas o expansión comercial hacia mercados clave de América Latina, me encantaría tener una conversación de 20 minutos para evaluar posibles sinergias con nuestra red. ¿Tendrías espacio la próxima semana?",
+    "nombre": "Nevis",
+    "ai_first": 1,
+    "sitio_web": "",
+    "traccion": 0,
+    "es_startup": true,
+    "pais": "Desconocido",
+    "evidencia": "El titular informa que levantó US$70M para su desarrollo de IA enfocado en asesores financieros.",
+    "purpose": 0,
+    "copycat_analogo": "",
+    "ronda_reciente": "US$70M, oct 2026",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 40.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "nevis",
+    "primera_vez": "2026-10-26T20:26:16.865670+00:00",
+    "ultima_vez": "2026-10-26T20:26:16.865670+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSXlVbm1wd2FqbjBHUUdCLWlpVGNZV3I2YXdYc1Y2N1gwN3h2YmZlZE5ycVRWaFRCT01mdmwzS0VpVk9nTnlaTVplSlk3NUJncUw3b01RT1dKcFdwZG1JQ0U1Zi1TVFFNanJ0bUpxZ3BONXFnWVlHYlViZEJCYUU0UTk5YkxQUQ?oc=5",
+        "titulo": "Nevis, IA para asesores financieros, levanta US$70M - El Ecosistema Startup",
+        "fecha": "2026-10-26T17:07:01+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "copycat_analogo": "Marqeta (EE.UU.), infraestructura moderna para emisión y procesamiento de tarjetas y pagos.",
     "ai_first": 0,
     "momento": 0,
@@ -2067,13 +2172,19 @@
     "levantando_ahora": false,
     "key": "tenstorrent",
     "primera_vez": "2026-10-24T00:10:00.461302+00:00",
-    "ultima_vez": "2026-10-24T00:10:00.461302+00:00",
+    "ultima_vez": "2026-10-26T20:26:16.865695+00:00",
     "menciones": [
       {
         "fuente": "Google News",
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZF9sMzU4UEJpaXJyOFJrMEs1TDYzaFlXTkd2N25RNXJMcGpZVmhqaVIyWUpDVzFld3BWNEJIMHhlVWlzWUx0N3dTajNjc2lkWURNMlY2dXE4UFBuUU9XZ2hMUDZuZTZQRnM4X2xqY2E5LTVBNkZIdWU0QnNQQVZ4ODJtY0cwZHAwRDEydklHOA?oc=5",
         "titulo": "Tenstorrent levanta US$1.500M: las 10 rondas de la semana - El Ecosistema Startup",
         "fecha": "2026-10-23T19:21:36+00:00"
+      },
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcHpNSjBYSXhZdl8yVml3a1A4M1locy1rRnNKZF9obk8xT0VIaG1TS19OSnFnUUlXZTc2UTFKR0lrc2ljYXktdE10alV2YjkwV1Y3YVc4eXEtMFRUekhUR200dHpieEdNejJ1dkV1Q2Y4QzFuT1MxMzRRb3dmUURnVw?oc=5",
+        "titulo": "Tenstorrent, rival de Nvidia, levanta US$1.500M - El Ecosistema Startup",
+        "fecha": "2026-10-26T12:03:34+00:00"
       }
     ],
     "decision_equipo": null,
