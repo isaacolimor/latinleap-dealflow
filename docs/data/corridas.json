@@ -138,5 +138,86 @@
       }
     },
     "digest": "https://github.com/isaacolimor/latinleap-dealflow/issues/2"
+  },
+  {
+    "fecha": "2026-10-26T19:35:03.807860+00:00",
+    "modelo": "gemini-3.8-flash",
+    "articulos_leidos": 200,
+    "articulos_nuevos": 42,
+    "descartes_prefiltro": {
+      "ya_visto": 86,
+      "etapa_tardia": 1,
+      "solo_brasil": 1
+    },
+    "evaluados": 0,
+    "errores_evaluacion": 16,
+    "muestra_errores": [
+      {
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdVZIN2twM25kRk5yal9Sd0lvVXRBaUthdFpXYTZHWGtMRnBFVExjMFVGN1p0UTE4dDltWkJJVW5mZmFjXzZHX3pSVXpHV0FiY3ZYaVJGOU03TnNjNnl5MW5Rd25Ma2VMNGRFME83eWxUZnNkWVlBLWVnUFllaFB6Q09Ea2tpYmtYOXROaU42Q1BuQQ?oc=5",
+        "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      },
+      {
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSDVMWEpsZjZLbTRZbmRaYW5DTUZoa1BKaUFxdGdTb2luYVJmU3N2bm1KbFFZMnVuLXZzNThMaVdlLWVwc0QzUzFsb0lfRVlycm9teVlreXhEelo1VktIQkNGcUp3azl6OUlMOHNuM1BKWHJBOGFCd1dYMGliY1BrNW5aUkQ0LWRvakJhN2dHcw?oc=5",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=300)"
+      }
+    ],
+    "pendientes_por_tiempo": 0,
+    "esperas_por_limite": 2,
+    "consultas_ia": 2,
+    "memos_generados": 0,
+    "minutos_evaluando": 10.9,
+    "startups": 0,
+    "pasan_filtros": 0,
+    "calificadas_nuevas": 0,
+    "decisiones_registradas": 0,
+    "por_fuente": {
+      "LatamList": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Startups Latam": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Google News": {
+        "leidos": 150,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Descubre.vc": {
+        "leidos": 30,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      }
+    },
+    "estado_fuentes": {
+      "LatamList": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Startups Latam": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Google News": {
+        "ok": true,
+        "articulos": 150
+      },
+      "Descubre.vc": {
+        "ok": true,
+        "articulos": 30
+      }
+    },
+    "digest": null
   }
 ]
