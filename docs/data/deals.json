@@ -65,6 +65,67 @@
     }
   },
   {
+    "sitio_web": "",
+    "traccion": 1,
+    "purpose": 0.5,
+    "copycat": 1,
+    "descripcion": "Plataforma de viajes compartidos (carpooling) entre ciudades.",
+    "borrador_contacto": "Hola Renzo, vi el reciente levantamiento de US$600.000 de Viatik con Plug and Play y Picante para escalar en Argentina. Destaco su rápido crecimiento en rutas como Salta-Jujuy. En Latin Leap invertimos en modelos probados de movilidad en LATAM y nos gustaría conocer su plan de expansión regional. ¿Tendrás 20 minutos la próxima semana para una llamada?",
+    "es_tecnologia": true,
+    "sector": "mobility",
+    "nombre": "Viatik",
+    "evidencia": "Cerró ronda de US$600.000 (acumula US$850K). Entre junio y septiembre de 2026 multiplicó por seis su volumen de operaciones en Argentina.",
+    "pais": "Uruguay",
+    "copycat_analogo": "BlaBlaCar (plataforma europea de viajes compartidos en auto entre ciudades)",
+    "etapa": "seed",
+    "es_startup": true,
+    "ronda_reciente": "Seed US$600K, oct 2026",
+    "momento": 0.5,
+    "adquirida": false,
+    "ai_first": 0,
+    "filtros_fallidos": [],
+    "score": 75.0,
+    "score_bruto": 75.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "calificada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "viatik",
+    "primera_vez": "2026-11-02T22:42:35.430185+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430185+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/la-uruguaya-viatik-levanta-us600-000-en-su-segunda-ronda-para-escalar-los-viajes-compartidos-entre-ciudades-en-argentina/",
+        "titulo": "La uruguaya Viatik levanta US$600.000 en su segunda ronda para escalar los viajes compartidos entre ciudades en Argentina",
+        "fecha": "2026-10-28T14:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": 4,
+    "memo": {
+      "tesis": "Adaptación regional del modelo validado de BlaBlaCar para movilidad interurbana en LATAM, respaldada por un crecimiento de 6x en volumen operativo en Argentina.",
+      "riesgos": [
+        "Complejidad para alcanzar liquidez bilateral en el marketplace y sostener la retención de usuarios a medida que se expande a nuevos corredores geográficos.",
+        "Márgenes unitarios ajustados por alta sensibilidad al precio en el transporte interurbano de la región.",
+        "Riesgo de desintermediación de la plataforma entre conductores y pasajeros recurrentes sin un foso defensivo o programa de fidelización robusto."
+      ],
+      "preguntas": [
+        "¿Cuál es la métrica de unit economics por trayecto (take rate medio, CAC por lado del marketplace y margen de contribución unitario)?",
+        "¿Cuál es el tamaño de mercado accesible (TAM) en carpooling interurbano en LATAM y la estrategia para alcanzar densidad crítica en nuevos corredores?",
+        "¿Cómo planean destinar los US$600.000 de la ronda Seed y qué tecnología o foso defensivo implementarán para retener a conductores y usuarios?"
+      ]
+    }
+  },
+  {
     "evidencia": "Levantó US$5.4M en Pre-Series A. Cuatriplicó sus comercios activos y triplicó el volumen mensual de pagos entre enero y septiembre de 2026.",
     "pais": "Argentina",
     "momento": 0.5,
@@ -326,7 +387,20 @@
     ],
     "decision_equipo": null,
     "issue": 3,
-    "ultima_vez": "2026-10-26T20:26:16.865586+00:00"
+    "ultima_vez": "2026-10-26T20:26:16.865586+00:00",
+    "memo": {
+      "tesis": "Modelo probado de neobanco transaccional en stablecoins (análogo a Strike) que resuelve la inflación y fricción de pagos en LATAM con tracción comprobada de 100.000 usuarios activos.",
+      "riesgos": [
+        "Incertidumbre regulatoria e incertidumbre de cumplimiento normativo sobre el uso transfronterizo y local de USDT en jurisdicciones restrictivas como Bolivia y Argentina.",
+        "Baja defensibilidad del producto ante la eventual entrada de neobancos o billeteras consolidadas que integren rieles de stablecoins.",
+        "Sostenibilidad financiera y monetización incierta de la base de 100.000 usuarios activos en etapas tempranas."
+      ],
+      "preguntas": [
+        "¿Cuáles son los unit economics actuales por usuario activo (CAC, LTV, take rate promedio por transacción e ingresos netos por rampas fiat-USDT)?",
+        "¿Cómo gestionan el marco regulatorio y el riesgo cambiario/de licencias para operar transacciones virtuales en USDT en Bolivia, Argentina, Colombia y Brasil?",
+        "¿Cuál es el plan de uso de fondos de la ronda presemilla y qué barreras de entrada desarrollarán frente a competidores regionales?"
+      ]
+    }
   },
   {
     "descripcion": "Desarrolla soluciones de aislantes térmicos y materiales para la construcción.",
@@ -466,6 +540,150 @@
         "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdVZIN2twM25kRk5yal9Sd0lvVXRBaUthdFpXYTZHWGtMRnBFVExjMFVGN1p0UTE4dDltWkJJVW5mZmFjXzZHX3pSVXpHV0FiY3ZYaVJGOU03TnNjNnl5MW5Rd25Ma2VMNGRFME83eWxUZnNkWVlBLWVnUFllaFB6Q09Ea2tpYmtYOXROaU42Q1BuQQ?oc=5",
         "titulo": "Membrezia: startup chilena de pagos recurrentes mira EE.UU. - El Ecosistema Startup",
         "fecha": "2026-10-26T17:07:01+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "copycat": 0,
+    "purpose": 0,
+    "es_tecnologia": true,
+    "ronda_reciente": "Pre-seed US$300K",
+    "borrador_contacto": "Hola, vi la noticia sobre la reciente ronda pre-semilla de US$300.000 levantada por Agrology en Argentina. En Latin Leap acompañamos startups en etapas tempranas en la región. Me gustaría programar una breve llamada de 20 minutos para conocer más sobre su propuesta de valor y planes de crecimiento. ¿Tienes disponibilidad esta semana?",
+    "sitio_web": "",
+    "traccion": 0,
+    "copycat_analogo": "",
+    "pais": "Argentina",
+    "nombre": "Agrology",
+    "sector": "agtech",
+    "descripcion": "Startup agtech en Argentina que levanta capital pre-semilla.",
+    "evidencia": "Anuncio de ronda pre-semilla de US$300.000 en Argentina.",
+    "ai_first": 0,
+    "etapa": "pre_seed",
+    "es_startup": true,
+    "momento": 1,
+    "adquirida": false,
+    "filtros_fallidos": [],
+    "score": 35.0,
+    "score_bruto": 35.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "agrology",
+    "primera_vez": "2026-11-02T22:42:35.430218+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430218+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQnFETENtM0trU0h5bzRNbHdtLTd4ZzZwUnNDU2dYOUp4RjVhTjhyRVd4YzFGUnNKdVRiRmNxVnRHaENrSmRyV2JGTEY3LThtdG1uNTFzWnhObVpoVVNJQlFhZjlFVkF5Q2I2NFFmdnVwSzFoWjNxMmlzeEFQR01BRG5zQUt2Ylk?oc=5",
+        "titulo": "Agrology y Give Zero: US$300K y US$600K en Argentina - El Ecosistema Startup",
+        "fecha": "2026-11-01T14:03:27+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "borrador_contacto": "Hola, felicitaciones por la ronda pre-semilla de US$600.000 en Argentina. Desde Latin Leap invertimos en etapas pre-seed y seed en LATAM, y nos interesaría conocer más sobre Give Zero y sus próximos hitos. ¿Tendrías 20 minutos para una llamada exploratoria la próxima semana?",
+    "traccion": 0,
+    "ronda_reciente": "Pre-seed US$600K",
+    "nombre": "Give Zero",
+    "adquirida": false,
+    "etapa": "pre_seed",
+    "sector": "cleantech",
+    "momento": 1,
+    "pais": "Argentina",
+    "evidencia": "Anuncio de ronda pre-semilla de US$600.000 en Argentina.",
+    "descripcion": "Startup en Argentina que levanta capital pre-semilla.",
+    "es_tecnologia": true,
+    "es_startup": true,
+    "copycat": 0,
+    "purpose": 0,
+    "sitio_web": "",
+    "copycat_analogo": "",
+    "ai_first": 0,
+    "filtros_fallidos": [],
+    "score": 35.0,
+    "score_bruto": 35.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "givezero",
+    "primera_vez": "2026-11-02T22:42:35.430249+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430249+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQnFETENtM0trU0h5bzRNbHdtLTd4ZzZwUnNDU2dYOUp4RjVhTjhyRVd4YzFGUnNKdVRiRmNxVnRHaENrSmRyV2JGTEY3LThtdG1uNTFzWnhObVpoVVNJQlFhZjlFVkF5Q2I2NFFmdnVwSzFoWjNxMmlzeEFQR01BRG5zQUt2Ylk?oc=5",
+        "titulo": "Agrology y Give Zero: US$300K y US$600K en Argentina - El Ecosistema Startup",
+        "fecha": "2026-11-01T14:03:27+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "copycat": 0,
+    "sitio_web": "",
+    "momento": 1,
+    "borrador_contacto": "Hola, felicitaciones por la apertura de la oficina de SmartUp en Atlanta. En Latin Leap nos enfoca impulsar startups AI-first de origen latinoamericano con proyección global. Nos encantaría conocer su plan de expansión en EE.UU. y explorar cómo apoyarlos. ¿Tendrías 20 minutos la próxima semana para una breve videollamada? Un saludo.",
+    "evidencia": "Startup chilena de IA logística que acaba de abrir oficina comercial e infraestructura en Atlanta.",
+    "descripcion": "Desarrolla soluciones de inteligencia artificial aplicadas a la gestión y optimización logística.",
+    "traccion": 0,
+    "copycat_analogo": "",
+    "etapa": "desconocida",
+    "nombre": "SmartUp",
+    "es_startup": true,
+    "ai_first": 1,
+    "ronda_reciente": "",
+    "pais": "Chile",
+    "adquirida": false,
+    "sector": "logistica",
+    "es_tecnologia": true,
+    "purpose": 0,
+    "filtros_fallidos": [],
+    "score": 35.0,
+    "score_bruto": 35.0,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 15.0,
+      "ai_first": 15.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": true,
+    "key": "smartup",
+    "primera_vez": "2026-11-02T22:42:35.430046+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430046+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdlg5bjJOTDE1ZjRCTEhZenpxVktCS1BqenpfRGVPWXlTaXBPcVRqMVkydG1oMUc4UVZLNHNRYVRBYTNuaUdrWGtEQW8wblVMQUcxb3lCd2hreWd0NU42R2hpeFVxUmx3aU5CZXZkb0IyMWx6MjhKdEJjeUhuNG9SUVlsZkRFektNUnRn?oc=5",
+        "titulo": "SmartUp, IA logística chilena, abre oficina en Atlanta - El Ecosistema Startup",
+        "fecha": "2026-11-02T17:51:35+00:00"
       }
     ],
     "decision_equipo": null,
@@ -798,6 +1016,56 @@
     "decision_equipo": null,
     "issue": null,
     "etapa_por_confirmar": false
+  },
+  {
+    "copycat_analogo": "Relex Solutions (optimización de inventario y demanda retail mediante inteligencia artificial)",
+    "descripcion": "Plataforma de agentes de IA y algoritmos predictivos integrados a ERPs para optimizar inventario y demanda retail.",
+    "es_tecnologia": true,
+    "purpose": 0,
+    "adquirida": false,
+    "sector": "next-gen retail",
+    "ronda_reciente": "Serie A US$5M, oct 2026",
+    "ai_first": 1,
+    "es_startup": true,
+    "sitio_web": "",
+    "traccion": 1,
+    "borrador_contacto": "Hola Luis Ricardo, felicidades por la Serie A de US$5M para Celes y el hito de los 55 millones de pronósticos diarios. Nos impresiona mucho su enfoque de integración sobre ERPs como SAP para resolver el dolor del retail en LATAM. En Latin Leap invertimos en startups AI-first y nos encantaría conversar sobre su expansión a Brasil. ¿Tendrás 20 minutos la próxima semana para una llamada? Saludos.",
+    "evidencia": "Levantó US$5M en Serie A liderada por SP Ventures. Procesa 55M de pronósticos diarios para +8.500 tiendas en 8 países.",
+    "pais": "Colombia",
+    "copycat": 0.5,
+    "nombre": "Celes",
+    "etapa": "serie_a_o_mas",
+    "momento": 0.5,
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 82.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 10.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 15.0,
+      "momento": 2.5,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "celes",
+    "primera_vez": "2026-11-02T22:42:35.430113+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430113+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/startup-celes-levanta-us5-millones-liderada-por-sp-ventures-para-escalar-en-empresas-retail-por-america-latina/",
+        "titulo": "Startup Celes levanta US$5 millones liderada por SP Ventures para escalar en empresas retail por América Latina",
+        "fecha": "2026-10-29T15:07:10+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "pais": "Perú",
@@ -1206,6 +1474,56 @@
     "decision_equipo": null,
     "issue": null,
     "etapa_por_confirmar": false
+  },
+  {
+    "sitio_web": "",
+    "traccion": 1,
+    "descripcion": "Fintech que financia maquinaria y equipos para pymes e independientes en el punto de venta.",
+    "ronda_reciente": "Serie A US$6,5M, oct 2026",
+    "copycat_analogo": "Balboa Capital / Finova (financiamiento digital de maquinaria y equipos para pymes en punto de venta)",
+    "etapa": "serie_a_o_mas",
+    "purpose": 1,
+    "copycat": 0.5,
+    "nombre": "FinMaq",
+    "sector": "fintech",
+    "es_tecnologia": true,
+    "momento": 0,
+    "evidencia": "Cerró Serie A de US$6,5M liderada por Accion en oct 2026. 72% de sus pymes clientes accedieron por primera vez a financiamiento de activos productivos.",
+    "pais": "Colombia",
+    "ai_first": 0,
+    "es_startup": true,
+    "adquirida": false,
+    "borrador_contacto": "Hola Diego, felicitaciones por el cierre de la Serie A de US$6,5M liderada por Accion. Nos impacta mucho su tasa de 72% de inclusión financiera para pymes en Colombia al financiar maquinaria en punto de venta. En Latin Leap seguimos de cerca la evolución fintech en la región. ¿Tendrás 20 minutos para una llamada breve y conocer sus planes futuros?",
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 70.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 10.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 5.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "finmaq",
+    "primera_vez": "2026-11-02T22:42:35.430284+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430284+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/la-colombiana-finmaq-levanta-us65-millones-en-una-serie-a-liderada-por-accion-para-financiar-maquinaria-de-pymes/",
+        "titulo": "La colombiana FinMaq levanta US$6,5 millones en una Serie A liderada por Accion para financiar maquinaria de pymes",
+        "fecha": "2026-10-28T13:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "traccion": 1,
@@ -2034,6 +2352,56 @@
     "decision_equipo": null,
     "issue": null,
     "etapa_por_confirmar": false
+  },
+  {
+    "descripcion": "Plataforma SaaS para la digitalización, control y rendición de gastos corporativos.",
+    "traccion": 0.5,
+    "sitio_web": "",
+    "sector": "fintech",
+    "evidencia": "Startup fundada hace 12 años que automatiza la rendición de gastos para todo tipo de empresas en la región.",
+    "copycat_analogo": "Expensify / SAP Concur (software de rendición y automatización de gastos corporativos)",
+    "purpose": 0,
+    "es_tecnologia": true,
+    "pais": "Chile",
+    "es_startup": true,
+    "momento": 0,
+    "borrador_contacto": "Hola Sebastián, leí sobre la historia de pivote de Paymox a Rindegastos y su foco estratégico en LATAM. En Latin Leap nos interesa mucho el crecimiento de plataformas B2B consolidadas en la región. Me encantaría conocer más sobre su hoja de ruta regional y explorar sinergias. ¿Tendrías 20 minutos la próxima semana para conversar? Saludos.",
+    "copycat": 1,
+    "nombre": "Rindegastos",
+    "ronda_reciente": "",
+    "ai_first": 0,
+    "adquirida": false,
+    "etapa": "serie_a_o_mas",
+    "filtros_fallidos": [
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 65.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 20.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "rindegastos",
+    "primera_vez": "2026-11-02T22:42:35.430150+00:00",
+    "ultima_vez": "2026-11-02T22:42:35.430150+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/hacer-una-sola-cosa-y-hacerla-bien-la-historia-del-ceo-de-rindegastos/",
+        "titulo": "Hacer una sola cosa, y hacerla bien: la historia del CEO de Rindegastos",
+        "fecha": "2026-10-28T15:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "copycat": 1,

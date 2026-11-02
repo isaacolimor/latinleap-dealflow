@@ -294,5 +294,82 @@
       }
     },
     "digest": "https://github.com/isaacolimor/latinleap-dealflow/issues/3"
+  },
+  {
+    "fecha": "2026-11-02T22:44:23.837818+00:00",
+    "modelo": "gemini-3.6-flash",
+    "articulos_leidos": 129,
+    "articulos_nuevos": 42,
+    "descartes_prefiltro": {
+      "ya_visto": 51,
+      "etapa_tardia": 1,
+      "solo_brasil": 1
+    },
+    "evaluados": 8,
+    "errores_evaluacion": 8,
+    "muestra_errores": [
+      {
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQeWlDT1Q4dElPanRmdWgwY1pvNU95QTlCLW03bVJFNmwta05NMG9MQ2s1TGNLZmpqdExRRkpyVXp0ZUlWcnZveTNtYmNVdkMySjdzVnJRbGxPWlpBU2RzNFhiTXJqMktfcVF4NlhUQ0ZIXzhkRUhraUxTMDdFYnJvVWR3?oc=5",
+        "error": "RuntimeError: Gemini HTTP 503: [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n]"
+      }
+    ],
+    "pendientes_por_tiempo": 24,
+    "esperas_por_limite": 16,
+    "consultas_ia": 3,
+    "memos_generados": 2,
+    "minutos_evaluando": 21.3,
+    "startups": 7,
+    "pasan_filtros": 4,
+    "calificadas_nuevas": 1,
+    "decisiones_registradas": 0,
+    "por_fuente": {
+      "LatamList": {
+        "leidos": 10,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      },
+      "Startups Latam": {
+        "leidos": 10,
+        "evaluados": 4,
+        "startups": 4,
+        "pasan_filtros": 1,
+        "calificadas_nuevas": 1
+      },
+      "Google News": {
+        "leidos": 79,
+        "evaluados": 4,
+        "startups": 3,
+        "pasan_filtros": 3,
+        "calificadas_nuevas": 0
+      },
+      "Descubre.vc": {
+        "leidos": 30,
+        "evaluados": 0,
+        "startups": 0,
+        "pasan_filtros": 0,
+        "calificadas_nuevas": 0
+      }
+    },
+    "estado_fuentes": {
+      "LatamList": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Startups Latam": {
+        "ok": true,
+        "articulos": 10
+      },
+      "Google News": {
+        "ok": true,
+        "articulos": 79
+      },
+      "Descubre.vc": {
+        "ok": true,
+        "articulos": 30
+      }
+    },
+    "digest": "https://github.com/isaacolimor/latinleap-dealflow/issues/4"
   }
 ]
