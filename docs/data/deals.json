@@ -65,63 +65,69 @@
     }
   },
   {
-    "sitio_web": "",
-    "traccion": 1,
-    "purpose": 0.5,
-    "copycat": 1,
-    "descripcion": "Plataforma de viajes compartidos (carpooling) entre ciudades.",
-    "borrador_contacto": "Hola Renzo, vi el reciente levantamiento de US$600.000 de Viatik con Plug and Play y Picante para escalar en Argentina. Destaco su rápido crecimiento en rutas como Salta-Jujuy. En Latin Leap invertimos en modelos probados de movilidad en LATAM y nos gustaría conocer su plan de expansión regional. ¿Tendrás 20 minutos la próxima semana para una llamada?",
-    "es_tecnologia": true,
-    "sector": "mobility",
-    "nombre": "Viatik",
-    "evidencia": "Cerró ronda de US$600.000 (acumula US$850K). Entre junio y septiembre de 2026 multiplicó por seis su volumen de operaciones en Argentina.",
-    "pais": "Uruguay",
-    "copycat_analogo": "BlaBlaCar (plataforma europea de viajes compartidos en auto entre ciudades)",
-    "etapa": "seed",
-    "es_startup": true,
-    "ronda_reciente": "Seed US$600K, oct 2026",
-    "momento": 0.5,
-    "adquirida": false,
+    "copycat_analogo": "BlaBlaCar, plataforma europea de carpooling interurbano entre ciudades.",
     "ai_first": 0,
+    "es_tecnologia": true,
+    "momento": 1,
+    "borrador_contacto": "Hola, vi el cierre de su ronda de US$600K para escalar Viatik en Argentina y el crecimiento de 6x en transacciones en los últimos meses. En Latin Leap nos apasionan los modelos proven copycat en movilidad eficiente. Me gustaría agendar una llamada de 20 minutos para conversar sobre sus planes de expansión regional y cómo apoyarlos. ¿Tendrías disponibilidad esta semana?",
+    "etapa": "seed",
+    "sector": "mobility",
+    "descripcion": "Aplicación de movilidad compartida que conecta conductores y pasajeros para viajes interurbanos en Argentina y Uruguay.",
+    "evidencia": "Viatik levantó US$600K en octubre de 2026. Registró un crecimiento de 6x en transacciones en Argentina entre junio y septiembre de 2026.",
+    "traccion": 1,
+    "es_startup": true,
+    "nombre": "Viatik",
+    "ronda_reciente": "Ronda US$600K, oct 2026",
+    "purpose": 1,
+    "sitio_web": "",
+    "pais": "Uruguay",
+    "copycat": 1,
+    "adquirida": false,
     "filtros_fallidos": [],
-    "score": 75.0,
-    "score_bruto": 75.0,
+    "score": 80.0,
+    "score_bruto": 80.0,
     "desglose": {
       "sector": 20.0,
       "copycat": 20.0,
       "traccion": 20.0,
       "geografia": 10.0,
       "ai_first": 0.0,
-      "momento": 2.5,
-      "purpose": 2.5
+      "momento": 5.0,
+      "purpose": 5.0
     },
     "estado": "calificada",
-    "levantando_ahora": false,
+    "levantando_ahora": true,
     "etapa_por_confirmar": false,
     "key": "viatik",
     "primera_vez": "2026-11-02T22:42:35.430185+00:00",
-    "ultima_vez": "2026-11-02T22:42:35.430185+00:00",
     "menciones": [
       {
         "fuente": "Startups Latam",
         "url": "https://startupslatam.com/la-uruguaya-viatik-levanta-us600-000-en-su-segunda-ronda-para-escalar-los-viajes-compartidos-entre-ciudades-en-argentina/",
         "titulo": "La uruguaya Viatik levanta US$600.000 en su segunda ronda para escalar los viajes compartidos entre ciudades en Argentina",
         "fecha": "2026-10-28T14:00:00+00:00"
+      },
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/viatik-raises-600k-to-expand-in-argentina/",
+        "titulo": "Viatik raises $600K to expand in Argentina",
+        "fecha": "2026-10-29T22:55:54+00:00"
       }
     ],
     "decision_equipo": null,
     "issue": 4,
+    "ultima_vez": "2026-11-09T23:23:08.210893+00:00",
     "memo": {
-      "tesis": "Adaptación regional del modelo validado de BlaBlaCar para movilidad interurbana en LATAM, respaldada por un crecimiento de 6x en volumen operativo en Argentina.",
+      "tesis": "Viatik adapta con éxito un modelo probado en mercados globales (BlaBlaCar) al Cono Sur con tracción acelerada y un enfoque purpose-driven de movilidad sostenible.",
       "riesgos": [
-        "Complejidad para alcanzar liquidez bilateral en el marketplace y sostener la retención de usuarios a medida que se expande a nuevos corredores geográficos.",
-        "Márgenes unitarios ajustados por alta sensibilidad al precio en el transporte interurbano de la región.",
-        "Riesgo de desintermediación de la plataforma entre conductores y pasajeros recurrentes sin un foso defensivo o programa de fidelización robusto."
+        "Ausencia actual de un componente tecnológico AI-first diferenciador que proteja la plataforma frente a competidores locales o globales.",
+        "Riesgo regulatorio y de seguridad operacional asociado a la intermediación de transporte interurbano en la región.",
+        "Sensibilidad a condiciones macroeconómicas e inflación en Argentina que pueden erosionar los márgenes de monetización reales."
       ],
       "preguntas": [
-        "¿Cuál es la métrica de unit economics por trayecto (take rate medio, CAC por lado del marketplace y margen de contribución unitario)?",
-        "¿Cuál es el tamaño de mercado accesible (TAM) en carpooling interurbano en LATAM y la estrategia para alcanzar densidad crítica en nuevos corredores?",
-        "¿Cómo planean destinar los US$600.000 de la ronda Seed y qué tecnología o foso defensivo implementarán para retener a conductores y usuarios?"
+        "¿Cuáles son sus unit economics actuales (CAC, LTV, take rate por viaje) y cómo proyectan sostener el margen bruto en Argentina dada la volatilidad macroeconómica?",
+        "Dado que actualmente no registran un componente AI-first, ¿tienen previsto integrar inteligencia artificial para optimizar el matcheo de rutas, tarificación dinámica o seguridad?",
+        "¿Cómo gestionan el marco regulatorio del transporte interurbano de pasajeros en Uruguay y Argentina, y cuál es el plan de uso de fondos de la ronda de US$600K para la expansión regional?"
       ]
     }
   },
@@ -403,6 +409,60 @@
     }
   },
   {
+    "borrador_contacto": "Hola Francisco, felicitaciones por la extensión Seed de US$7M y el hito de procesar US$5B anuales con Takenos. En Latin Leap seguimos de cerca las soluciones fintech transfronterizas. Nos encantaría agendar una llamada de 20 minutos para conocer sus planes de expansión hacia los 15 países de LATAM y explorar oportunidades de colaboración. ¿Cuándo tendrías un espacio?",
+    "traccion": 1,
+    "sitio_web": "",
+    "copycat": 0,
+    "nombre": "Takenos",
+    "sector": "fintech",
+    "ai_first": 0,
+    "etapa": "post_seed_pre_a",
+    "pais": "Argentina",
+    "es_tecnologia": true,
+    "evidencia": "Levantó extensión seed de US$7M (total US$12M), procesa más de US$5B anuales y opera en 6 países.",
+    "ronda_reciente": "Seed extension US$7M, nov 2026",
+    "adquirida": false,
+    "es_startup": true,
+    "purpose": 0.5,
+    "momento": 1,
+    "copycat_analogo": "",
+    "descripcion": "Plataforma fintech que utiliza stablecoins para mover dinero entre divisas y fronteras con cuentas en dólares y tarjetas.",
+    "filtros_fallidos": [],
+    "score": 57.5,
+    "score_bruto": 57.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 10.0,
+      "ai_first": 0.0,
+      "momento": 5.0,
+      "purpose": 2.5
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "takenos",
+    "primera_vez": "2026-11-09T23:19:21.719178+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719248+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/takenos-raises-7m-seed-extension-to-expand-across-latin-america/",
+        "titulo": "Takenos raises $7M seed extension to expand across Latin America",
+        "fecha": "2026-11-04T18:59:24+00:00"
+      },
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/la-argentina-takenos-levanta-us7-millones-en-una-extension-de-su-ronda-semilla-y-apunta-a-mas-de-15-paises-en-2027/",
+        "titulo": "La argentina Takenos levanta US$7 millones en una extensión de su ronda semilla y apunta a más de 15 países en 2027",
+        "fecha": "2026-11-05T13:29:32+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "descripcion": "Desarrolla soluciones de aislantes térmicos y materiales para la construcción.",
     "copycat_analogo": "",
     "purpose": 1,
@@ -448,6 +508,54 @@
     "decision_equipo": null,
     "issue": null,
     "etapa_por_confirmar": true
+  },
+  {
+    "evidencia": "Cofundada por José Murillo (ex-Tul); enfocada en inteligencia artificial y automatización.",
+    "traccion": 0,
+    "borrador_contacto": "Hola José, leí sobre tu trayectoria desde Tul y el trabajo que estás liderando en Primero AI. En Latin Leap apoyamos a fundadores de la región que construyen modelos AI-first en sectores clave. Me gustaría agendar una llamada de 20 minutos para conocer más sobre Primero AI y explorar puntos de convergencia con nuestro fondo. ¿Tendrás un espacio en tu agenda?",
+    "descripcion": "Startup de inteligencia artificial y automatización cofundada por José Murillo.",
+    "sitio_web": "",
+    "es_tecnologia": true,
+    "copycat": 0,
+    "sector": "ai saas",
+    "nombre": "Primero AI",
+    "ai_first": 1,
+    "momento": 0,
+    "etapa": "desconocida",
+    "copycat_analogo": "",
+    "ronda_reciente": "",
+    "pais": "México",
+    "es_startup": true,
+    "purpose": 0,
+    "adquirida": false,
+    "filtros_fallidos": [],
+    "score": 50.0,
+    "score_bruto": 50.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 15.0,
+      "ai_first": 15.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "bajo_umbral",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": true,
+    "key": "primeroai",
+    "primera_vez": "2026-11-09T23:19:21.719136+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719136+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/una-opinion-distinta-a-la-del-mercado-la-historia-del-cofundador-de-primero-ai/",
+        "titulo": "Una opinión distinta a la del mercado: la historia del cofundador de Primero AI",
+        "fecha": "2026-11-06T14:00:40+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "etapa": "desconocida",
@@ -1055,13 +1163,70 @@
     "etapa_por_confirmar": false,
     "key": "celes",
     "primera_vez": "2026-11-02T22:42:35.430113+00:00",
-    "ultima_vez": "2026-11-02T22:42:35.430113+00:00",
+    "ultima_vez": "2026-11-09T23:23:08.210791+00:00",
     "menciones": [
       {
         "fuente": "Startups Latam",
         "url": "https://startupslatam.com/startup-celes-levanta-us5-millones-liderada-por-sp-ventures-para-escalar-en-empresas-retail-por-america-latina/",
         "titulo": "Startup Celes levanta US$5 millones liderada por SP Ventures para escalar en empresas retail por América Latina",
         "fecha": "2026-10-29T15:07:10+00:00"
+      },
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/celes-raises-5m-series-a-led-by-sp-ventures/",
+        "titulo": "Celes raises $5M Series A led by SP Ventures",
+        "fecha": "2026-10-30T19:15:49+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "es_startup": false,
+    "adquirida": false,
+    "purpose": 0,
+    "descripcion": "Unicornio fintech mexicano de servicios financieros y procesamiento de pagos para negocios.",
+    "momento": 0,
+    "nombre": "Clip",
+    "sector": "fintech",
+    "sitio_web": "",
+    "etapa": "serie_a_o_mas",
+    "borrador_contacto": "Hola equipo de Clip, felicitaciones por la adquisición de Pulpos para fortalecer su ecosistema de pagos y gestión empresarial en México.",
+    "evidencia": "Empresa unicornio mexicana que adquirió la plataforma Pulpos para integrar herramientas de gestión de negocios y pagos.",
+    "copycat": 0,
+    "copycat_analogo": "",
+    "traccion": 1,
+    "ronda_reciente": "",
+    "ai_first": 0,
+    "pais": "México",
+    "es_tecnologia": true,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 55.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "clip",
+    "primera_vez": "2026-11-09T23:19:21.719320+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719320+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/clip-acquires-pulpos-to-expand-business-management-services/",
+        "titulo": "Clip acquires Pulpos to expand business management services",
+        "fecha": "2026-11-02T23:30:07+00:00"
       }
     ],
     "decision_equipo": null,
@@ -1513,13 +1678,19 @@
     "etapa_por_confirmar": false,
     "key": "finmaq",
     "primera_vez": "2026-11-02T22:42:35.430284+00:00",
-    "ultima_vez": "2026-11-02T22:42:35.430284+00:00",
+    "ultima_vez": "2026-11-09T23:23:08.210978+00:00",
     "menciones": [
       {
         "fuente": "Startups Latam",
         "url": "https://startupslatam.com/la-colombiana-finmaq-levanta-us65-millones-en-una-serie-a-liderada-por-accion-para-financiar-maquinaria-de-pymes/",
         "titulo": "La colombiana FinMaq levanta US$6,5 millones en una Serie A liderada por Accion para financiar maquinaria de pymes",
         "fecha": "2026-10-28T13:00:00+00:00"
+      },
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/colombian-fintech-finmaq-raises-6-5m-series-a/",
+        "titulo": "Colombian fintech FinMaq raises $6.5M Series A",
+        "fecha": "2026-10-29T16:23:10+00:00"
       }
     ],
     "decision_equipo": null,
@@ -1632,6 +1803,58 @@
     "etapa_por_confirmar": false
   },
   {
+    "ronda_reciente": "",
+    "ai_first": 0,
+    "adquirida": false,
+    "traccion": 1,
+    "es_startup": false,
+    "copycat_analogo": "",
+    "etapa": "serie_a_o_mas",
+    "sitio_web": "",
+    "copycat": 0,
+    "pais": "México",
+    "descripcion": "Grupo corporativo de transporte interurbano de pasajeros, movilidad y logística en México.",
+    "momento": 0,
+    "evidencia": "Empresa corporativa con 95 años de operación en México en el sector de transporte y movilidad.",
+    "es_tecnologia": false,
+    "borrador_contacto": "Hola Juan Pablo, leímos sobre la trayectoria y estrategia operativa en Flecha Amarilla. Interesante labor de gestión y modernización tecnológica.",
+    "nombre": "Flecha Amarilla",
+    "sector": "mobility",
+    "purpose": 0,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "no_es_tecnologia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 55.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 15.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "flechaamarilla",
+    "primera_vez": "2026-11-09T23:19:21.719355+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719355+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/te-avientan-al-ruedo-la-historia-del-director-de-negocios-de-flecha-amarilla/",
+        "titulo": "Te avientan al ruedo: la historia del director de negocios de Flecha Amarilla",
+        "fecha": "2026-11-04T15:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "nombre": "GoTrendier",
     "borrador_contacto": "Hola equipo de GoTrendier, impresionante ver su expansión hacia categorías como hogar y entretenimiento en México y Colombia, sumando 30.000 productos nuevos en una semana y alcanzando 14M de usuarios. En Latin Leap seguimos con atención el comercio circular en la región. Me encantaría conectar en una llamada de 20 minutos para conocer sus próximos pasos. ¿Tendrían disponibilidad la próxima semana?",
     "sitio_web": "",
@@ -1698,6 +1921,57 @@
       "fuente": "https://www.merca2.es/2024/10/01/squirrel-media-gotrendier-1975669/",
       "nota": "Squirrel Media compró 10.5% por €4.4M en 2024 (valuación implícita de unos €42M)."
     }
+  },
+  {
+    "copycat_analogo": "",
+    "descripcion": "Plataforma de seguros diseñada específicamente para cubrir riesgos asociados a agentes de inteligencia artificial.",
+    "momento": 1,
+    "adquirida": false,
+    "pais": "Desconocido",
+    "es_tecnologia": true,
+    "ai_first": 0.5,
+    "sitio_web": "",
+    "es_startup": true,
+    "nombre": "Harbor",
+    "ronda_reciente": "Levantamiento US$10M, nov 2026",
+    "purpose": 0,
+    "traccion": 0,
+    "etapa": "serie_a_o_mas",
+    "evidencia": "Harbor levantó US$10M en noviembre de 2026 para desarrollar su oferta de seguros enfocada en agentes de IA.",
+    "sector": "insurtech",
+    "copycat": 0,
+    "borrador_contacto": "Hola, vi la noticia sobre la ronda de US$10M levantada por Harbor para seguros de agentes de IA. En Latin Leap invertimos en la intersección entre IA e insurtechs en la región. Me encantaría coordinar una breve llamada de 20 minutos para conocer más sobre el producto y explorar posibles oportunidades de colaboración. ¿Tendrás tiempo en los próximos días?",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 32.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 7.5,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "harbor",
+    "primera_vez": "2026-11-09T23:23:08.210853+00:00",
+    "ultima_vez": "2026-11-09T23:23:08.210853+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaFoycVh6Q3I1VkVxbEp6UDJPT0k3N2I3cnB1Y2VwR3paZDZOcmExUnV4Mm1QR2lvWjhFWjZMNTRHb3ZvU2RMV3ptQk96dlJ1ZXMzQ0tPOFphZ28waGNmVU41ZWtRcG1rSFdvaWRnNmFxaTFQeC1KZklTbjNNbW9fcTlxSnQzdFE?oc=5",
+        "titulo": "Harbor, seguros para agentes de IA, levanta US$10M - El Ecosistema Startup",
+        "fecha": "2026-11-08T07:03:27+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "ai_first": 0,
@@ -2134,6 +2408,109 @@
     "issue": null
   },
   {
+    "ai_first": 0,
+    "es_startup": false,
+    "copycat": 0,
+    "sitio_web": "",
+    "traccion": 0,
+    "evidencia": "Newtopia es identificado como un fondo de inversión pre-seed, no una startup.",
+    "borrador_contacto": "No aplica por ser un fondo de VC.",
+    "es_tecnologia": false,
+    "descripcion": "Fondo de inversión de riesgo en etapa pre-seed.",
+    "adquirida": false,
+    "purpose": 0,
+    "sector": "otro",
+    "nombre": "Newtopia",
+    "ronda_reciente": "",
+    "pais": "Desconocido",
+    "copycat_analogo": "",
+    "etapa": "desconocida",
+    "momento": 0,
+    "filtros_fallidos": [
+      "no_es_startup",
+      "no_es_tecnologia",
+      "fuera_de_geografia"
+    ],
+    "score": 0.0,
+    "score_bruto": 0.0,
+    "desglose": {
+      "sector": 0.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": true,
+    "key": "newtopia",
+    "primera_vez": "2026-11-09T23:19:21.719215+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719215+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQa2xYVDJvZElmd0Eyam8wYUI5MV8xRE85dUlLWEo2YkFqdEpCd3dWOVJnMnVnMExWM0RZYlBZRUp3Y2lkN0VHa05Xekd4LVlmdGt6QXFxWkREMDIxb3ZOQmJ6NzFiY0UtS1lBQXZHdEtHVkVkQzhRRzk1a3FvaUtXM0pjRU95ZV9fZGEyenNVUQ?oc=5",
+        "titulo": "Newtopia, el fondo pre-seed que apuesta con 90% de riesgo - El Ecosistema Startup",
+        "fecha": "2026-11-08T15:36:40+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
+    "traccion": 0,
+    "adquirida": false,
+    "copycat": 0,
+    "copycat_analogo": "",
+    "ai_first": 1,
+    "momento": 1,
+    "descripcion": "Startup que genera datos sintéticos para el entrenamiento de robots.",
+    "borrador_contacto": "Hola, vi la noticia sobre la ronda de US$10M de Physicl para el desarrollo de datos sintéticos aplicados a robótica. En Latin Leap nos enfocamos en startups AI-first y nos encantaría tener una llamada de 20 minutos para conocer su visión de expansión y evaluar posibles sinergias. ¿Tendrás disponibilidad esta semana?",
+    "etapa": "serie_a_o_mas",
+    "es_tecnologia": true,
+    "evidencia": "Levantó una ronda de US$10M para su solución de datos sintéticos para robótica.",
+    "es_startup": true,
+    "pais": "Desconocido",
+    "ronda_reciente": "US$10M",
+    "sector": "ai saas",
+    "nombre": "Physicl",
+    "purpose": 0,
+    "sitio_web": "",
+    "filtros_fallidos": [
+      "fuera_de_geografia",
+      "etapa_tardia"
+    ],
+    "score": 0.0,
+    "score_bruto": 40.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 0.0,
+      "geografia": 0.0,
+      "ai_first": 15.0,
+      "momento": 5.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": true,
+    "etapa_por_confirmar": false,
+    "key": "physicl",
+    "primera_vez": "2026-11-09T23:19:21.719071+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719071+00:00",
+    "menciones": [
+      {
+        "fuente": "Google News",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTl9CV2dhbmpjdjJmVmRPVnJ6bURsMU1Yd3U2c3BWa3U2WmwyMVZTZlJEVHBpTktJNENVQ3VFUzk4SFBfLVk1YzhHby0tYi1xbW5OQm1ZLWJVVG5OZFBlS2VHWjJ1RmxwMWZTOUR0S3BDdExLajZVNUpmdmFaVEZfSXhqaXhXUmZ0?oc=5",
+        "titulo": "Physicl, datos sintéticos para robots, levanta US$10M - El Ecosistema Startup",
+        "fecha": "2026-11-08T21:51:38+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
+  },
+  {
     "copycat_analogo": "Marqeta (EE.UU.), infraestructura moderna para emisión y procesamiento de tarjetas y pagos.",
     "ai_first": 0,
     "momento": 0,
@@ -2183,6 +2560,56 @@
     "decision_equipo": null,
     "issue": null,
     "etapa_por_confirmar": false
+  },
+  {
+    "es_startup": true,
+    "borrador_contacto": "Hola equipo de Pulpos, felicitaciones por la adquisición por parte de Clip. En Latin Leap seguimos de cerca la evolución de plataformas de gestión con IA para pymes en LATAM y les deseamos mucho éxito en esta nueva etapa de integración.",
+    "nombre": "Pulpos",
+    "sector": "ai saas",
+    "pais": "México",
+    "evidencia": "Fue adquirida por la fintech Clip. Ha levantado US$9M en total, incluyendo una ronda de US$5M en abril de 2026 y una semilla de US$4M.",
+    "copycat": 0,
+    "etapa": "post_seed_pre_a",
+    "ai_first": 0.5,
+    "sitio_web": "",
+    "ronda_reciente": "US$5M, abr 2026",
+    "copycat_analogo": "",
+    "traccion": 0.5,
+    "momento": 0,
+    "descripcion": "Plataforma de gestión empresarial en la nube para pymes con herramientas de ventas, inventario, facturación y agentes de IA por WhatsApp.",
+    "adquirida": true,
+    "purpose": 0,
+    "es_tecnologia": true,
+    "filtros_fallidos": [
+      "adquirida"
+    ],
+    "score": 0.0,
+    "score_bruto": 52.5,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 10.0,
+      "geografia": 15.0,
+      "ai_first": 7.5,
+      "momento": 0.0,
+      "purpose": 0.0
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": false,
+    "key": "pulpos",
+    "primera_vez": "2026-11-09T23:19:21.719287+00:00",
+    "ultima_vez": "2026-11-09T23:19:21.719287+00:00",
+    "menciones": [
+      {
+        "fuente": "LatamList",
+        "url": "https://latamlist.com/clip-acquires-pulpos-to-expand-business-management-services/",
+        "titulo": "Clip acquires Pulpos to expand business management services",
+        "fecha": "2026-11-02T23:30:07+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "pais": "Colombia",
@@ -2502,6 +2929,56 @@
     "decision_equipo": null,
     "issue": null,
     "etapa_por_confirmar": false
+  },
+  {
+    "evidencia": "Tempo es una blockchain incubada por Stripe y Paradigm que procesa pagos transfronterizos con stablecoins para clientes como ARQ (2M+ usuarios en LATAM).",
+    "etapa": "desconocida",
+    "copycat": 0,
+    "borrador_contacto": "Hola Jan, vi la presencia de Tempo en Tech Week Colombia y Brasil y su trabajo facilitando pagos transfronterizos con stablecoins junto a aliados como ARQ. En Latin Leap seguimos de cerca la infraestructura fintech en LATAM. Me gustaría agendar una llamada de 20 minutos para explorar cómo colaborar en su expansión regional. ¿Tienes disponibilidad esta semana?",
+    "copycat_analogo": "",
+    "nombre": "Tempo",
+    "pais": "Estados Unidos",
+    "es_tecnologia": true,
+    "ai_first": 0,
+    "purpose": 0.5,
+    "descripcion": "Blockchain de capa 1 diseñada para procesar pagos transfronterizos a gran escala con stablecoins y comisiones mínimas.",
+    "adquirida": false,
+    "ronda_reciente": "",
+    "sitio_web": "",
+    "momento": 0.5,
+    "traccion": 1,
+    "es_startup": true,
+    "sector": "fintech",
+    "filtros_fallidos": [
+      "fuera_de_geografia"
+    ],
+    "score": 0.0,
+    "score_bruto": 45.0,
+    "desglose": {
+      "sector": 20.0,
+      "copycat": 0.0,
+      "traccion": 20.0,
+      "geografia": 0.0,
+      "ai_first": 0.0,
+      "momento": 2.5,
+      "purpose": 2.5
+    },
+    "estado": "descartada",
+    "levantando_ahora": false,
+    "etapa_por_confirmar": true,
+    "key": "tempo",
+    "primera_vez": "2026-11-09T23:23:08.210944+00:00",
+    "ultima_vez": "2026-11-09T23:23:08.210944+00:00",
+    "menciones": [
+      {
+        "fuente": "Startups Latam",
+        "url": "https://startupslatam.com/tempo-una-blockchain-para-pagos-con-stablecoins-llego-a-la-tech-week-para-construir-relaciones-en-el-mercado-latinoamericano/",
+        "titulo": "Tempo, una blockchain para pagos con stablecoins, llegó a la Tech Week para construir relaciones en el mercado latinoamericano",
+        "fecha": "2026-11-04T13:00:00+00:00"
+      }
+    ],
+    "decision_equipo": null,
+    "issue": null
   },
   {
     "es_startup": true,
